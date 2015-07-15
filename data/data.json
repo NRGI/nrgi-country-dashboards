@@ -1,0 +1,142 @@
+{ 
+  "x": {
+    "domain": ["2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013"],
+    "label": "Time"
+  },
+  "y": {
+    "domain": [0, 3165181731],
+    "label": "Value"
+  },
+  "data": [
+    {
+    "label": "Extractives revenues",
+    "data": [
+        {
+            "value":27021531.67,
+            "year":"2004",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":44654643.0,
+            "year":"2005",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":66220560.0,
+            "year":"2006",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":61767543.0,
+            "year":"2007",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":91193482.0,
+            "year":"2008",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":111972313.3,
+            "year":"2009",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":212460480.0,
+            "year":"2010",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":942698326.4,
+            "year":"2011",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":1112429756.0,
+            "year":"2012",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":1269116733.0,
+            "year":"2013",
+            "name":"Ghana",
+            "id":"GHA"
+        }
+    ]
+  },
+  {
+    "label": "Public spending on education",
+    "data": [
+        {
+            "value":710513547.9,
+            "year":"2004",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":751231819.9,
+            "year":"2005",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":1020516581.0,
+            "year":"2006",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":1485453186.0,
+            "year":"2007",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":1711680877.0,
+            "year":"2008",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":1298925419.0,
+            "year":"2009",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":1930490383.0,
+            "year":"2010",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":3165181731.0,
+            "year":"2011",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":0,
+            "year":"2012",
+            "name":"Ghana",
+            "id":"GHA"
+        },
+        {
+            "value":0,
+            "year":"2013",
+            "name":"Ghana",
+            "id":"GHA"
+        }
+    ]
+    }
+  ]
+}
