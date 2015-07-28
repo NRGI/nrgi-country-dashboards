@@ -175,10 +175,12 @@ nav#main {
 }
 
 #content article {
-    min-height:100%;
     overflow:hidden;
     display:block;
     /*position:relative;*/
+}
+#main-content article {
+    min-height:600px;
 }
 #content article .inner {
     margin: 0 auto;
@@ -196,7 +198,7 @@ nav#main {
 #explore-line {
     float: left;
     width:100%;
-    min-height:250px;
+    min-height:350px;
 }
 #explore-pie {
     min-height:350px;
@@ -488,13 +490,19 @@ nav#main {
 .lineChart .area {
     fill: #ffffff;
   }
-.lineChart .line0 {
-    stroke: #4f7184;
+  
+.lineChart .line {
+    stroke: #00b48d;
     stroke-width: 5px;
     fill: none;
 }
-.lineChart .line1 {
+.lineChart .line0 {
     stroke: #ff6f4a;
+    stroke-width: 5px;
+    fill: none;
+}
+.lineChart .line4 {
+    stroke: #000000;
     stroke-width: 5px;
     fill: none;
 }
