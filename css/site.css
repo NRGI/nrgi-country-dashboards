@@ -9,9 +9,18 @@ body {
     font-family: "Open Sans";
     font-size:2.3em;
 }
-
+article#home {
+    background-color: #f15623;
+}
+article#commodities {
+/*    background-color: #ffc60b;*/
+    background-color:#60c4b1;
+}
+article#time {
+    background-color: #ffc60b;
+}
 h1, h2, h3, h4 {
-    text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ffffff, 3px 3px 0 #ffffff, 4px 4px 0 #ffffff;
+    text-shadow: 1px 1px 10px #ffffff;
     font-family: "Open Sans Condensed", sans-serif;
 }
 
@@ -55,16 +64,23 @@ nav#main {
     top:0px;
     z-index:50;
     width:100%;
-    background-color:#eeeeee;
+    background-color:#ffffff;
     border-bottom:1px solid #dddddd;
 }
 .nav li {
     margin-left:25px;
-    background-color:#87B6A7;
+    background-color:#00833d;
     float:left;
     font-size:1em;
     font-family: "Open Sans Condensed", sans-serif;
     list-style-type:none;
+    -webkit-transition: all .2s ease-in-out;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    -webkit-transition-delay: initial;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 .nav li a {
     color:#ffffff;
@@ -74,7 +90,7 @@ nav#main {
 }
 .nav li a:hover, .nav li a:focus, .nav li.active a {
     background-color:#ffffff;
-    color:#87B6A7;
+    color:#00833d;
 }
 .nav:after {
   clear:none;
@@ -82,7 +98,7 @@ nav#main {
 
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:focus, 
 .navbar-default .navbar-brand:hover {
-    color:#5B5941;
+    color:#000000;
     font-size: 1.9em;
     text-shadow: 1px 1px 2px #ffffff;
     font-family: "Open Sans Condensed", sans-serif;
@@ -100,6 +116,10 @@ nav#main {
 }
 .brand-shrink .navbar-brand {
   line-height: 1em;
+  font-size:1.7em;
+}
+.brand-shrink .nav li {
+    font-size:0.8em;
 }
 .navbar-default {
     background: none;
@@ -112,18 +132,22 @@ nav#main {
 /* HEADER */
 .masthead {
     background-color: rgb(255,255,255);
-    background-color: rgba(255,255,255,0.5);
-    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,startColorStr="#7FFFFFFF",endColorStr="#7FFFFFFF");
-    -ms-filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,startColorStr="#7FFFFFFF",endColorStr="#7FFFFFFF");
+    background-color: rgba(255,255,255,0.1);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,startColorStr="#1AFFFFFF",endColorStr="#1AFFFFFF");
+    -ms-filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,startColorStr="#1AFFFFFF",endColorStr="#1AFFFFFF");
     margin:150px 0px 150px 0px;
     padding:30px;
-    color:#000000;
+    color:#ffffff;
     text-align:right;
 }
 .masthead h1 {
     padding:5px 15px 0px 15px;
     font-weight: bold;
-    color: #e3f09b;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000;
+}
+.masthead h2 {
+    color: #ffffff;
     text-shadow: 1px 1px 2px #000000;
 }
 .header-box {
@@ -171,10 +195,12 @@ nav#main {
 }
 #explore-line {
     float: left;
+    width:100%;
+    min-height:250px;
 }
 #explore-pie {
-    min-height:250px;
-    width:450px;
+    min-height:350px;
+    width:100%;
     text-align: center;
     float: left;
 }
@@ -199,7 +225,7 @@ nav#main {
     color:#000000;
     padding:4px 10px;
     display:block;
-    font-size:0.8em;
+    font-size:14px;
     box-shadow: 1px 1px 2px #666666;
 }
 #explore-pie .pie-years ul li.active {
@@ -212,15 +238,16 @@ nav#main {
 }
 #explore-pie .segment {
     cursor: pointer;
+    fill: #00b48d;
 }
 #explore-pie .segment.Oil {
-    fill: #F79F79;
+    fill: #222222;
 }
 #explore-pie .segment.Bauxite {
     fill: #F7D08A;
 }
 #explore-pie .segment.Gold {
-    fill: #E3F09B;
+    fill: #f68b1f;
 }
 
 /* FOOTER */
@@ -330,4 +357,148 @@ nav#main {
         padding-top:inherit;
         font-size:1em;
     }
+}
+
+/* Chart */
+
+// GLOBAL
+
+.chart-container {
+    width:50%;
+}
+
+.chart-item {
+  width: 100%;
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: top;
+  word-spacing: normal;
+
+  @include media(medium-up) {
+    .chart-group-2 &,
+    .chart-group-3 & {
+      width: calc(100% / 2 - 1.5rem);
+      margin: 0 0.75rem 1rem 0.75rem;
+      display: inline-block;
+    }
+  }
+  @include media(large-up) {
+    .chart-group-2 &,
+    .chart-group-3 & {
+      width: calc(100% - 1.5rem);
+      margin: 0 0.75rem 1rem 0.75rem;
+      display: inline-block;
+    }
+  }
+  @include media(xlarge-up) {
+    .chart-group-2 &,
+    .chart-group-3 & {
+      width: calc(100% / 2 - 1.5rem);
+      margin: 0 0.75rem 1rem 0.75rem;
+      display: inline-block;
+    }
+  }
+  @include media(xxlarge-up) {
+    .chart-group-3 & {
+      width: calc(100% / 3 - 1.5rem);
+      margin: 0 0.75rem 1rem 0.75rem;
+      display: inline-block;
+    }
+    .chart-group-2 & {
+      width: calc(100% / 2 - 1.5rem);
+      margin: 0 0.75rem 1rem 0.75rem;
+      display: inline-block;
+    }
+  }
+}
+
+.chart-title {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  font-weight: $base-font-bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.chart {
+  width: 100%;
+  display: block;
+}
+
+.chart .small-label {
+    fill: tint(#000000, 44%);
+}
+
+.chart .axis text {
+    font-size: 0.875rem;
+    fill: rgba(#000000, 0.64);
+    font-weight: bold;
+}
+
+.chart .axis-lines {
+    stroke: rgba(#000000, 0.12);
+    stroke-width: 1px;
+    fill: none;
+  }
+  
+
+.chart .x.axis .tick line {
+      display: none;
+}
+.chart .x.axis .domain {
+      display: none;
+}
+  
+}
+
+.lineChart, .barChart, .scatterplotChart {
+  min-height: 400px;
+}
+
+.flare {
+  min-height:300px;
+}
+.segment .flare text {
+  display:block;
+}
+
+.flare, .lineChart {
+  div.tooltip {   
+    position: absolute;           
+    text-align: left;                
+    padding: 0 10px 10px 10px;             
+    font: 15px sans-serif;        
+    background: white;   
+    border: 0px;      
+    border-radius: 8px;           
+    pointer-events: none;
+    dl dd {
+      float:left;
+    }
+    dl dt {
+      float:left;
+      clear:left;
+      margin-right:4px;
+    }
+  }
+}
+
+.lineChart .area {
+    fill: #ffffff;
+  }
+.lineChart .line0 {
+    stroke: #4f7184;
+    stroke-width: 5px;
+    fill: none;
+}
+.lineChart .line1 {
+    stroke: #ff6f4a;
+    stroke-width: 5px;
+    fill: none;
+}
+
+.lineChart .focus-circle {
+    fill: shade(#000000, 48%);
 }
