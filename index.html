@@ -50,7 +50,7 @@
                   <li><a href="#commodities">Commodities</a></li>
                   <li><a href="#spending">Compare spending</a></li>
                   <li><a href="#growth">Compare growth</a></li>
-                  <li><a href="#contact">About</a></li>
+                  <li><a href="#about">About</a></li>
                 </ul>
             </div>
           </nav>
@@ -95,6 +95,21 @@
                       source of revenue from extractive industries.</h2>
                     <div class="chart-container">
                       <div id="explore-line" class="lineChart"></div>
+                    </div>
+                </div>
+                <div class="clearer"> </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="growth">
+          <div class="inner">
+            <div class="content-box">
+              <div class="row">
+                <div class="col-md-12">
+                    <h2>GDP grew much faster than extractives revenue.</h2>
+                    <div class="chart-container">
+                      <div id="explore-line-growth" class="lineChart"></div>
                     </div>
                 </div>
                 <div class="clearer"> </div>
@@ -204,15 +219,31 @@
           
         <script>
           var lineOptions, thisLineChart;
-          var url = 'data/data.json';
+          var url = 'data/gheiti.json';
           d3.json(url, function(error, data) {
             lineOptions = {
-              "data": data
+              "data": data,
+              "max": 1024808288
             }
             thisLineChart = new lineChart("#explore-line", lineOptions)
           });
           window.onresize = function(){
             thisLineChart.update();
+          };
+        </script>
+          
+        <script>
+          var lineGDPOptions, thisGDPLineChart;
+          var url = 'data/gdp-extractives.json';
+          d3.json(url, function(error, data) {
+            lineGDPOptions = {
+              "data": data,
+              "max": 14,
+            }
+            thisGDPLineChart = new lineChart("#explore-line-growth", lineGDPOptions)
+          });
+          window.onresize = function(){
+            thisGDPLineChart.update();
           };
         </script>
     </body>
