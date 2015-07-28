@@ -23,23 +23,95 @@ var lineChart = function(el, data) {
   
   var parseDate = d3.time.format("%Y").parse;
   
+  // Might want to move data wrangling functions out of these charts...
+  this.getData = function(data) {
+    var _data = data.data.records;
+    
+    var years = {}
+    
+    this.drilldown = "commodity";
+    
+    var td = _data;
+    // Aggregate according to drilldown
+    if (this.drilldown != null) {
+      this.data = d3.nest()
+        .key(function(d) {
+          return d.commodity;
+        })
+        .key(function(d) {
+          return d.year;
+        })
+        .rollup(function(items){
+          return d3.sum(items, function(d) { 
+            return parseFloat(d.value)
+          });
+        })
+        .entries(_data)
+        .map(
+          function(d) {
+            obj = {};
+            obj["commodity"] = d.key;
+            obj["data"] = d.values.map(
+              function(v) {
+                vobj = {};
+                vobj["year"] = v.key;
+                vobj["date"] = parseDate(v.key);
+                vobj["value"] = v.values;
+                years[v.key] = true;
+                return vobj;
+              }
+            );
+            return obj;
+          }
+        );
+    }
+    
+    var td = this.data;
+    
+    for (i=0; i < td.length; i++) {
+      var seeny = td[i].data.map(
+        function(iv) {
+          return iv["year"];
+        }
+      );
+      $.map(years,
+        function(c, index) {
+          if (seeny.indexOf(index) < 0) {
+            vcobj = {}
+            vcobj["year"] = index;
+            vcobj["date"] = parseDate(index);
+            vcobj["value"] = "0.0"
+            td[i]["data"].push(vcobj);
+            }
+          }
+      );
+      td[i]["data"].sort(function (a,b) {
+        return a.year < b.year;
+      });
+    }
+    this.data = td;
+    
+    var _d = {}
+    _d["data"] = td;
+    _d["x"] = {
+      "domain": ["2004", "2005", "2006", "2007", "2008", "2009", "2010", 
+                 "2011", "2012", "2013"],
+      "label": "Time"
+    }
+    max = data.max;
+    console.log(max);
+    _d["y"] = {
+      "domain": [0, max],
+      "label": "Value"
+    }
+    console.log(_d);
+    return _d;
+  }
+  
   this.setData = function(data) {
-    var _data = data.data;
-    
-    // Add support for multiple series in future...
-    
-    this.data0 = _data.data[0].data;
-    this.data1 = _data.data[1].data;
-    
-    this.data0.forEach(function(d) {
-      d.date = parseDate(d.year);
-    });
-    this.data1.forEach(function(d) {
-      d.date = parseDate(d.year);
-    });
-    
-    this.xData = _data.x;
-    this.yData = _data.y;
+    this.data = this.getData(data);
+    this.xData = this.data.x;
+    this.yData = this.data.y;
     this.update();
   }
   
@@ -81,14 +153,14 @@ var lineChart = function(el, data) {
         .attr("class", "label")
         .attr("text-anchor", "middle");
 
-    dataCanvas.append("path")
-      .attr("class", "line line0")
-      .on("mouseover", mouseover);
+    _data = this.getData(data);
     
-    dataCanvas.append("path")
-      .attr("class", "line line1")
-      .on("mouseover", mouseover);;
-      
+    for(i=0; i < _data.data.length; i++) {      
+      dataCanvas.append("path")
+        .attr("class", "line line"+i)
+        .on("mouseover", mouseover);
+    }
+
     this.$el.append("div")
       .attr("class", "tooltip")
       .html('<dl><dt>Year</dt><dd class="year"></dd><dt>Value</dt><dd class="value"></dd></dl>');
@@ -158,9 +230,10 @@ var lineChart = function(el, data) {
         return dec(value) + suffix;
       });
 
+
+    // Need to calculate on the basis of >1 series dates?
     x.range([0, _width])
-      .domain(d3.extent(this.data0, function(d) { return d.date; }));
-      //.domain(this.data.map(function(d) { return d.date; }));
+      .domain(d3.extent(this.data.data[0].data, function(d) { return d.date; }));
 
     y.range([_height, 0])
       .domain(this.yData.domain);
@@ -172,23 +245,19 @@ var lineChart = function(el, data) {
       .attr('width', _width)
       .attr('height', _height);
       
-
-    var pathLine0 = dataCanvas.select(".line0")
-      .datum(this.data0)
-      .attr("d", line)
-      .on("mouseover", mouseover);
-      
-
-    var pathLine1 = dataCanvas.select(".line1")
-      .datum(this.data1)
-      .attr("d", line)
-      .on("mouseover", mouseover);
+    for(i=0; i < this.data.data.length; i++) {      
+      dataLine = dataCanvas.select(".line"+i)
+        .datum(this.data.data[i].data)
+        .attr("d", line)
+        .on("mouseover", mouseover);
+    }
       
     // Add focus circles
+    // Need to adjust this for multiple series
     dataCanvas.select(".focus-circles").selectAll(".focus-circle").remove();
   	var focuscircles = dataCanvas.select(".focus-circles")
       .selectAll("focus-circle")
-  		.data( this.data0 );
+  		.data( this.data.data[0].data );
       
     focuscircles
   		.enter()
