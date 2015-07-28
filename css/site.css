@@ -200,6 +200,11 @@ nav#main {
     width:100%;
     min-height:350px;
 }
+#explore-line-growth {
+    float: left;
+    width:100%;
+    min-height:350px;
+}
 #explore-pie {
     min-height:350px;
     width:100%;
