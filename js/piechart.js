@@ -49,10 +49,6 @@ var pieChart = function(el, data) {
       arc = d3.svg.arc()
           .outerRadius(radius - 10)
           .innerRadius(radius - 100);
-      
-      arcOver = d3.svg.arc()
-            .outerRadius(radius)
-            .innerRadius(radius - 90);
 
       this.$el.on("mouseleave", mouseleave);
 
@@ -170,8 +166,7 @@ var pieChart = function(el, data) {
           ;        
                  
       g
-          .on("mousemove",mouseover)
-          .on("click",mouseclick);
+          .on("mousemove",mouseover);
           
       g
           .transition().duration(750)
@@ -214,25 +209,6 @@ var pieChart = function(el, data) {
         .html("<h4>" + d.data[drilldown] + "</h4><small>Revenue: $ " + revenue + "</small>")  
         .style("left", (d3.event.pageX-el_left+20) + "px")     
         .style("top", (d3.event.pageY-el_top+20) + "px");
-  }
-  
-  function mouseclick(d) {
-      var seg = d3.select(this);
-      if (seg.classed("selected")) {      
-          seg
-              .classed("selected", false)
-              .transition()
-              .duration(200)
-              .attr("d", arc)
-              .style("stroke-width", 1);
-      } else {      
-          seg.classed("selected", true)
-             .transition()
-             .duration(200)
-             .attr("d", arcOver)
-             .style("stroke", "white")
-             .style("stroke-width", 1);          
-      }
   }
 
   function mouseleave(d) {
