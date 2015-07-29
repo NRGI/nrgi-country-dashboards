@@ -193,14 +193,6 @@ var pieChart = function(el, data) {
         .attr("data-year", function(d) {return d;})
         .text(function(d) {return d;});
         
-      pieul.transition()
-        .attr("class", function(d) {
-          if (cuts["year"] == d) {
-            return "year-li active";
-          }
-          return "year-li";
-        });
-
   }
   
   function mouseover(d) {
