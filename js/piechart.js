@@ -4,7 +4,7 @@ var pieChart = function(el, data) {
   var el_top = $(el).offset().top;
   var el_left = $(el).offset().left;
   
-  var _width, _height, svg, pie, arc, arcOver, tooltip, years, yearsdiv, drilldown, cuts;
+  var _width, _height, svg, pie, arc, tooltip, yearsdiv, drilldown, cuts;
   var margin = {top: 10, right: 32, bottom: 48, left: 32};
 
 
