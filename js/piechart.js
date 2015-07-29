@@ -133,7 +133,7 @@ var pieChart = function(el, data) {
       }
       this.data = td;
       
-      years = $.map(td,
+      this.years = $.map(td,
         function(c, index) {
           return c["year"];
         })
@@ -181,7 +181,7 @@ var pieChart = function(el, data) {
         
       var pieul = d3.select(".pie-years ul")
         .selectAll(".year-li")
-        .data(years)
+        .data(this.years)
         .enter()
         .append("li")
         .attr("class", function(d) {
