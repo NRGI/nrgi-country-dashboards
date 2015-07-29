@@ -234,6 +234,14 @@ nav#main {
     display:block;
     font-size:14px;
     box-shadow: 1px 1px 2px #666666;
+    cursor:pointer;
+    -webkit-transition: all .2s ease-in-out;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    -webkit-transition-delay: initial;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 #explore-pie .pie-years ul li.active {
     background-color:#666666;
