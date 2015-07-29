@@ -213,6 +213,8 @@
             var year = $(this).attr("data-year");
             pieOptions["cuts"]["year"] = year;
             thisPieChart.setData(pieOptions);
+            $(".pie-years li").removeClass("active");
+            $(this).addClass("active");
           });
         </script>
           
