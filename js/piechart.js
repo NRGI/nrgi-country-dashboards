@@ -172,8 +172,6 @@ var pieChart = function(el, data) {
           .transition().duration(750)
           .attrTween("d", arcTween);
 
-      // FIXME: generate based on data
-        
       var pieul = d3.select(".pie-years ul")
         .selectAll(".year-li")
         .data(this.years)
