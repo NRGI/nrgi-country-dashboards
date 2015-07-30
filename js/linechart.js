@@ -99,12 +99,10 @@ var lineChart = function(el, data) {
       "label": "Time"
     }
     max = data.max;
-    console.log(max);
     _d["y"] = {
       "domain": [0, max],
       "label": "Value"
     }
-    console.log(_d);
     return _d;
   }
   
@@ -116,7 +114,6 @@ var lineChart = function(el, data) {
   }
   
   this._init = function() {
-    console.log("init");
     this._calcSize();
     svg = this.$el.append('svg')
       .attr('class', 'chart');      
@@ -171,7 +168,6 @@ var lineChart = function(el, data) {
     this.setData(data);
   };
   this.update = function() {
-    console.log("update");
     this._calcSize();
     var _this = this;
 
