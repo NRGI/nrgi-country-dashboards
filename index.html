@@ -194,11 +194,13 @@
           });
         </script>
 
+        <script src="js/data.js"></script>
+        <script src="js/years.js"></script>
         <script src="js/piechart.js"></script>
         <script src="js/linechart.js"></script>
           
         <script>
-          var pieOptions, thisPieChart;
+          var pieOptions, thisYearWidget, thisPieChart, pieD;
           d3.json("data/gheiti.json", function(error, data) {
             pieOptions = {
               "records": data["records"],
@@ -207,12 +209,15 @@
                 "year": "2013"
               }
             }
-            thisPieChart = new pieChart("#explore-pie", pieOptions);
+            pieD = pieData(pieOptions);
+            thisPieChart = new pieChart("#explore-pie", pieD);
+            thisYearWidget = new yearWidget("#explore-pie", pieD);
           });
           $(document).on("click", ".pie-years li", function(){
             var year = $(this).attr("data-year");
             pieOptions["cuts"]["year"] = year;
-            thisPieChart.setData(pieOptions);
+            pieD = pieData(pieOptions);
+            thisPieChart.setData(pieD);
             $(".pie-years li").removeClass("active");
             $(this).addClass("active");
           });
