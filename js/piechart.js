@@ -33,11 +33,6 @@ var pieChart = function(el, data) {
           .attr("class", "tooltip")
           .style("opacity", 0);
 
-      // FIXME: generalise this to show any dimension
-      yearsdiv = this.$el.append("div")
-          .attr("class", "pie-years")
-          .append("ul");
-
       // Make pie only 180 rather than 360 degrees, and rotate 90 deg CCW
       pie = d3.layout.pie()
           .value(function(d) { return +d.value; })
@@ -89,20 +84,6 @@ var pieChart = function(el, data) {
       g
           .transition().duration(750)
           .attrTween("d", arcTween);
-
-      var pieul = d3.select(".pie-years ul")
-        .selectAll(".year-li")
-        .data(this.years)
-        .enter()
-        .append("li")
-        .attr("class", function(d) {
-          if (cuts["year"] == d) {
-            return "year-li active";
-          }
-          return "year-li";
-        })
-        .attr("data-year", function(d) {return d;})
-        .text(function(d) {return d;});
         
   }
   
