@@ -81,6 +81,7 @@
                     contributor.</h2>
                     <div class="chart-container">
                       <div id="explore-pie"></div>
+                      <div id="explore-pie-companies"></div>
                     </div>
                 </div>
               </div>
@@ -177,6 +178,7 @@
 
         <script src="js/data.js"></script>
         <script src="js/years.js"></script>
+        <script src="js/companies.js"></script>
         <script src="js/piechart.js"></script>
         <script src="js/linechart.js"></script>
           
@@ -191,14 +193,20 @@
               }
             }
             pieD = pieData(pieOptions);
+            pieC = pieD;
+            pieD.data = pieD.commodities;
             thisPieChart = new pieChart("#explore-pie", pieD);
             thisYearWidget = new yearWidget("#explore-pie", pieD);
+            thisCompaniesWidget = new companiesWidget(
+              "#explore-pie-companies", pieD);
           });
           $(document).on("click", ".pie-years li", function(){
             var year = $(this).attr("data-year");
             pieOptions["cuts"]["year"] = year;
             pieD = pieData(pieOptions);
+            pieD.data = pieD.commodities;
             thisPieChart.setData(pieD);
+            thisCompaniesWidget.setData(pieD);
             $(".pie-years li").removeClass("active");
             $(this).addClass("active");
           });
@@ -215,9 +223,6 @@
             }
             thisLineChart = new lineChart("#explore-line", lineOptions)
           });
-          window.onresize = function(){
-            thisLineChart.update();
-          };
         </script>
           
         <script>
@@ -231,6 +236,8 @@
             thisGDPLineChart = new lineChart("#explore-line-growth", lineGDPOptions)
           });
           window.onresize = function(){
+            thisPieChart.update();
+            thisLineChart.update();
             thisGDPLineChart.update();
           };
         </script>
