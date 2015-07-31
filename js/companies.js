@@ -5,7 +5,6 @@ companiesWidget = function(el, data) {
     
     this.setData = function(data) {
       this.companies = data.companies;
-      console.log(this.companies);
       this.update();
     }
     
@@ -34,10 +33,12 @@ companiesWidget = function(el, data) {
         .attr("class", "company-tr");
       
       companiestr
-        .html(function(d) {return "<td>" + d.name + "</td>" + "<td>" + d.value + "</td>";});
+        .html(function(d) {return "<td>" + d.name + "</td>" + "<td>" + dec(d.value) + "</td>";});
         
     }
-  
+
+    var dec = d3.format(',.2f');
+
     this._init();
     this.setData(data);
 }
