@@ -191,6 +191,9 @@ nav#main {
 #content .content-box {
     padding: 20px 60px 60px;
 }
+.table {
+    font-size:0.7em;
+}
 
 /* CHARTS */
 #explorer {
@@ -208,9 +211,12 @@ nav#main {
 }
 #explore-pie {
     min-height:350px;
-    width:100%;
+    width:60%;
     text-align: center;
     float: left;
+}
+#explore-pie-companies {
+    width:40%;
 }
 #explore-pie svg {
     display:inline-block;
