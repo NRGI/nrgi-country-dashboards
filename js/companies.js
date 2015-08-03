@@ -16,7 +16,7 @@ companiesWidget = function(el, data) {
           .attr("class", "table");
         var thead = table.append("thead");
         thead
-          .append("th").text("Name");
+          .append("th").text("Company name");
         thead
           .append("th").text("Revenue");
         
@@ -33,7 +33,22 @@ companiesWidget = function(el, data) {
         .attr("class", "company-tr");
       
       companiestr
-        .html(function(d) {return "<td>" + d.name + "</td>" + "<td>" + dec(d.value) + "</td>";});
+        .html(function(d) {return '<td class="company-name"></td><td class="company-revenue"></td><td class="company-commodity"></td>'});
+
+      companiestr
+        .select(".company-name")
+        .text(function(d) {return d.name });
+
+      companiestr
+        .select(".company-revenue")
+        .text(function(d) {return dec(d.value) });
+
+      companiestr
+        .select(".company-commodity")
+        .html(function(d) {
+          companiesbadges = $.map(d.commodities, function(v) {
+            return '<span class="badge ' + v.key + '">' + v.key + '</span>' });
+          return companiesbadges.join("");});
         
     }
 
