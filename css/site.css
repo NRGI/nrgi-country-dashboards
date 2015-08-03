@@ -262,7 +262,7 @@ nav#main {
     padding: 0px;
     display: inline-block;
 }
-#explore-pie .segment {
+#explore-pie .segment, #explore-pie rect {
     cursor: pointer;
     fill: #00b48d;
 }
@@ -271,7 +271,7 @@ nav#main {
     border-radius: 0;
     display: block;
 }
-#explore-pie .segment.Oil {
+#explore-pie .segment.Oil, #explore-pie rect.Oil {
     fill: #222222;
 }
 #explore-pie-companies .badge.Oil {
@@ -280,7 +280,7 @@ nav#main {
 #explore-pie .segment.Bauxite {
     fill: #F7D08A;
 }
-#explore-pie .segment.Gold {
+#explore-pie .segment.Gold, #explore-pie rect.Gold {
     fill: #f68b1f;
 }
 #explore-pie-companies .badge.Gold {
