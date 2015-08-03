@@ -44,6 +44,24 @@ var pieChart = function(el, data) {
       arc = d3.svg.arc()
           .outerRadius(radius - 10)
           .innerRadius(radius - 100);
+      var legend = svg.selectAll(".legend")
+          .data(["Oil", "Gold", "Other"])
+          .enter().append("g")
+          .attr("class", "legend")
+          .attr("transform", function (d, i) { return "translate(-600," + (-100 + i * 20) + ")"; });
+
+      legend.append("rect")
+          .attr("x", width - 18)
+          .attr("width", 18)
+          .attr("height", 18)
+          .attr("class", function(d) { return d });
+
+      legend.append("text")
+          .attr("x", width - 24)
+          .attr("y", 9)
+          .attr("dy", ".35em")
+          .style("text-anchor", "end")
+          .text(function (d) { return d; });
 
       this.$el.on("mouseleave", mouseleave);
 
