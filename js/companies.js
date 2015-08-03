@@ -19,6 +19,8 @@ companiesWidget = function(el, data) {
           .append("th").text("Company name");
         thead
           .append("th").text("Revenue");
+        thead
+          .append("th").text("Commodities");
         
         tbody = table.append("tbody");      
     }
