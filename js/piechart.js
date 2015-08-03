@@ -75,16 +75,17 @@ var pieChart = function(el, data) {
   	      .style("fill-rule", "evenodd")
           .attr("class", "arc segment")
           .each(function(d) { this._current = d; })
-          .attr("class", function(d) { return "arc segment " + d.data[drilldown]; })
-          ;        
-                 
+          .attr("class", function(d) {
+            return "arc segment " + d.data[drilldown];
+          });
+
       g
           .on("mousemove",mouseover);
-          
+
       g
           .transition().duration(750)
           .attrTween("d", arcTween);
-        
+
   }
   
   function mouseover(d) {
