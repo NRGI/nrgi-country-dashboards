@@ -24,6 +24,7 @@ pieData = function(data) {
       })
       .rollup(function(items){
         robj = {}
+        // Create commodities: roll up sum of revenue under commodity name
         robj["commodities"] = d3.nest()
           .key(function(d) {
             return d[drilldown];
@@ -33,19 +34,32 @@ pieData = function(data) {
               return parseFloat(d.value)
             });
           }).entries(items);
+        // Create companies: roll up sum of revenue under company name
         robj["companies"] = d3.nest()
           .key(function(d) {
             return d.name;
           })
           .rollup(function(items){
-            return d3.sum(items, function(d) {
+            crobj = {}
+            crobj["commodities"] = d3.nest()
+              .key(function(d) {
+                return d[drilldown];
+              })
+              .rollup(function(items){
+                return d3.sum(items, function(d) {
+                  return parseFloat(d.value)
+                });
+              }).entries(items);
+            crobj["sum"] = d3.sum(items, function(d) {
                       return parseFloat(d.value)
                     });
+            return crobj;
           })
           .entries(items);
         return robj;
       })
       .entries(this.data)
+      // Rename and sort companies
       .map(
         function(d) {
           obj = {};
@@ -63,7 +77,8 @@ pieData = function(data) {
             function(v) {
               vobj = {};
               vobj["name"] = v.key;
-              vobj["value"] = v.values;
+              vobj["value"] = v.values.sum;
+              vobj["commodities"] = v.values.commodities;
               return vobj;
             }
           ).sort(function (a,b) {
@@ -73,6 +88,7 @@ pieData = function(data) {
         }
       );
     var td = this.data;
+    // Ensure all commodities exist for each year or are zero.
     for (i=0; i < td.length; i++) {
       var seenc = td[i].commodities.map(
         function(iv) {
@@ -95,6 +111,7 @@ pieData = function(data) {
     }
     this.data = td;
     
+    // Sort by year descending
     this.years = $.map(td,
       function(c, index) {
         return c["year"];
@@ -103,6 +120,7 @@ pieData = function(data) {
         return a<b;
       });
     
+    // Filter for relevant year
     if (this.cuts != null) {
         this.data = this.data.filter(filterByCut)[0];
     }
