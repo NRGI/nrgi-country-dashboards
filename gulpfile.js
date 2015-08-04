@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var ghPages = require('gulp-gh-pages');
 
 var b = watchify(browserify({
   entries: ['./app/js/main.js', './app/js/data.js'],
@@ -23,6 +24,11 @@ gulp.task('styles', function() {
     .pipe(reload({ stream:true }));
 });
 
+gulp.task('gh-deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
 // Build task
 gulp.task('build', ['copy_files', 'styles']);
 
@@ -37,3 +43,5 @@ gulp.task('serve', ['styles'], function() {
   gulp.watch(['*.html', 'scss/**/*.scss', 'js/**/*.js'], 
              ['build'], reload);
 });
+
+gulp.task('deploy', ['build', 'gh-deploy']);
