@@ -1,22 +1,39 @@
+var watchify = require('watchify');
+var browserify = require('browserify');
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
-gulp.task('sass', function() {
-  return sass('scss/styles.scss')
-    .pipe(gulp.dest('css'))
+var b = watchify(browserify({
+  entries: ['./app/js/main.js', './app/js/data.js'],
+  debug: true,
+}));
+
+// Copy files
+gulp.task('copy_files', function() {
+  return gulp.src(['app/**/*', '!app/css/**', '!app/scss/**'])
+    .pipe(gulp.dest('dist'));
+});
+
+// Generate SASS from CSS
+gulp.task('styles', function() {
+  return sass('app/scss/styles.scss')
+    .pipe(gulp.dest('dist/css'))
     .pipe(reload({ stream:true }));
 });
 
-// watch files for changes and reload
-gulp.task('serve', ['sass'], function() {
+// Build task
+gulp.task('build', ['copy_files', 'styles']);
+
+// Watch files for changes and reload
+gulp.task('serve', ['styles'], function() {
   browserSync({
     server: {
-      baseDir: ''
+      baseDir: './dist'
     }
   });
 
   gulp.watch(['*.html', 'scss/**/*.scss', 'js/**/*.js'], 
-             ['sass'], reload);
+             ['build'], reload);
 });
