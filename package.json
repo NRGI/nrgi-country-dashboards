@@ -1,0 +1,36 @@
+{
+  "name": "nrgi-country-dashboards",
+  "version": "1.0.0",
+  "description": "dashboards",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "del": "^1.2.0",
+    "gulp-gh-pages": "^0.5.2",
+    "browserify": "^11.0.1",
+    "vinyl-buffer": "^1.0.0",
+    "gulp-util": "^3.0.6",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-ruby-sass": "^1.0.5",
+    "watchify": "^3.3.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NRGI/nrgi-country-dashboards.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/NRGI/nrgi-country-dashboards/issues"
+  },
+  "homepage": "https://github.com/NRGI/nrgi-country-dashboards"
+}
