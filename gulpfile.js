@@ -6,11 +6,6 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var ghPages = require('gulp-gh-pages');
 
-var b = watchify(browserify({
-  entries: ['./app/js/main.js', './app/js/data.js'],
-  debug: true,
-}));
-
 // Copy files
 gulp.task('copy_files', function() {
   return gulp.src(['app/**/*', '!app/css/**', '!app/scss/**'])
@@ -40,7 +35,7 @@ gulp.task('serve', ['styles'], function() {
     }
   });
 
-  gulp.watch(['*.html', 'scss/**/*.scss', 'js/**/*.js'], 
+  gulp.watch(['app/*.html', 'app/scss/**/*.scss', 'app/js/**/*.js'],
              ['build'], reload);
 });
 
