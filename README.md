@@ -1,2 +1,0 @@
-# nrgi-country-dashboards
-dashboards
