@@ -6,6 +6,10 @@
     cd nrgi-country-dashboards
     npm install
 
+# Running
+
+You can choose one of the following commands to serve a live version of the site, build static site files, or deploy your code to Github pages.
+
 1. Run in browser
 
      ```
