@@ -1,0 +1,442 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+/* BASIC PAGE STYLES */
+body {
+  position: relative;
+  font-family: "Open Sans";
+  font-size: 1.5em;
+}
+h1, h2, h3, h4 {
+  text-shadow: 1px 1px 10px #ffffff;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+h1 {
+  font-size: 6.5em;
+  margin: 0.2em 0;
+}
+
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.7em;
+}
+h4 {
+  font-size: 1.3em;
+  font-style: italic;
+}
+p {
+  margin-bottom: 20px;
+}
+.transitioner {
+  -webkit-transition: all .2s ease-in-out;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-delay: initial;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+a {
+  @extend .transitioner;
+}
+blockquote {
+  border-left: 5px solid #365e93;
+  font-size: 1.2em;
+  margin-left: 15px;
+}
+/* NAVIGATION */
+nav#main {
+  position: fixed;
+  padding: 0px 10px 10px 10px;
+  top: 0px;
+  z-index: 50;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  border-radius: 0;
+  font-family: "Open Sans Condensed", sans-serif;
+  
+  ul {
+    margin-top: 0;
+  }
+  li {
+    margin-left: 25px;
+    background-color: $nav-button-colour;
+    float: left;
+    font-size: 1em;
+    list-style-type: none;
+    @extend .transitioner;
+
+    a {
+      color: #ffffff;
+      padding: 4px 20px;
+      display: block;
+      box-shadow: 1px 1px 5px #666666;
+    }
+    a:hover, a:focus, &.active a {
+      background-color: #ffffff;
+      color: $nav-button-colour;
+    }
+  }
+  &.brand-shrink {
+    .navbar-brand {
+      line-height: 1em;
+      font-size: 1.7em;
+    }
+    li {
+      font-size: 0.8em;
+    }
+  }
+  :after {
+    clear: none;
+  }
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:focus, 
+.navbar-default .navbar-brand:hover {
+  color: #000000;
+  font-size: 1.9em;
+  text-shadow: 1px 1px 2px #ffffff;
+  padding: 10px;
+  float: none;
+  line-height: 1.5em;
+  width: 300px;
+  @extend .transitioner;
+}
+.navbar-default {
+  background: none;
+  border: none;
+}
+.navbar-toggle {
+  background-color: white;
+}
+
+/* Article-specific styling */ 
+article#home {
+  border-left: 10px solid $colour-home;
+}
+article#commodities {
+  border-left: 10px solid $colour-commodities;
+}
+article#time {
+  border-left: 10px solid $colour-time;
+}
+
+/* HEADER */
+.masthead {
+  background-color: rgb(255,255,255);
+  background-color: rgba(255,255,255,0.1);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,startColorStr="#1AFFFFFF",endColorStr="#1AFFFFFF");
+  -ms-filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,startColorStr="#1AFFFFFF",endColorStr="#1AFFFFFF");
+  margin: 150px 0px 150px 0px;
+  padding: 30px;
+  color: #222222;
+  text-align: right;
+}
+.masthead h1 {
+  padding: 5px 15px 0px 15px;
+  font-weight: bold;
+  color: $colour-home;
+  text-shadow: 1px 1px 2px #000000;
+}
+.masthead h2 {
+  color: $colour-home;
+  text-shadow: 1px 1px 2px #666666;
+}
+.header-box {
+  max-width: 1000px;
+}
+/* CONTENT */
+.content-box {
+  margin-top: 100px;
+  color: #000000;
+  padding: 10px;
+}
+#content {
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  article {
+    overflow: hidden;
+    display: block;
+    .inner {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  .content-box {
+    padding: 20px 60px 60px;
+  }
+}
+#main-content article {
+  min-height: 600px;
+}
+.table {
+  font-size: 0.7em;
+}
+
+/* CHARTS */
+#explorer {
+  clear: both;
+}
+#explore-line {
+  float: left;
+  width: 100%;
+  min-height: 350px;
+}
+#explore-line-growth {
+  float: left;
+  width: 100%;
+  min-height: 350px;
+}
+#explore-pie {
+  min-height: 350px;
+  width: 60%;
+  text-align: center;
+  float: left;
+  svg {
+    display: inline-block;
+  }
+  .tooltip {
+    position: absolute;
+    background-color: #ffffff;
+    padding: 0px 5px;
+    border-radius: 3px;
+  }
+  .pie-years {
+    text-align: center;
+    width: 100%;
+    ul {
+      padding: 0px;
+      display: inline-block;
+    }
+    ul li {
+      list-style-type: none;
+      float: left;
+      margin-left: 7px;
+      background-color: #eeeeee;
+      color: #000000;
+      padding: 4px 10px;
+      display: block;
+      font-size: 14px;
+      box-shadow: 1px 1px 2px #666666;
+      cursor: pointer;
+      @extend .transitioner;
+      &.active {
+        background-color: #666666;
+        color: #ffffff;
+      }
+    }
+  }
+}
+#explore-pie-companies {
+  width: 40%;
+  box-shadow: 0 0 6px #666666;
+  max-height: 350px;
+  overflow: scroll;
+  padding: 5px;
+  .badge {
+    background-color: $colour-commodity-default;
+    border-radius: 0;
+    display: block;
+    &.Oil {
+      background-color: $colour-oil;
+    }
+    &.Gold {
+      background-color: $colour-gold;
+    }
+  }
+}
+#explore-pie {
+  .segment, rect {
+    fill: $colour-commodity-default;
+    &.Oil {
+      fill: $colour-oil;
+    }
+    &.Gold {
+      fill: $colour-gold;
+    }
+  }
+}
+/* FOOTER */
+
+.footer-box {
+  background-color: #222222;
+  padding: 10px;
+  clear: both;
+  color: #ffffff;
+  a {
+    color: #ffffff;
+    border-bottom: 1px dashed;
+    &:hover {
+      border-bottom: none;
+      text-decoration: none;
+      color: #cccccc;
+    }
+  }
+  .footer-right {
+      font-size: 0.6em;
+  }
+}
+
+/* HELPERS */
+.clearer {
+  clear: both;
+}
+
+/* STYLING FOR MOBILE */
+
+@media (max-width: 768px) {
+    h2, .footer h2{font-size: 1.8em;}
+    body{font-size: 1.5em;}
+    .thumbnail{
+        width: 300px;}
+    #home .inner div {
+        display: none;
+    }
+    .navbar-default {
+        background: #365e93;
+    }
+    .navbar-collapse {
+        background: #ffffff;
+    }
+    .navbar-collapse ul li,
+    .navbar-collapse ul.nav-right li a  {
+        float: inherit;
+        background: #ffffff;
+    }
+    .navbar-collapse ul li a,
+    .navbar-collapse ul.nav-right li a {
+        box-shadow: inherit;
+        color: #666666;
+    }
+    .navbar-collapse li a:hover, .navbar-collapse li a:focus, 
+    .navbar-collapse li.active a,
+    ul.nav-right li a:hover, 
+    ul.nav-right a:focus {
+        color: #365e93;
+    }
+    .navbar.collapse ul.pull-right {
+        float: inherit;
+    }
+    .navbar-header {
+        padding: 10px;
+    }
+    nav#main {
+        top: 0px;
+    }
+    #content {
+        margin-top: 40px;
+    }
+    #content .content-box {
+        padding: 20px;
+        margin-top: 0px;
+    }
+    .footer-right {
+        padding-top: inherit;
+        font-size: 1em;
+    }
+}
+
+/* Chart */
+
+// GLOBAL
+
+.chart-item {
+  width: 100%;
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: top;
+  word-spacing: normal;
+}
+
+.chart {
+  width: 100%;
+  display: block;
+}
+
+.chart .small-label {
+    fill: tint(#000000, 44%);
+}
+
+.chart .axis text {
+    font-size: 0.875rem;
+    fill: rgba(#000000, 0.64);
+    font-weight: bold;
+}
+
+.chart .axis-lines {
+    stroke: rgba(#000000, 0.12);
+    stroke-width: 1px;
+    fill: none;
+  }
+  
+
+.chart .x.axis {
+  .tick line {
+      display: none;
+  }
+  .domain {
+      display: none;
+  }
+}
+
+.lineChart, .barChart, .scatterplotChart {
+  min-height: 400px;
+}
+
+.flare {
+  min-height:300px;
+}
+.segment .flare text {
+  display:block;
+}
+
+.flare, .lineChart {
+  div.tooltip {   
+    position: absolute;           
+    text-align: left;                
+    padding: 0 10px 10px 10px;             
+    font: 15px sans-serif;        
+    background: white;   
+    border: 0px;      
+    border-radius: 8px;           
+    pointer-events: none;
+    dl dd {
+      float:left;
+    }
+    dl dt {
+      float:left;
+      clear:left;
+      margin-right:4px;
+    }
+  }
+}
+
+.lineChart .area {
+    fill: #ffffff;
+  }
+  
+.lineChart .line {
+    stroke: #00b48d;
+    stroke-width: 5px;
+    fill: none;
+}
+.lineChart .line0 {
+    stroke: #ff6f4a;
+    stroke-width: 5px;
+    fill: none;
+}
+.lineChart .line4 {
+    stroke: #000000;
+    stroke-width: 5px;
+    fill: none;
+}
+
+.lineChart .focus-circle {
+    fill: shade(#000000, 48%);
+}
