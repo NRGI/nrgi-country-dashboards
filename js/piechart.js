@@ -17,7 +17,7 @@ var pieChart = function(el, data) {
   this._calcSize();
   var width = _width,
       height = _height,
-      radius = Math.min(width, height),
+      radius = Math.min(width/2, height)
       color = d3.scale.category20();
 
   this._init = function() {
@@ -48,7 +48,11 @@ var pieChart = function(el, data) {
           .data(["Oil", "Gold", "Other"])
           .enter().append("g")
           .attr("class", "legend")
-          .attr("transform", function (d, i) { return "translate(-600," + (-100 + i * 20) + ")"; });
+          .attr("transform", function (d, i) { 
+            var lw = width * 1.4;
+            lw -=50;
+            return "translate(-" + lw + "," + (-height + 20 + i * 20) + ")"; 
+          });
 
       legend.append("rect")
           .attr("x", width - 18)
