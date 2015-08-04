@@ -17,7 +17,7 @@ var pieChart = function(el, data) {
   this._calcSize();
   var width = _width,
       height = _height,
-      radius = Math.min(width, height),
+      radius = Math.min(width/2, height)
       color = d3.scale.category20();
 
   this._init = function() {
