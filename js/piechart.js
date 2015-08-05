@@ -4,7 +4,7 @@ var pieChart = function(el, data) {
   var el_top = $(el).offset().top;
   var el_left = $(el).offset().left;
   
-  var _width, _height, svg, pie, arc, tooltip, yearsdiv, drilldown, cuts, legend;
+  var _width, _height, svg, pie, arc, drilldown, cuts, legend, tip;
   var margin = {top: 10, right: 32, bottom: 48, left: 32};
 
 
@@ -30,10 +30,12 @@ var pieChart = function(el, data) {
           .append("g")
           .attr("transform", "translate(" + width / 2 + "," + height + ")");
 
-      // Add tooltip div
-      tooltip = this.$el.append("div")
-          .attr("class", "tooltip")
-          .style("opacity", 0);
+      tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+          return "<strong>" + d.data[drilldown] + "</strong><br /><small>Revenue: $ " + dec(d.data.value) + "</small>";
+        });
 
       // Make pie only 180 rather than 360 degrees, and rotate 90 deg CCW
       pie = d3.layout.pie()
@@ -47,6 +49,7 @@ var pieChart = function(el, data) {
           .outerRadius(radius - 10)
           .innerRadius(radius - 100);
 
+      // Create legend
       legend = datacanvas.selectAll(".legend")
           .data(["Oil", "Gold", "Other"])
           .enter().append("g")
@@ -57,7 +60,6 @@ var pieChart = function(el, data) {
             lh = -height + 20 + (i * 20);
             return "translate(-" + lw + "," + lh + ")";
           });
-
       legend.append("rect")
           .attr("width", 18)
           .attr("height", 18);
@@ -67,6 +69,7 @@ var pieChart = function(el, data) {
           .style("text-anchor", "end");
 
       this.$el.on("mouseleave", mouseleave);
+      svg.call(tip);
 
       this.setData(data);
   }
@@ -93,8 +96,8 @@ var pieChart = function(el, data) {
 
       // Update arcs
       arc
-          .outerRadius(radius - 10)
-          .innerRadius(radius - 100);
+        .outerRadius(radius - 10)
+        .innerRadius(radius - 100);
       datacanvas.selectAll(".arc")
         .attr("d", arc);
 
@@ -107,11 +110,9 @@ var pieChart = function(el, data) {
           lh = -height + 20 + (i * 20);
           return "translate(-" + lw + "," + lh + ")";
         });
-
       legend.select("rect")
           .attr("x", width - 18)
           .attr("class", function(d) { return d });
-
       legend.select("text")
           .attr("x", width - 24)
           .text(function (d) { return d; });
@@ -120,6 +121,7 @@ var pieChart = function(el, data) {
           ? function() { return 1; }
           : function(d) { return d.value; };
 
+      // Create arcs
       drilldown = this.drilldown;
 
       var g = datacanvas.selectAll(".arc")
@@ -135,45 +137,30 @@ var pieChart = function(el, data) {
           .each(function(d) { this._current = d; })
           .attr("class", function(d) {
             return "arc segment " + d.data[drilldown];
-          });
-
-      g
-          .on("mousemove",mouseover);
+          })
+          .on("mouseover", mouseover)
+          .on("mouseout", mouseleave);
 
       g
           .transition().duration(750)
           .attrTween("d", arcTween);
-
   }
   
   function mouseover(d) {
+    tip.show(d);
     var seg = d3.select(this);
-      seg
-        .transition()
-        .duration(200)
-        .style("opacity", 0.5);
-      seg
-        .on("mouseleave", mouseleave);
-          
-      var revenue = dec(d.value);
-
-      d3.select('.tooltip')
-        .transition()
-        .duration(200)
-        .style("opacity", .8);
-      d3.select('.tooltip')
-        .html("<h4>" + d.data[drilldown] + "</h4><small>Revenue: $ " + revenue + "</small>")  
-        .style("left", (d3.event.pageX-el_left+20) + "px")     
-        .style("top", (d3.event.pageY-el_top+20) + "px");
+    seg
+      .transition()
+      .duration(200)
+      .style("opacity", 0.5);
   }
 
   function mouseleave(d) {
-      d3.selectAll(".segment")
-        .transition()
-        .duration(200)
-        .style("opacity", 1);
-      d3.select(".tooltip")
-        .style("opacity", 0);
+    tip.hide();
+    d3.selectAll(".segment")
+      .transition()
+      .duration(200)
+      .style("opacity", 1);
   }
   
   function arcTween(a) {
