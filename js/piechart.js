@@ -68,7 +68,6 @@ var pieChart = function(el, data) {
           .attr("dy", ".35em")
           .style("text-anchor", "end");
 
-      this.$el.on("mouseleave", mouseleave);
       svg.call(tip);
 
       this.setData(data);
