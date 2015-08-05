@@ -19,6 +19,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="http://underscorejs.org/underscore-min.js"></script>
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="js/vendor/d3.v3.min.js"></script>
@@ -233,11 +234,12 @@
             }
             thisGDPLineChart = new lineChart("#explore-line-growth", lineGDPOptions)
           });
-          window.onresize = function(){
-            thisPieChart.update();
-            thisLineChart.update();
-            thisGDPLineChart.update();
-          };
+          var resizeCharts = _.debounce(function() {
+              thisPieChart.update();
+              thisLineChart.update();
+              thisGDPLineChart.update();
+          }, 300);
+          $(window).resize(resizeCharts);
         </script>
     </body>
 </html>
