@@ -82,7 +82,7 @@ pieData = function(data) {
               return vobj;
             }
           ).sort(function (a,b) {
-              return a.value<b.value;
+              return b.value - a.value;
             });
           return obj;
         }
@@ -106,7 +106,9 @@ pieData = function(data) {
           }
       );
       td[i]["commodities"].sort(function (a,b) {
-        return a.commodity < b.commodity;
+        if (a.commodity < b.commodity) return -1;
+        if (a.commodity > b.commodity) return 1;
+        return 0;
       });
     }
     this.data = td;
@@ -117,7 +119,7 @@ pieData = function(data) {
         return c["year"];
       })
       .sort(function (a,b) {
-        return a<b;
+        return b - a;
       });
     
     // Filter for relevant year
