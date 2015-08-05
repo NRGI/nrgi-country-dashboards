@@ -86,7 +86,7 @@ var lineChart = function(el, data) {
           }
       );
       td[i]["data"].sort(function (a,b) {
-        return a.year < b.year;
+        return parseFloat(b.year) - parseFloat(a.year);
       });
     }
     this.data = td;
