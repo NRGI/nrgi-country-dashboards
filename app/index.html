@@ -195,6 +195,7 @@
         <script src="js/companies.js"></script>
         <script src="js/piechart.js"></script>
         <script src="js/linechart.js"></script>
+        <script src="js/map.js"></script>
           
         <script>
           var pieOptions, thisYearWidget, thisPieChart, pieD;
@@ -256,5 +257,13 @@
           }, 300);
           $(window).resize(resizeCharts);
         </script>
+
+        <link type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        <script type="text/javascript">
+        $.getJSON("data/ghana-resource-volumes.json", function(data) {
+          thisMap = new nrgiMap("", data);
+        });
+    </script>
     </body>
 </html>
