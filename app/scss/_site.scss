@@ -124,6 +124,9 @@ article#commodities {
 article#time {
   border-left: 10px solid $colour-time;
 }
+article#production {
+  border-left: 10px solid $col-12;
+}
 
 /* HEADER */
 .masthead {
@@ -179,6 +182,25 @@ article#time {
 }
 
 /* CHARTS */
+.map {
+    z-index: 0;
+}
+.globalMap {
+    height: 450px;
+    g .leaflet-clickable {
+      stroke: $colour-commodity-default;
+      fill: $colour-commodity-default;
+    }
+    g .leaflet-clickable.Gold {
+      stroke: $colour-gold;
+      fill: $colour-gold;
+    }
+    g .leaflet-clickable.Oil {
+      stroke: $colour-oil;
+      fill: $colour-oil;
+    }
+}
+
 #explorer {
   clear: both;
 }
