@@ -27,7 +27,9 @@
     </head>
     <body data-spy="scroll">
         <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browsehappy">You are using an <strong>outdated</strong>
+           browser. Please <a href="http://browsehappy.com/">upgrade your 
+          browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
@@ -75,15 +77,27 @@
             <div class="content-box">
               <div class="row">
                 <div class="col-md-12">
-                  <h2>In 2013, oil was Ghana's largest source
-                    of revenue from extractive industries. The Ghana
-                    National Petroleum Company is by far the largest
-                    contributor.</h2>
+                  <h2>Revenue by commodity and company</h2>
                     <div class="chart-container">
                       <div id="explore-pie"></div>
                       <div id="explore-pie-companies"></div>
                     </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="production">
+          <div class="inner">
+            <div class="content-box">
+              <div class="row">
+                <div class="col-md-12">
+                    <h2>Production volumes across the country</h2>
+                    <div class="map-container">
+                      <div id="map" class="globalMap"></div>
+                    </div>
+                </div>
+                <div class="clearer"> </div>
               </div>
             </div>
           </div>
@@ -181,6 +195,7 @@
         <script src="js/companies.js"></script>
         <script src="js/piechart.js"></script>
         <script src="js/linechart.js"></script>
+        <script src="js/map.js"></script>
           
         <script>
           var pieOptions, thisYearWidget, thisPieChart, pieD;
@@ -242,5 +257,38 @@
           }, 300);
           $(window).resize(resizeCharts);
         </script>
+          
+          
+        <link type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        <script type="text/javascript">
+      
+        function markerSize(volume) {
+          var max_size = 50000;
+          var min_size = 3000;
+          var size = volume / 50;
+          if (size < min_size) { return min_size; }
+          if (size > max_size) { return max_size; }
+          return size;
+        }
+        
+        function getPopupContent(feature) {
+          var pc = '<dt>'+feature['project_name']+'</dt>\
+           <dl>Location: '+feature['location']+'<br />\
+           Production volume: '+feature['production_vol'] + '<br />\
+           Commodity: '+feature['commodity']+'</dl>';
+          return pc;
+        }
+    
+        function filterByYear(obj) {
+          if (obj["year"] != "2013") { return false; }
+          return true;
+        }
+    
+        $.getJSON("data/ghana-resource-volumes.json", function(data) {
+          thisMap = new nrgiMap("", data);
+        });
+    </script>
     </body>
 </html>

@@ -556,6 +556,9 @@ article#commodities {
 article#time {
   border-left: 10px solid #FFC60B; }
 
+article#production {
+  border-left: 10px solid #27C4F4; }
+
 /* HEADER */
 .masthead {
   background-color: white;
@@ -606,6 +609,21 @@ article#time {
   font-size: 0.7em; }
 
 /* CHARTS */
+.map {
+  z-index: 0; }
+
+.globalMap {
+  height: 450px; }
+  .globalMap g .leaflet-clickable {
+    stroke: #00B48D;
+    fill: #00B48D; }
+  .globalMap g .leaflet-clickable.Gold {
+    stroke: #F68B1F;
+    fill: #F68B1F; }
+  .globalMap g .leaflet-clickable.Oil {
+    stroke: #222222;
+    fill: #222222; }
+
 #explorer {
   clear: both; }
 
@@ -678,6 +696,7 @@ article#time {
   border-radius: 2px;
   pointer-events: none;
   font-size: 0.8em;
+  top: 0;
   /* Creates a small triangle extender for the tooltip */
   /* Northward tooltips */
   /* Eastward tooltips */
