@@ -46,4 +46,26 @@ var nrgiMap = function(el, data) {
   map.addLayer(markers["Gold"]);
   map.addLayer(markers["Oil"]);
   map.scrollWheelZoom.disable();
+
+  function markerSize(volume) {
+    var max_size = 50000;
+    var min_size = 3000;
+    var size = volume / 50;
+    if (size < min_size) { return min_size; }
+    if (size > max_size) { return max_size; }
+    return size;
+  }
+
+  function getPopupContent(feature) {
+    var pc = '<dt>'+feature['project_name']+'</dt>\
+     <dl>Location: '+feature['location']+'<br />\
+     Production volume: '+feature['production_vol'] + '<br />\
+     Commodity: '+feature['commodity']+'</dl>';
+    return pc;
+  }
+
+  function filterByYear(obj) {
+    if (obj["year"] != "2013") { return false; }
+    return true;
+  }
 }
