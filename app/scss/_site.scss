@@ -288,6 +288,7 @@ article#production {
   border-radius: 2px;
   pointer-events: none;
   font-size:0.8em;
+  top:0;
 
   /* Creates a small triangle extender for the tooltip */
   &::after {
