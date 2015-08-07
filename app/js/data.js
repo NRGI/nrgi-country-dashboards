@@ -1,4 +1,5 @@
-var pieData = {}
+var pieData = {},
+    lineData = {};
 pieData = function(data) {
     this.drilldown = data.drilldown;
     this.data = data.records;
@@ -134,4 +135,85 @@ pieData = function(data) {
     out["drilldown"] = this.drilldown;
     out["years"] = this.years;
     return out;
+}
+lineData = function(data) {
+  var _data = data.data.records;
+  var parseDate = d3.time.format("%Y").parse;
+  var years = {}
+
+  this.drilldown = "commodity";
+
+  var td = _data;
+  // Aggregate according to drilldown
+  if (this.drilldown != null) {
+    this.data = d3.nest()
+      .key(function(d) {
+        return d.commodity;
+      })
+      .key(function(d) {
+        return d.year;
+      })
+      .rollup(function(items){
+        return d3.sum(items, function(d) {
+          return parseFloat(d.value)
+        });
+      })
+      .entries(_data)
+      .map(
+        function(d) {
+          obj = {};
+          obj["commodity"] = d.key;
+          obj["data"] = d.values.map(
+            function(v) {
+              vobj = {};
+              vobj["year"] = v.key;
+              vobj["date"] = parseDate(v.key);
+              vobj["value"] = v.values;
+              years[v.key] = true;
+              return vobj;
+            }
+          );
+          return obj;
+        }
+      );
+  }
+
+  var td = this.data;
+
+  for (i=0; i < td.length; i++) {
+    var seeny = td[i].data.map(
+      function(iv) {
+        return iv["year"];
+      }
+    );
+    $.map(years,
+      function(c, index) {
+        if (seeny.indexOf(index) < 0) {
+          vcobj = {}
+          vcobj["year"] = index;
+          vcobj["date"] = parseDate(index);
+          vcobj["value"] = "0.0"
+          td[i]["data"].push(vcobj);
+          }
+        }
+    );
+    td[i]["data"].sort(function (a,b) {
+      return parseFloat(b.year) - parseFloat(a.year);
+    });
+  }
+  this.data = td;
+
+  var _d = {}
+  _d["data"] = td;
+  _d["x"] = {
+    "domain": ["2004", "2005", "2006", "2007", "2008", "2009", "2010",
+               "2011", "2012", "2013"],
+    "label": "Time"
+  }
+  max = data.max;
+  _d["y"] = {
+    "domain": [0, max],
+    "label": "Value"
+  }
+  return _d;
 }

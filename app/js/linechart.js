@@ -20,94 +20,9 @@ var lineChart = function(el, data) {
     _width = parseInt(this.$el.style('width'), 10) - margin.left - margin.right;
     _height = parseInt(this.$el.style('height'), 10) - margin.top - margin.bottom;
   };
-  
-  var parseDate = d3.time.format("%Y").parse;
-  
-  // Might want to move data wrangling functions out of these charts...
-  this.getData = function(data) {
-    var _data = data.data.records;
-    
-    var years = {}
-    
-    this.drilldown = "commodity";
-    
-    var td = _data;
-    // Aggregate according to drilldown
-    if (this.drilldown != null) {
-      this.data = d3.nest()
-        .key(function(d) {
-          return d.commodity;
-        })
-        .key(function(d) {
-          return d.year;
-        })
-        .rollup(function(items){
-          return d3.sum(items, function(d) { 
-            return parseFloat(d.value)
-          });
-        })
-        .entries(_data)
-        .map(
-          function(d) {
-            obj = {};
-            obj["commodity"] = d.key;
-            obj["data"] = d.values.map(
-              function(v) {
-                vobj = {};
-                vobj["year"] = v.key;
-                vobj["date"] = parseDate(v.key);
-                vobj["value"] = v.values;
-                years[v.key] = true;
-                return vobj;
-              }
-            );
-            return obj;
-          }
-        );
-    }
-    
-    var td = this.data;
-    
-    for (i=0; i < td.length; i++) {
-      var seeny = td[i].data.map(
-        function(iv) {
-          return iv["year"];
-        }
-      );
-      $.map(years,
-        function(c, index) {
-          if (seeny.indexOf(index) < 0) {
-            vcobj = {}
-            vcobj["year"] = index;
-            vcobj["date"] = parseDate(index);
-            vcobj["value"] = "0.0"
-            td[i]["data"].push(vcobj);
-            }
-          }
-      );
-      td[i]["data"].sort(function (a,b) {
-        return parseFloat(b.year) - parseFloat(a.year);
-      });
-    }
-    this.data = td;
-    
-    var _d = {}
-    _d["data"] = td;
-    _d["x"] = {
-      "domain": ["2004", "2005", "2006", "2007", "2008", "2009", "2010", 
-                 "2011", "2012", "2013"],
-      "label": "Time"
-    }
-    max = data.max;
-    _d["y"] = {
-      "domain": [0, max],
-      "label": "Value"
-    }
-    return _d;
-  }
-  
+
   this.setData = function(data) {
-    this.data = this.getData(data);
+    this.data = data;
     this.xData = this.data.x;
     this.yData = this.data.y;
     this.update();
@@ -132,7 +47,6 @@ var lineChart = function(el, data) {
       .x(function(d) { return x(d.date); })
       .y(function(d) { return y(d.value); });
 
-
     // Chart elements.
     dataCanvas = svg.append("g")
         .attr('class', 'data-canvas')
@@ -150,14 +64,6 @@ var lineChart = function(el, data) {
         .attr("class", "label")
         .attr("text-anchor", "middle");
 
-    _data = this.getData(data);
-    
-    for(i=0; i < _data.data.length; i++) {      
-      dataCanvas.append("path")
-        .attr("class", "line line"+i)
-        .on("mouseover", mouseover);
-    }
-
     this.$el.append("div")
       .attr("class", "tooltip")
       .html('<dl><dt>Year</dt><dd class="year"></dd><dt>Value</dt><dd class="value"></dd></dl>');
@@ -170,6 +76,12 @@ var lineChart = function(el, data) {
   this.update = function() {
     this._calcSize();
     var _this = this;
+
+    for(i=0; i < this.data.data.length; i++) {
+      dataCanvas.append("path")
+        .attr("class", "line line"+i)
+        .on("mouseover", mouseover);
+    }
 
     var yAxisGroup = svg.select('.y.axis');
 
