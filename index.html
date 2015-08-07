@@ -28,7 +28,7 @@
     <body data-spy="scroll">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong>
-           browser. Please <a href="http://browsehappy.com/">upgrade your 
+           browser. Please <a href="http://browsehappy.com/">upgrade your
           browser</a> to improve your experience.</p>
         <![endif]-->
 
@@ -50,7 +50,7 @@
                 <ul class="nav nav-slider">
                   <li><a href="#home">Home</a></li>
                   <li><a href="#commodities">Commodities</a></li>
-                  <li><a href="#spending">Compare spending</a></li>
+                  <li><a href="#production">Production</a></li>
                   <li><a href="#growth">Compare growth</a></li>
                   <li><a href="#about">About</a></li>
                 </ul>
@@ -229,26 +229,30 @@
           
           
         <script>
-          var lineOptions, thisLineChart;
+          var lineOptions, thisLineChart, lineD;
           var url = 'data/gheiti.json';
           d3.json(url, function(error, data) {
             lineOptions = {
               "data": data,
-              "max": 1024808288
+              "max": 1024808288,
+              "drilldown": "commodity"
             }
-            thisLineChart = new lineChart("#explore-line", lineOptions)
+            lineD = lineData(lineOptions);
+            thisLineChart = new lineChart("#explore-line", lineD)
           });
         </script>
           
         <script>
-          var lineGDPOptions, thisGDPLineChart;
+          var lineGDPOptions, thisGDPLineChart, lineGDPD;
           var url = 'data/gdp-extractives.json';
           d3.json(url, function(error, data) {
             lineGDPOptions = {
               "data": data,
               "max": 14,
+              "drilldown": "commodity"
             }
-            thisGDPLineChart = new lineChart("#explore-line-growth", lineGDPOptions)
+            lineGDPD = lineData(lineGDPOptions);
+            thisGDPLineChart = new lineChart("#explore-line-growth", lineGDPD)
           });
           var resizeCharts = _.debounce(function() {
               thisPieChart.update();
@@ -257,35 +261,10 @@
           }, 300);
           $(window).resize(resizeCharts);
         </script>
-          
-          
+
         <link type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet" />
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
-        
         <script type="text/javascript">
-      
-        function markerSize(volume) {
-          var max_size = 50000;
-          var min_size = 3000;
-          var size = volume / 50;
-          if (size < min_size) { return min_size; }
-          if (size > max_size) { return max_size; }
-          return size;
-        }
-        
-        function getPopupContent(feature) {
-          var pc = '<dt>'+feature['project_name']+'</dt>\
-           <dl>Location: '+feature['location']+'<br />\
-           Production volume: '+feature['production_vol'] + '<br />\
-           Commodity: '+feature['commodity']+'</dl>';
-          return pc;
-        }
-    
-        function filterByYear(obj) {
-          if (obj["year"] != "2013") { return false; }
-          return true;
-        }
-    
         $.getJSON("data/ghana-resource-volumes.json", function(data) {
           thisMap = new nrgiMap("", data);
         });

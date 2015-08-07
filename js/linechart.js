@@ -12,7 +12,7 @@ var lineChart = function(el, data) {
   var margin = {top: 10, right: 32, bottom: 48, left: 32};
   var _width, _height;
   // Scales, Axis, line and area functions.
-  var x, y, xAxis, line, area, bisector;
+  var x, y, xAxis, line, area, bisector, tip, legend;
   // Elements.
   var svg, dataCanvas;
 
@@ -20,94 +20,9 @@ var lineChart = function(el, data) {
     _width = parseInt(this.$el.style('width'), 10) - margin.left - margin.right;
     _height = parseInt(this.$el.style('height'), 10) - margin.top - margin.bottom;
   };
-  
-  var parseDate = d3.time.format("%Y").parse;
-  
-  // Might want to move data wrangling functions out of these charts...
-  this.getData = function(data) {
-    var _data = data.data.records;
-    
-    var years = {}
-    
-    this.drilldown = "commodity";
-    
-    var td = _data;
-    // Aggregate according to drilldown
-    if (this.drilldown != null) {
-      this.data = d3.nest()
-        .key(function(d) {
-          return d.commodity;
-        })
-        .key(function(d) {
-          return d.year;
-        })
-        .rollup(function(items){
-          return d3.sum(items, function(d) { 
-            return parseFloat(d.value)
-          });
-        })
-        .entries(_data)
-        .map(
-          function(d) {
-            obj = {};
-            obj["commodity"] = d.key;
-            obj["data"] = d.values.map(
-              function(v) {
-                vobj = {};
-                vobj["year"] = v.key;
-                vobj["date"] = parseDate(v.key);
-                vobj["value"] = v.values;
-                years[v.key] = true;
-                return vobj;
-              }
-            );
-            return obj;
-          }
-        );
-    }
-    
-    var td = this.data;
-    
-    for (i=0; i < td.length; i++) {
-      var seeny = td[i].data.map(
-        function(iv) {
-          return iv["year"];
-        }
-      );
-      $.map(years,
-        function(c, index) {
-          if (seeny.indexOf(index) < 0) {
-            vcobj = {}
-            vcobj["year"] = index;
-            vcobj["date"] = parseDate(index);
-            vcobj["value"] = "0.0"
-            td[i]["data"].push(vcobj);
-            }
-          }
-      );
-      td[i]["data"].sort(function (a,b) {
-        return parseFloat(b.year) - parseFloat(a.year);
-      });
-    }
-    this.data = td;
-    
-    var _d = {}
-    _d["data"] = td;
-    _d["x"] = {
-      "domain": ["2004", "2005", "2006", "2007", "2008", "2009", "2010", 
-                 "2011", "2012", "2013"],
-      "label": "Time"
-    }
-    max = data.max;
-    _d["y"] = {
-      "domain": [0, max],
-      "label": "Value"
-    }
-    return _d;
-  }
-  
+
   this.setData = function(data) {
-    this.data = this.getData(data);
+    this.data = data;
     this.xData = this.data.x;
     this.yData = this.data.y;
     this.update();
@@ -115,11 +30,25 @@ var lineChart = function(el, data) {
   
   this._init = function() {
     this._calcSize();
+    
+    d3.selection.prototype.moveToFront = function() {
+      return this.each(function(){
+      this.parentNode.appendChild(this);
+      });
+    };
+    
     svg = this.$el.append('svg')
       .attr('class', 'chart');      
       
     x = d3.time.scale();
     y = d3.scale.linear();
+    
+    tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function(d) {
+        return "<strong>" + d.year + "</strong><br /><small>" + d.name + "</small><br /><small>$ " + dec(d.value) + "</small>";
+      });
     
     // Define xAxis function.
     xAxis = d3.svg.axis()
@@ -131,7 +60,6 @@ var lineChart = function(el, data) {
     line = d3.svg.line()
       .x(function(d) { return x(d.date); })
       .y(function(d) { return y(d.value); });
-
 
     // Chart elements.
     dataCanvas = svg.append("g")
@@ -150,26 +78,41 @@ var lineChart = function(el, data) {
         .attr("class", "label")
         .attr("text-anchor", "middle");
 
-    _data = this.getData(data);
-    
-    for(i=0; i < _data.data.length; i++) {      
-      dataCanvas.append("path")
-        .attr("class", "line line"+i)
-        .on("mouseover", mouseover);
-    }
-
-    this.$el.append("div")
-      .attr("class", "tooltip")
-      .html('<dl><dt>Year</dt><dd class="year"></dd><dt>Value</dt><dd class="value"></dd></dl>');
+    dataCanvas.append("g")
+      .attr("class", "series");
 
     dataCanvas.append("g")
       .attr("class", "focus-circles");
-      
+
+    // Create legend
+    dataCanvas.append("g")
+      .attr("class", "legends");
+
+    svg.call(tip);
+
     this.setData(data);
   };
   this.update = function() {
     this._calcSize();
+    height = _height,
+    width = _width;
     var _this = this;
+        
+    lc = dataCanvas.select(".series").selectAll(".line")
+      .data(data.data)
+      .enter()
+      .append("g")
+      .attr("class", function(d) {return "series "+d.name; })
+    
+    lc
+      .append("path")
+      .attr("class", function(d) {return "line "+d.name; })
+      .on("mouseover", mouseover);
+      
+    lc
+      .append("g")
+      .attr("class", "focus-circles")
+      .on("mouseover", mouseover);
 
     var yAxisGroup = svg.select('.y.axis');
 
@@ -226,10 +169,9 @@ var lineChart = function(el, data) {
         return dec(value) + suffix;
       });
 
-
-    // Need to calculate on the basis of >1 series dates?
+    // Provide the range and domain for x and y axes
     x.range([0, _width])
-      .domain(d3.extent(this.data.data[0].data, function(d) { return d.date; }));
+      .domain(this.xData.domain);
 
     y.range([_height, 0])
       .domain(this.yData.domain);
@@ -240,33 +182,71 @@ var lineChart = function(el, data) {
     dataCanvas
       .attr('width', _width)
       .attr('height', _height);
+
+    // Add series, in all their glory
+    dataCanvas.selectAll(".series path.line")
+      .datum(function(d) { return d.data;})
+      .attr("d", line)
+      .on("mouseover", mouseover);
       
-    for(i=0; i < this.data.data.length; i++) {      
-      dataLine = dataCanvas.select(".line"+i)
-        .datum(this.data.data[i].data)
-        .attr("d", line)
-        .on("mouseover", mouseover);
-    }
+    // Pass data for each series to focus-circles
+    var focuscircle_series = dataCanvas.selectAll(".series g.focus-circles")
+      .datum(function(d) { return d;});
       
-    // Add focus circles
-    // Need to adjust this for multiple series
-    dataCanvas.select(".focus-circles").selectAll(".focus-circle").remove();
-  	var focuscircles = dataCanvas.select(".focus-circles")
-      .selectAll("focus-circle")
-  		.data( this.data.data[0].data );
+    // Create circle for each focuscircle-series, pass data
+    var focuscircle = focuscircle_series.selectAll(".focus-circle")
+      .data(function(d) { return d.data;});
       
-    focuscircles
-  		.enter()
-  		.append("circle")
-  			.attr("class","focus-circle")
-  			.attr("cx", function(d,i){return x(d.date)})
-  			.attr("cy",function(d,i){return y(d.value)})
-        .style('opacity', 0)
-  			.attr("r",12)
-      .on("mouseover", circlemouseover);
-      
-    focuscircles.exit()
+    focuscircle
+      .enter()
+      .append("circle")
+			.attr("class","focus-circle focus-circle"+i)
+      .style('opacity', 0)
+			.attr("r",12);
+
+    focuscircle
+  			.attr("cx", function(d,i){ return x(d.date);})
+        .attr("cy",function(d,i){return y(d.value);});
+  
+    focuscircle.exit()
       .remove();
+  
+    focuscircle
+        .on("mouseover", circlemouseover)
+        .on("mouseout", circlemouseout);
+
+    // Update legends
+    var legends = dataCanvas.select(".legends");
+    var legend = legends
+        .selectAll(".legend")
+        .data($.map(data.data, function(k) { return k.name; }));
+    
+    legend
+      .enter()
+      .append("g")
+      .attr("class", "legend")
+      .html("<rect/><text/>");
+    
+    legend
+      .attr("transform", function (d, i) {
+        var lw = _width;
+        // Needs to be this to compensate for a) width, b) datacanvas transform
+        lw -= 100;
+        lh =  20 + (i * 20);
+        return "translate(-" + lw + "," + lh + ")";
+      });
+    
+    legend.select("rect")
+        .attr("x", _width - 18)
+        .attr("width", 18)
+        .attr("height", 18)
+        .attr("class", function(d) { return d });
+    legend.select("text")
+        .attr("x", _width - 24)
+        .attr("y", 9)
+        .attr("dy", ".35em")
+        .style("text-anchor", "end")
+        .text(function (d) { return d; });
 
     // Append Axis.
     svg.select(".x.axis")
@@ -300,38 +280,23 @@ var lineChart = function(el, data) {
   }
   function circlemouseover(d) {
     thecircle = d3.select(this);
-    thecircle_x = thecircle.attr("cx");
-    thecircle_y = thecircle.attr("cy");
-    
-    the_tooltip = d3.select(".tooltip");
-    the_line = d3.select(".line0");
-    
-    
-    the_tooltip = d3.select('.tooltip');
-  
-    d3.select(".tooltip .year").text(d.year);
-    d3.select(".tooltip .value").text(d.value);
-    
-    the_tooltip
-        .style("left", thecircle_x + "px")     
-        .style("top", thecircle_y + "px")
-        .transition()
-        .duration(200)
-        .style("opacity", .8);
-
-    the_line.style("stroke-width", "7px");
-    d3.select(this).on("mouseout", function () {
-      the_line.style("stroke-width", "5px");
-      the_tooltip.style("opacity", 0);
-    });
+    tip.show(d);
+    the_line = d3.select(".line." + d.name);
+    the_line.style("stroke-width", "6px");
+  }
+  function circlemouseout(d) {
+    thecircle = d3.select(this);
+    tip.hide();
+    the_line = d3.select(".line." + d.name);
+    the_line.style("stroke-width", "4px");
   }
 
-  this.destroy = function(el) {
+  this.destroy = function() {
     // Any clean-up would go here
     // in this example there is nothing to do
   };
   
-  var dec = d3.format('0,0[.]0');
+  var dec = d3.format(',.2f');
 
   this._init();
 };
