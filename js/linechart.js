@@ -30,13 +30,6 @@ var lineChart = function(el, data) {
   
   this._init = function() {
     this._calcSize();
-    
-    d3.selection.prototype.moveToFront = function() {
-      return this.each(function(){
-      this.parentNode.appendChild(this);
-      });
-    };
-    
     svg = this.$el.append('svg')
       .attr('class', 'chart');      
       
@@ -49,7 +42,7 @@ var lineChart = function(el, data) {
       .html(function(d) {
         return "<strong>" + d.year + "</strong><br /><small>" + d.name + "</small><br /><small>$ " + dec(d.value) + "</small>";
       });
-    
+
     // Define xAxis function.
     xAxis = d3.svg.axis()
       .scale(x)
@@ -97,18 +90,18 @@ var lineChart = function(el, data) {
     height = _height,
     width = _width;
     var _this = this;
-        
+
     lc = dataCanvas.select(".series").selectAll(".line")
       .data(data.data)
       .enter()
       .append("g")
       .attr("class", function(d) {return "series "+d.name; })
-    
+
     lc
       .append("path")
       .attr("class", function(d) {return "line "+d.name; })
       .on("mouseover", mouseover);
-      
+
     lc
       .append("g")
       .attr("class", "focus-circles")
@@ -196,7 +189,7 @@ var lineChart = function(el, data) {
     // Create circle for each focuscircle-series, pass data
     var focuscircle = focuscircle_series.selectAll(".focus-circle")
       .data(function(d) { return d.data;});
-      
+
     focuscircle
       .enter()
       .append("circle")
@@ -205,12 +198,12 @@ var lineChart = function(el, data) {
 			.attr("r",12);
 
     focuscircle
-  			.attr("cx", function(d,i){ return x(d.date);})
+        .attr("cx", function(d,i){ return x(d.date);})
         .attr("cy",function(d,i){return y(d.value);});
-  
+
     focuscircle.exit()
       .remove();
-  
+
     focuscircle
         .on("mouseover", circlemouseover)
         .on("mouseout", circlemouseout);
@@ -220,13 +213,13 @@ var lineChart = function(el, data) {
     var legend = legends
         .selectAll(".legend")
         .data($.map(data.data, function(k) { return k.name; }));
-    
+
     legend
       .enter()
       .append("g")
       .attr("class", "legend")
       .html("<rect/><text/>");
-    
+
     legend
       .attr("transform", function (d, i) {
         var lw = _width;
@@ -235,7 +228,7 @@ var lineChart = function(el, data) {
         lh =  20 + (i * 20);
         return "translate(-" + lw + "," + lh + ")";
       });
-    
+
     legend.select("rect")
         .attr("x", _width - 18)
         .attr("width", 18)

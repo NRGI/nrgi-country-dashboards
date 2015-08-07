@@ -613,7 +613,7 @@ article#production {
   z-index: 0; }
 
 .globalMap {
-  height: 450px; }
+  height: 500px; }
   .globalMap g .leaflet-clickable {
     stroke: #00B48D;
     fill: #00B48D; }
