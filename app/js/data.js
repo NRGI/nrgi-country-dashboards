@@ -141,14 +141,14 @@ lineData = function(data) {
   var parseDate = d3.time.format("%Y").parse;
   var years = {}
 
-  this.drilldown = "commodity";
+  this.drilldown = data.drilldown;
 
   var td = _data;
   // Aggregate according to drilldown
   if (this.drilldown != null) {
     this.data = d3.nest()
       .key(function(d) {
-        return d.commodity;
+        return d[this.drilldown];
       })
       .key(function(d) {
         return d.year;
@@ -162,13 +162,14 @@ lineData = function(data) {
       .map(
         function(d) {
           obj = {};
-          obj["commodity"] = d.key;
+          obj["name"] = d.key;
           obj["data"] = d.values.map(
             function(v) {
               vobj = {};
               vobj["year"] = v.key;
               vobj["date"] = parseDate(v.key);
               vobj["value"] = v.values;
+              vobj["name"] = d.key;
               years[v.key] = true;
               return vobj;
             }
@@ -202,12 +203,14 @@ lineData = function(data) {
     });
   }
   this.data = td;
-
+  yd = $.map(years, function(k, v){ return parseFloat(v); });
+  yd_min = parseDate(String(d3.min(yd)));
+  yd_max = parseDate(String(d3.max(yd)));
   var _d = {}
+  _d["drilldown"] = this.drilldown;
   _d["data"] = td;
   _d["x"] = {
-    "domain": ["2004", "2005", "2006", "2007", "2008", "2009", "2010",
-               "2011", "2012", "2013"],
+    "domain": [yd_min, yd_max],
     "label": "Time"
   }
   max = data.max;
