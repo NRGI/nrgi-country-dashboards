@@ -499,7 +499,7 @@ nav#main {
   position: fixed;
   padding: 0px 10px 10px 10px;
   top: 0px;
-  z-index: 50;
+  z-index: 9999;
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #dddddd;
@@ -765,14 +765,13 @@ article#production {
   .thumbnail {
     width: 300px; }
 
-  #home .inner div {
+  article#home {
     display: none; }
 
-  .navbar-default {
-    background: #365e93; }
-
   nav#main {
-    top: 0px; }
+    top: 0px;
+    background: #ffffff;
+    margin-bottom: 15px; }
     nav#main .navbar-collapse {
       background: #ffffff; }
       nav#main .navbar-collapse ul {
@@ -787,25 +786,32 @@ article#production {
             background: #666666;
             color: #ffffff; }
     nav#main .navbar-brand, nav#main .navbar-brand:hover {
-      font-size: 1.25em;
-      padding: 0px; }
+      font-size: 1.1em !important;
+      padding: 0px;
+      line-height: 1em; }
+    nav#main .navbar-toggle {
+      margin-top: 0; }
 
   .navbar-header {
     padding: 10px; }
 
   #content {
-    margin-top: 40px; }
-
-  #content .content-box {
-    padding: 20px;
-    margin-top: 0px; }
+    margin-top: 50px; }
+    #content .content-box {
+      padding: 20px;
+      margin-top: 0px; }
+    #content h1, #content h2, #content h3, #content h4 {
+      margin-bottom: 4px; }
 
   .footer-right {
     padding-top: inherit;
     font-size: 1em; }
 
   .table {
-    font-size: 0.5em; } }
+    font-size: 0.45em; }
+    .table .badge {
+      font-weight: normal;
+      padding: 3px 2px; } }
 /* Chart */
 .chart-item {
   width: 100%;
