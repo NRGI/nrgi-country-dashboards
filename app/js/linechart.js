@@ -260,7 +260,6 @@ var lineChart = function(el, data) {
         .attr('y', 10)
         .attr('transform', 'rotate(-90)');
     }
-
   }
   
   function mouseover(d) {
@@ -268,7 +267,7 @@ var lineChart = function(el, data) {
       .style("stroke-width", "7px")
       .on("mouseout", function () {
           d3.select(this)
-          .style("stroke-width", "5px");
+          .style("stroke-width", "4px");
       });
   }
   function circlemouseover(d) {
