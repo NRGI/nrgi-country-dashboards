@@ -206,11 +206,11 @@ var barChart = function(el, data) {
   function mouseover(d) {
     tip.show(d);
     d3.select(this)
-      .style("fill", "#00833d")
+      .style("opacity", "0.5")
       .on("mouseout", function () {
         tip.hide();
           d3.select(this)
-          .style("fill", "");
+          .style("opacity", "1");
       });
   }
 
