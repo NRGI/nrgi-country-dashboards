@@ -220,6 +220,16 @@ article#production {
   width: 100%;
   min-height: 350px;
 }
+#explore-revenues {
+  width: 100%;
+  min-height: 380px;
+  .axis text {
+    font-size:0.5em;
+  }
+  .data-canvas rect {
+    fill: $colour-commodity-default;
+  }
+}
 #explore-line-growth {
   float: left;
   width: 100%;
