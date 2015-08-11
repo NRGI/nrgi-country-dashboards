@@ -663,14 +663,6 @@ article#production {
     font-size: 0.75em;
     color: inherit; }
 
-#explore-pie-container {
-  width: 60%;
-  float: left; }
-
-#explore-pie-companies-container {
-  width: 40%;
-  float: left; }
-
 #explore-pie {
   height: 280px;
   width: 100%;
@@ -779,33 +771,27 @@ article#production {
   .navbar-default {
     background: #365e93; }
 
-  .navbar-collapse {
-    background: #ffffff; }
-
-  .navbar-collapse ul li,
-  .navbar-collapse ul.nav-right li a {
-    float: inherit;
-    background: #ffffff; }
-
-  .navbar-collapse ul li a,
-  .navbar-collapse ul.nav-right li a {
-    box-shadow: inherit;
-    color: #666666; }
-
-  .navbar-collapse li a:hover, .navbar-collapse li a:focus,
-  .navbar-collapse li.active a,
-  ul.nav-right li a:hover,
-  ul.nav-right a:focus {
-    color: #365e93; }
-
-  .navbar.collapse ul.pull-right {
-    float: inherit; }
+  nav#main {
+    top: 0px; }
+    nav#main .navbar-collapse {
+      background: #ffffff; }
+      nav#main .navbar-collapse ul {
+        margin-left: 0; }
+        nav#main .navbar-collapse ul li, nav#main .navbar-collapse ul li a {
+          margin-left: 0;
+          float: none;
+          background: #eeeeee;
+          box-shadow: none;
+          color: #000000; }
+          nav#main .navbar-collapse ul li:hover, nav#main .navbar-collapse ul li a:hover {
+            background: #666666;
+            color: #ffffff; }
+    nav#main .navbar-brand, nav#main .navbar-brand:hover {
+      font-size: 1.25em;
+      padding: 0px; }
 
   .navbar-header {
     padding: 10px; }
-
-  nav#main {
-    top: 0px; }
 
   #content {
     margin-top: 40px; }
@@ -816,7 +802,10 @@ article#production {
 
   .footer-right {
     padding-top: inherit;
-    font-size: 1em; } }
+    font-size: 1em; }
+
+  .table {
+    font-size: 0.5em; } }
 /* Chart */
 .chart-item {
   width: 100%;

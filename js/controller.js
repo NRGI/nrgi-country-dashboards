@@ -1,19 +1,21 @@
-var pieOptions, thisYearWidget, thisPieChart, pieD;
+var exploreOptions, explorePieChart, pieD;
 var lineOptions, thisLineChart, lineD;
+
+// This creates the data explorer
 d3.json("data/gheiti-revenues.json", function(error, data) {
   // Create pie chart with commodities
-  pieOptions = {
+  exploreOptions = {
     "records": data["records"],
     "drilldown": "commodity",
     "cuts": {
       "year": "2013"
     }
   }
-  pieD = pieData(pieOptions);
+  pieD = pieData(exploreOptions);
   pieC = pieD;
   pieD.data = pieD.commodities;
-  thisPieChart = new pieChart("#explore-pie", pieD);
-  thisCompaniesWidget = new companiesWidget(
+  explorePieChart = new pieChart("#explore-pie", pieD);
+  explorePieCompanies = new companiesWidget(
     "#explore-pie-companies", pieD);
   var sliderYears = pieD.years;
 
@@ -37,11 +39,11 @@ d3.json("data/gheiti-revenues.json", function(error, data) {
   });
   exploreSlider.noUiSlider.on('set', function(){
     var year = parseInt(exploreSlider.noUiSlider.get());
-    pieOptions.cuts.year = year;
-    pieD = pieData(pieOptions);
+    exploreOptions.cuts.year = year;
+    pieD = pieData(exploreOptions);
     pieD.data = pieD.commodities;
-    thisPieChart.setData(pieD);
-    thisCompaniesWidget.setData(pieD);
+    explorePieChart.setData(pieD);
+    explorePieCompanies.setData(pieD);
   });
   // Create line chart for commodities
   lineOptions = {
@@ -66,7 +68,7 @@ d3.json(url, function(error, data) {
   thisGDPLineChart = new lineChart("#explore-line-growth", lineGDPD);
 });
 var resizeCharts = _.debounce(function() {
-    thisPieChart.update();
+    explorePieChart.update();
     thisLineChart.update();
     thisGDPLineChart.update();
 }, 300);
