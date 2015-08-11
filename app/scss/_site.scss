@@ -122,12 +122,21 @@ article#home {
 }
 article#commodities {
   border-left: 10px solid $colour-commodities;
+  h2 {
+    border-bottom: 5px solid $colour-commodities;
+  }
 }
 article#time {
   border-left: 10px solid $colour-time;
+  h2 {
+    border-bottom: 5px solid $colour-time;
+  }
 }
 article#production {
   border-left: 10px solid $col-12;
+  h2 {
+    border-bottom: 5px solid $col-12;
+  }
 }
 
 /* HEADER */
