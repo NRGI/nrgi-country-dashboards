@@ -217,6 +217,7 @@ article#production {
   min-height: 350px;
 }
 #explore-slider {
+  cursor: pointer;
   margin-bottom:70px;
   .noUi-base {
     background-color: #cccccc;
@@ -253,9 +254,6 @@ article#production {
   }
 }
 #explore-pie-companies {
-  box-shadow: 0 0 6px #666666;
-  max-height: 350px;
-  overflow: scroll;
   padding: 5px;
   .badge {
     background-color: $colour-commodity-default;
