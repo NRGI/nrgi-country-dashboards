@@ -28,14 +28,15 @@ gulp.task('gh-deploy', function() {
 gulp.task('build', ['copy_files', 'styles']);
 
 // Watch files for changes and reload
-gulp.task('serve', ['styles'], function() {
+gulp.task('serve', ['copy_files', 'styles'], function() {
   browserSync({
     server: {
       baseDir: './dist'
     }
   });
 
-  gulp.watch(['app/*.html', 'app/scss/**/*.scss', 'app/js/**/*.js'],
+  gulp.watch(['app/*.html', 'app/scss/**/*.scss', 'app/js/**/*.js',
+              'app/js/*.js', 'app/data/*.json'],
              ['build'], reload);
 });
 
