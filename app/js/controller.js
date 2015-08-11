@@ -50,6 +50,10 @@ d3.json("data/gheiti-revenues.json", function(error, data) {
   }
   lineD = lineData(lineOptions);
   thisLineChart = new lineChart("#explore-line", lineD);
+
+  barD = lineData(lineOptions);
+  barD.data = pieD.companies;
+  thisBarChart = new barChart("#explore-revenues", barD);
 });
 var lineGDPOptions, thisGDPLineChart, lineGDPD;
 var url = 'data/gdp-extractives.json';
