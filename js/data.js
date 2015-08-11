@@ -32,13 +32,13 @@ pieData = function(data) {
           })
           .rollup(function(items){
             return d3.sum(items, function(d) {
-              return parseFloat(d.value)
+              return undefinedIsZero(parseFloat(d.value));
             });
           }).entries(items);
         // Create companies: roll up sum of revenue under company name
         robj["companies"] = d3.nest()
           .key(function(d) {
-            return d.name;
+            return d["project_name"];
           })
           .rollup(function(items){
             crobj = {}
@@ -48,11 +48,11 @@ pieData = function(data) {
               })
               .rollup(function(items){
                 return d3.sum(items, function(d) {
-                  return parseFloat(d.value)
+                  return undefinedIsZero(parseFloat(d.value));
                 });
               }).entries(items);
             crobj["sum"] = d3.sum(items, function(d) {
-                      return parseFloat(d.value)
+                      return undefinedIsZero(parseFloat(d.value));
                     });
             return crobj;
           })
@@ -155,7 +155,7 @@ lineData = function(data) {
       })
       .rollup(function(items){
         return d3.sum(items, function(d) {
-          return parseFloat(d.value)
+          return undefinedIsZero(parseFloat(d.value));
         });
       })
       .entries(_data)
@@ -209,14 +209,32 @@ lineData = function(data) {
   var _d = {}
   _d["drilldown"] = this.drilldown;
   _d["data"] = td;
+
+  var maxY = d3.max($.map(this.data, function(k) {
+      return $.map(k.data, function(l) {
+        return l.value;
+      });
+    }));
+
   _d["x"] = {
     "domain": [yd_min, yd_max],
     "label": "Time"
   }
-  max = data.max;
+
   _d["y"] = {
-    "domain": [0, max],
+    "domain": [0, maxY],
     "label": "Value"
   }
   return _d;
+}
+
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+function undefinedIsZero(v) {
+  if (!isNumeric(v)) {
+    return 0;
+  }
+  return v;
 }

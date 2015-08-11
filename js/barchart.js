@@ -1,20 +1,21 @@
-// linechart.js
+// barchart.js
 
-var lineChart = {};
+var barChart = {};
 
-var lineChart = function(el, data) {
+var barChart = function(el, data) {
   this.$el = d3.select(el);
 
   this.data = null;
   this.xData = null;
   this.yData = null;
 
-  var margin = {top: 10, right: 32, bottom: 48, left: 32};
+  var margin = {top: 15, right: 32, bottom: 120, left: 32};
   var _width, _height;
   // Scales, Axis, line and area functions.
-  var x, y, xAxis, line, area, bisector, tip, legend;
+  var x, y, xAxis, line, area, tip, legend;
   // Elements.
   var svg, dataCanvas;
+  var barHeight = 20;
 
   this._calcSize = function() {
     _width = parseInt(this.$el.style('width'), 10) - margin.left - margin.right;
@@ -33,14 +34,14 @@ var lineChart = function(el, data) {
     svg = this.$el.append('svg')
       .attr('class', 'chart');      
       
-    x = d3.time.scale();
+    x = d3.scale.ordinal();
     y = d3.scale.linear();
     
     tip = d3.tip()
       .attr('class', 'd3-tip')
       .offset([-10, 0])
       .html(function(d) {
-        return "<strong>" + d.year + "</strong><br /><small>" + d.name + "</small><br /><small>$ " + dec(d.value) + "</small>";
+        return "<strong>" + d.name + "</strong><br />$ " + dec(d.value) + "</small>";
       });
 
     // Define xAxis function.
@@ -48,11 +49,6 @@ var lineChart = function(el, data) {
       .scale(x)
       .ticks(6)
       .orient("bottom");
-
-    // Line function.
-    line = d3.svg.line()
-      .x(function(d) { return x(d.date); })
-      .y(function(d) { return y(d.value); });
 
     // Chart elements.
     dataCanvas = svg.append("g")
@@ -71,12 +67,6 @@ var lineChart = function(el, data) {
         .attr("class", "label")
         .attr("text-anchor", "middle");
 
-    dataCanvas.append("g")
-      .attr("class", "series");
-
-    dataCanvas.append("g")
-      .attr("class", "focus-circles");
-
     // Create legend
     dataCanvas.append("g")
       .attr("class", "legends");
@@ -90,22 +80,6 @@ var lineChart = function(el, data) {
     height = _height,
     width = _width;
     var _this = this;
-
-    lc = dataCanvas.select(".series").selectAll(".line")
-      .data(data.data)
-      .enter()
-      .append("g")
-      .attr("class", function(d) {return "series "+d.name; })
-
-    lc
-      .append("path")
-      .attr("class", function(d) {return "line "+d.name; })
-      .on("mouseover", mouseover);
-
-    lc
-      .append("g")
-      .attr("class", "focus-circles")
-      .on("mouseover", mouseover);
 
     var yAxisGroup = svg.select('.y.axis');
 
@@ -163,11 +137,15 @@ var lineChart = function(el, data) {
       });
 
     // Provide the range and domain for x and y axes
-    x.range([0, _width])
-      .domain(this.xData.domain);
+    // FIXME
+    x
+      .domain(["Newmont Ghana Gold Ltd", "Gold Fields (Gh) Ltd", "Chirano Gold Mines Ltd", "GSR(Wassa)Ltd", "Ghana Manganese Co. Ltd", "Abosso Goldfields (Gh) Ltd (Damang)", "Perseus Mining(Ghana)Ltd", "AngloGold Ashanti(Ghana) Ltd", "GSR(Prestea/Bogoso)Ltd", "AngloGold(Iduapriem) Ltd", "Adamus Resources Ltd", "Newmont Golden Ridge Ltd 1", "Ghana Bauxite Company Ltd", "Noble Mining Ltd", "Prestea Sankofa Ltd", "AngloGold Bibiani (Central African Gold)", "Government of Ghana Shares in Anglogold global"])
+      .rangeRoundBands([0, _width], .1);
 
+    //FIXME
     y.range([_height, 0])
-      .domain(this.yData.domain);
+      .domain([0, 226405055]);
+      // .domain(this.yData.domain);
     svg
       .attr('width', _width + margin.left + margin.right)
       .attr('height', _height + margin.top + margin.bottom);
@@ -175,76 +153,31 @@ var lineChart = function(el, data) {
     dataCanvas
       .attr('width', _width)
       .attr('height', _height);
-
-    // Add series, in all their glory
-    dataCanvas.selectAll(".series path.line")
-      .datum(function(d) { return d.data;})
-      .attr("d", line)
-      .on("mouseover", mouseover);
-      
-    // Pass data for each series to focus-circles
-    var focuscircle_series = dataCanvas.selectAll(".series g.focus-circles")
-      .datum(function(d) { return d;});
-      
-    // Create circle for each focuscircle-series, pass data
-    var focuscircle = focuscircle_series.selectAll(".focus-circle")
-      .data(function(d) { return d.data;});
-
-    focuscircle
-      .enter()
-      .append("circle")
-			.attr("class","focus-circle focus-circle"+i)
-      .style('opacity', 0)
-			.attr("r",12);
-
-    focuscircle
-        .attr("cx", function(d,i){ return x(d.date);})
-        .attr("cy",function(d,i){return y(d.value);});
-
-    focuscircle.exit()
-      .remove();
-
-    focuscircle
-        .on("mouseover", circlemouseover)
-        .on("mouseout", circlemouseout);
-
-    // Update legends
-    var legends = dataCanvas.select(".legends");
-    var legend = legends
-        .selectAll(".legend")
-        .data($.map(data.data, function(k) { return k.name; }));
-
-    legend
-      .enter()
-      .append("g")
-      .attr("class", "legend")
-      .html("<rect/><text/>");
-
-    legend
-      .attr("transform", function (d, i) {
-        var lw = _width;
-        // Needs to be this to compensate for a) width, b) datacanvas transform
-        lw -= 100;
-        lh =  20 + (i * 20);
-        return "translate(-" + lw + "," + lh + ")";
-      });
-
-    legend.select("rect")
-        .attr("x", _width - 18)
-        .attr("width", 18)
-        .attr("height", 18)
-        .attr("class", function(d) { return d });
-    legend.select("text")
-        .attr("x", _width - 24)
-        .attr("y", 9)
-        .attr("dy", ".35em")
-        .style("text-anchor", "end")
-        .text(function (d) { return d; });
+    
+    dataCanvas.selectAll(".bar")
+          .data(this.data.data)
+          .enter().append("rect")
+          .attr("class", "bar")
+          .attr("width", x.rangeBand())
+          .attr("height", function(d) { return _height - y(d.value); })
+          .attr("x", function(d) { return x(d.name); })
+          .attr("y", function(d) { return y(d.value); })
+          .on('mouseover', mouseover);
 
     // Append Axis.
     svg.select(".x.axis")
       .attr("transform", "translate(" + margin.left + "," + (_height + margin.top + 10) + ")").transition()
-      .call(xAxis);
+      .call(xAxis)  
+      .selectAll("text")
+      .attr("y", 0)
+      .attr("x", -5)
+      .attr("dy", ".35em")
+      .attr("transform", "rotate(-65)")
+      .style("text-anchor", "end")
+
+    svg.selectAll(".x.axis text")
+      .text(function() { 
+        return truncate(d3.select(this).text(), 13, "..."); });
 
     if (this.xData && this.xData.label) {
       svg.select(".x.axis .label")
@@ -261,26 +194,24 @@ var lineChart = function(el, data) {
         .attr('transform', 'rotate(-90)');
     }
   }
-  
+
+  function truncate(str, maxLength, suffix) {
+  	if(str.length > maxLength) {
+  		str = str.substring(0, maxLength + 1);
+  		str = str + suffix;
+  	}
+  	return str;
+  }
+
   function mouseover(d) {
-    d3.select(this)
-      .style("stroke-width", "7px")
-      .on("mouseout", function () {
-          d3.select(this)
-          .style("stroke-width", "4px");
-      });
-  }
-  function circlemouseover(d) {
-    thecircle = d3.select(this);
     tip.show(d);
-    the_line = d3.select(".line." + d.name);
-    the_line.style("stroke-width", "6px");
-  }
-  function circlemouseout(d) {
-    thecircle = d3.select(this);
-    tip.hide();
-    the_line = d3.select(".line." + d.name);
-    the_line.style("stroke-width", "4px");
+    d3.select(this)
+      .style("fill", "#00833d")
+      .on("mouseout", function () {
+        tip.hide();
+          d3.select(this)
+          .style("fill", "");
+      });
   }
 
   this.destroy = function() {

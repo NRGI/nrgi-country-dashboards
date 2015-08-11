@@ -5,7 +5,7 @@ var pieChart = function(el, data) {
   var el_left = $(el).offset().left;
   
   var _width, _height, svg, pie, arc, drilldown, cuts, legend, tip;
-  var margin = {top: 10, right: 32, bottom: 48, left: 32};
+  var margin = {top: 10, right: 32, bottom: 10, left: 32};
 
 
   // Calculate based on element (window) size

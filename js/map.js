@@ -12,7 +12,7 @@ var nrgiMap = function(el, data) {
         	new L.LatLng(
         		feature['lat'],
         		feature['long']
-        	), markerSize(feature['production_vol']), {
+              ), markerSize(feature['value']), {
               fillOpacity: 0.8,
               className: feature["commodity"]
           }
@@ -48,6 +48,7 @@ var nrgiMap = function(el, data) {
   map.scrollWheelZoom.disable();
 
   function markerSize(volume) {
+    if (!isNumeric(volume)) { var volume = 0; }
     var max_size = 50000;
     var min_size = 3000;
     var size = volume / 50;
@@ -57,15 +58,19 @@ var nrgiMap = function(el, data) {
   }
 
   function getPopupContent(feature) {
-    var pc = '<dt>'+feature['project_name']+'</dt>\
-     <dl>Location: '+feature['location']+'<br />\
-     Production volume: '+feature['production_vol'] + '<br />\
-     Commodity: '+feature['commodity']+'</dl>';
+    var pc = '<dt>' + feature['project_name'] + '</dt>\
+     <dl>Location: ' + feature['location'] + '<br />\
+     Production volume: ' + feature['value'] + '\
+     ' + feature['value_unit'] + '<br />\
+     Commodity: '+ feature['commodity'] + '</dl>';
     return pc;
   }
 
   function filterByYear(obj) {
     if (obj["year"] != "2013") { return false; }
     return true;
+  }
+  function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
   }
 }

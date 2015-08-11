@@ -480,7 +480,7 @@ p {
   margin-bottom: 20px; }
 
 .transitioner, a, nav#main li, .navbar-default .navbar-brand, .navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:hover, #explore-pie .pie-years ul li {
+.navbar-default .navbar-brand:hover {
   -webkit-transition: all .2s ease-in-out;
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.2s;
@@ -548,23 +548,31 @@ nav#main {
 
 /* Article-specific styling */
 article#home {
-  border-left: 10px solid #F15623; }
+  border-left: 10px solid #F15623;
+  background: transparent url("/img/waves.jpg") repeat scroll 0 0/cover;
+  /* credit: https://www.flickr.com/photos/chadskeers/5568184388/in/photolist-9u3pe7-qHkSA9-pNCwyN-qHkPBo-9pqDra-9pF2Bj-ecjHSb-9w8uvx-9smNCK-6qp5jn-4SNukr-bc5u1p-5JrAVv-bc5tAD-pNCv4o-ecdGat-cja5mC-pvfvw3-pvftRE-6sYLPX-bc5tzc-3NoZ6-b89NQP-b8bttp-qsbgmf-qpXLKs-qaNjqP-qsbgGW-qsbhFE-bc5tCv-qtb5T3-qtahB3-pNXozc-qKEaHo-qHkNxu-4HydK5-9vzCWM-9smMc4-9rWrJ7-5JrB9t-hNqmn-kbUuZb-qxA4ev-qgjdNr-qxA2zD-qxKMN4-pALm6E-qxA3JH-qxKKDe-9rKYAa */ }
 
 article#commodities {
   border-left: 10px solid #60C4B1; }
+  article#commodities h2 {
+    border-bottom: 5px solid #60C4B1; }
 
 article#time {
   border-left: 10px solid #FFC60B; }
+  article#time h2 {
+    border-bottom: 5px solid #FFC60B; }
 
 article#production {
   border-left: 10px solid #27C4F4; }
+  article#production h2 {
+    border-bottom: 5px solid #27C4F4; }
 
 /* HEADER */
 .masthead {
   background-color: white;
-  background-color: rgba(255, 255, 255, 0.1);
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,startColorStr="#1AFFFFFF",endColorStr="#1AFFFFFF");
-  -ms-filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,startColorStr="#1AFFFFFF",endColorStr="#1AFFFFFF");
+  background-color: rgba(255, 255, 255, 0.7);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,startColorStr="#B3FFFFFF",endColorStr="#B3FFFFFF");
+  -ms-filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,startColorStr="#B3FFFFFF",endColorStr="#B3FFFFFF");
   margin: 150px 0px 150px 0px;
   padding: 30px;
   color: #222222;
@@ -632,44 +640,51 @@ article#production {
   width: 100%;
   min-height: 350px; }
 
+#explore-revenues {
+  width: 100%;
+  min-height: 380px; }
+  #explore-revenues .axis text {
+    font-size: 0.5em; }
+  #explore-revenues .data-canvas rect {
+    fill: #00B48D; }
+
 #explore-line-growth {
   float: left;
   width: 100%;
   min-height: 350px; }
 
-#explore-pie {
-  height: 350px;
+#explore-slider {
+  cursor: pointer;
+  margin-bottom: 70px; }
+  #explore-slider .noUi-base {
+    background-color: #cccccc; }
+  #explore-slider .noUi-pips {
+    font: inherit;
+    font-size: 0.75em;
+    color: inherit; }
+
+#explore-pie-container {
   width: 60%;
-  text-align: center;
   float: left; }
+
+#explore-pie-companies-container {
+  width: 40%;
+  float: left; }
+
+#explore-pie {
+  height: 280px;
+  width: 100%;
+  text-align: center; }
   #explore-pie svg {
     display: inline-block; }
-  #explore-pie .pie-years {
-    text-align: center;
-    width: 100%; }
-    #explore-pie .pie-years ul {
-      padding: 0px;
-      display: inline-block; }
-    #explore-pie .pie-years ul li {
-      list-style-type: none;
-      float: left;
-      margin-left: 7px;
-      background-color: #eeeeee;
-      color: #000000;
-      padding: 4px 10px;
-      display: block;
-      font-size: 14px;
-      box-shadow: 1px 1px 2px #666666;
-      cursor: pointer; }
-      #explore-pie .pie-years ul li.active {
-        background-color: #666666;
-        color: #ffffff; }
+    #explore-pie svg .segment, #explore-pie svg rect {
+      fill: #00B48D; }
+      #explore-pie svg .segment.Oil, #explore-pie svg rect.Oil {
+        fill: #222222; }
+      #explore-pie svg .segment.Gold, #explore-pie svg rect.Gold {
+        fill: #F68B1F; }
 
 #explore-pie-companies {
-  width: 40%;
-  box-shadow: 0 0 6px #666666;
-  max-height: 350px;
-  overflow: scroll;
   padding: 5px; }
   #explore-pie-companies .badge {
     background-color: #00B48D;
@@ -679,13 +694,6 @@ article#production {
       background-color: #222222; }
     #explore-pie-companies .badge.Gold {
       background-color: #F68B1F; }
-
-#explore-pie .segment, #explore-pie rect {
-  fill: #00B48D; }
-  #explore-pie .segment.Oil, #explore-pie rect.Oil {
-    fill: #222222; }
-  #explore-pie .segment.Gold, #explore-pie rect.Gold {
-    fill: #F68B1F; }
 
 /* D3 TIP */
 .d3-tip {
