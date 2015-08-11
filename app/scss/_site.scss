@@ -52,7 +52,7 @@ nav#main {
   position: fixed;
   padding: 0px 10px 10px 10px;
   top: 0px;
-  z-index: 50;
+  z-index: 9999;
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #dddddd;
@@ -371,14 +371,13 @@ article#production {
     body{font-size: 1.5em;}
     .thumbnail{
         width: 300px;}
-    #home .inner div {
-        display: none;
-    }
-    .navbar-default {
-        background: #365e93;
+    article#home {
+      display:none;
     }
     nav#main {
       top: 0px;
+      background: #ffffff;
+      margin-bottom:15px;
       .navbar-collapse {
         background: #ffffff;
           ul {
@@ -397,26 +396,37 @@ article#production {
         }
       }
       .navbar-brand, .navbar-brand:hover {
-        font-size: 1.25em;
+        font-size: 1.1em !important;
         padding: 0px;
+        line-height: 1em;
+      }
+      .navbar-toggle {
+        margin-top: 0;
       }
     }
     .navbar-header {
-        padding: 10px;
+      padding: 10px;
     }
     #content {
-        margin-top: 40px;
-    }
-    #content .content-box {
+      margin-top: 50px;
+      .content-box {
         padding: 20px;
         margin-top: 0px;
+      }
+      h1, h2, h3, h4 {
+        margin-bottom: 4px;
+      }
     }
     .footer-right {
         padding-top: inherit;
         font-size: 1em;
     }
     .table {
-      font-size: 0.5em;
+      font-size: 0.45em;
+      .badge {
+        font-weight: normal;
+        padding: 3px 2px;
+      }
     }
 }
 
