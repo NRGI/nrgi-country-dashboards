@@ -15,15 +15,8 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <!-- Latest compiled and minified JavaScript -->
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script src="js/vendor/underscore-min.js"></script>
         <link rel="stylesheet" href="css/styles.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="js/vendor/d3.v3.min.js"></script>
-        <script src="js/vendor/d3.tip.v0.6.3.js"></script>
+        <link rel="stylesheet" href="js/vendor/noUiSlider.8.0.2/nouislider.min.css">
     </head>
     <body data-spy="scroll">
         <!--[if lt IE 7]>
@@ -79,8 +72,18 @@
                 <div class="col-md-12">
                   <h2>Revenue by commodity and company</h2>
                     <div class="chart-container">
-                      <div id="explore-pie"></div>
-                      <div id="explore-pie-companies"></div>
+                      <div id="explore-slider-container">
+                        <h3>Year</h3>
+                        <div id="explore-slider"></div>
+                      </div>
+                      <div id="explore-pie-container">
+                        <h3>Commodities</h3>
+                        <div id="explore-pie"></div>
+                      </div>
+                      <div id="explore-pie-companies-container">
+                        <h3>Companies</h3>
+                        <div id="explore-pie-companies"></div>
+                      </div>
                     </div>
                 </div>
               </div>
@@ -173,6 +176,15 @@
           </div>
         </article>
 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="js/vendor/underscore-min.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/d3.v3.min.js"></script>
+        <script src="js/vendor/d3.tip.v0.6.3.js"></script>
+        <script src="js/vendor/noUiSlider.8.0.2/nouislider.min.js"></script>
+
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
@@ -191,7 +203,6 @@
 
 
         <script src="js/data.js"></script>
-        <script src="js/years.js"></script>
         <script src="js/companies.js"></script>
         <script src="js/piechart.js"></script>
         <script src="js/linechart.js"></script>
@@ -199,7 +210,9 @@
           
         <script>
           var pieOptions, thisYearWidget, thisPieChart, pieD;
-          d3.json("data/gheiti.json", function(error, data) {
+          var lineOptions, thisLineChart, lineD;
+          d3.json("data/gheiti-revenues.json", function(error, data) {
+            // Create pie chart with commodities
             pieOptions = {
               "records": data["records"],
               "drilldown": "commodity",
@@ -211,48 +224,55 @@
             pieC = pieD;
             pieD.data = pieD.commodities;
             thisPieChart = new pieChart("#explore-pie", pieD);
-            thisYearWidget = new yearWidget("#explore-pie", pieD);
             thisCompaniesWidget = new companiesWidget(
               "#explore-pie-companies", pieD);
-          });
-          $(document).on("click", ".pie-years li", function(){
-            var year = $(this).attr("data-year");
-            pieOptions["cuts"]["year"] = year;
-            pieD = pieData(pieOptions);
-            pieD.data = pieD.commodities;
-            thisPieChart.setData(pieD);
-            thisCompaniesWidget.setData(pieD);
-            $(".pie-years li").removeClass("active");
-            $(this).addClass("active");
-          });
-        </script>
-          
-          
-        <script>
-          var lineOptions, thisLineChart, lineD;
-          var url = 'data/gheiti.json';
-          d3.json(url, function(error, data) {
+            var sliderYears = pieD.years;
+
+            // Create year slider
+            var exploreSlider = document.getElementById( "explore-slider" );
+            function filterNormal(value, type) {
+              return 1;
+            }
+            noUiSlider.create(exploreSlider, {
+              start: [parseInt(d3.max(sliderYears))],
+              step: 1,
+              range: {
+                'min': parseInt(d3.min(sliderYears)),
+                'max': parseInt(d3.max(sliderYears))
+              },
+              pips: {
+              mode: 'steps',
+              filter: filterNormal
+              },
+              direction: 'rtl'
+            });
+            exploreSlider.noUiSlider.on('set', function(){
+              var year = parseInt(exploreSlider.noUiSlider.get());
+              pieOptions.cuts.year = year;
+              pieD = pieData(pieOptions);
+              pieD.data = pieD.commodities;
+              thisPieChart.setData(pieD);
+              thisCompaniesWidget.setData(pieD);
+            });
+            // Create line chart for commodities
             lineOptions = {
               "data": data,
-              "max": 1024808288,
               "drilldown": "commodity"
             }
             lineD = lineData(lineOptions);
-            thisLineChart = new lineChart("#explore-line", lineD)
+            thisLineChart = new lineChart("#explore-line", lineD);
           });
         </script>
-          
         <script>
           var lineGDPOptions, thisGDPLineChart, lineGDPD;
           var url = 'data/gdp-extractives.json';
           d3.json(url, function(error, data) {
             lineGDPOptions = {
               "data": data,
-              "max": 14,
               "drilldown": "commodity"
             }
             lineGDPD = lineData(lineGDPOptions);
-            thisGDPLineChart = new lineChart("#explore-line-growth", lineGDPD)
+            thisGDPLineChart = new lineChart("#explore-line-growth", lineGDPD);
           });
           var resizeCharts = _.debounce(function() {
               thisPieChart.update();
@@ -268,6 +288,6 @@
         $.getJSON("data/ghana-resource-volumes.json", function(data) {
           thisMap = new nrgiMap("", data);
         });
-    </script>
+        </script>
     </body>
 </html>
