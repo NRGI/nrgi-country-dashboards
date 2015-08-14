@@ -1,5 +1,6 @@
 var pieData = {},
-    lineData = {};
+    lineData = {},
+    barData = {};
 pieData = function(data) {
     this.drilldown = data.drilldown;
     this.data = data.records;
@@ -51,6 +52,15 @@ pieData = function(data) {
                   return undefinedIsZero(parseFloat(d.value));
                 });
               }).entries(items);
+            crobj["revenue"] = d3.nest()
+              .key(function(d) {
+                return d.value_type;
+              })
+              .rollup(function(items){
+                return d3.sum(items, function(d) {
+                  return undefinedIsZero(parseFloat(d.value));
+                });
+              }).entries(items);
             crobj["sum"] = d3.sum(items, function(d) {
                       return undefinedIsZero(parseFloat(d.value));
                     });
@@ -76,10 +86,22 @@ pieData = function(data) {
           );
           obj["companies"] = d.values.companies.map(
             function(v) {
+              var y0 = 0;
               vobj = {};
               vobj["name"] = v.key;
               vobj["value"] = v.values.sum;
               vobj["commodities"] = v.values.commodities;
+              vobj["revenue"] = v.values.revenue.map(
+                function(r) {
+                  robj = {}
+                  robj["company_name"] = v.key;
+                  robj["name"] = r.key;
+                  robj["value"] = r.values;
+                  robj["y0"] = y0;
+                  robj["y1"] = y0 += r.values;
+                  return robj;
+                }
+              );
               return vobj;
             }
           ).sort(function (a,b) {
@@ -127,7 +149,7 @@ pieData = function(data) {
     if (this.cuts != null) {
         this.data = this.data.filter(filterByCut)[0];
     }
-    
+
     var out = {}
     out["commodities"] = this.data.commodities;
     out["companies"] = this.data.companies;
@@ -237,4 +259,24 @@ function undefinedIsZero(v) {
     return 0;
   }
   return v;
+}
+barData = function(data) {
+  var out = {}
+  out.data = data.data;
+  xDomain = $.map(data.data, function(d) {
+    return d.name;
+  });
+  yDomain = $.map(data.data, function(d) {
+    return d.value;
+  });
+  yMax = d3.max(yDomain);
+  out.x = {
+    "domain": xDomain,
+    "label": "Time"
+  }
+  out.y = {
+    "domain": [0, yMax],
+    "label": "Value"
+  }
+  return out;
 }
