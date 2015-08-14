@@ -272,11 +272,11 @@ barData = function(data) {
   yMax = d3.max(yDomain);
   out.x = {
     "domain": xDomain,
-    "label": "Time"
+    "label": "Company"
   }
   out.y = {
     "domain": [0, yMax],
-    "label": "Value"
+    "label": "Revenue"
   }
   return out;
 }
