@@ -229,6 +229,12 @@ article#production {
   .data-canvas rect {
     fill: $colour-commodity-default;
   }
+  .data-canvas rect.cit {
+    fill: $col-18;
+  }
+  .data-canvas rect.royalties {
+    fill: $col-15;
+  }
 }
 #explore-line-growth {
   float: left;
