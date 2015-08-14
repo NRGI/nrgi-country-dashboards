@@ -44,6 +44,8 @@ d3.json("data/gheiti-revenues.json", function(error, data) {
     pieD.data = pieD.commodities;
     explorePieChart.setData(pieD);
     explorePieCompanies.setData(pieD);
+    barD.data = pieD.companies;
+    thisBarChart.setData(barData(barD));
   });
   // Create line chart for commodities
   lineOptions = {
@@ -55,7 +57,7 @@ d3.json("data/gheiti-revenues.json", function(error, data) {
 
   barD = lineData(lineOptions);
   barD.data = pieD.companies;
-  thisBarChart = new barChart("#explore-revenues", barD);
+  thisBarChart = new barChart("#explore-revenues", barData(barD));
 });
 var lineGDPOptions, thisGDPLineChart, lineGDPD;
 var url = 'data/gdp-extractives.json';

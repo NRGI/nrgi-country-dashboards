@@ -41,7 +41,7 @@ var barChart = function(el, data) {
       .attr('class', 'd3-tip')
       .offset([-10, 0])
       .html(function(d) {
-        return "<strong>" + d.name + "</strong><br />$ " + dec(d.value) + "</small>";
+        return "<strong>" + d.company_name + "</strong><br /><small>" + d.name + "<br />$ " + dec(d.value) + "</small>";
       });
 
     // Define xAxis function.
@@ -139,13 +139,12 @@ var barChart = function(el, data) {
     // Provide the range and domain for x and y axes
     // FIXME
     x
-      .domain(["Newmont Ghana Gold Ltd", "Gold Fields (Gh) Ltd", "Chirano Gold Mines Ltd", "GSR(Wassa)Ltd", "Ghana Manganese Co. Ltd", "Abosso Goldfields (Gh) Ltd (Damang)", "Perseus Mining(Ghana)Ltd", "AngloGold Ashanti(Ghana) Ltd", "GSR(Prestea/Bogoso)Ltd", "AngloGold(Iduapriem) Ltd", "Adamus Resources Ltd", "Newmont Golden Ridge Ltd 1", "Ghana Bauxite Company Ltd", "Noble Mining Ltd", "Prestea Sankofa Ltd", "AngloGold Bibiani (Central African Gold)", "Government of Ghana Shares in Anglogold global"])
+      .domain(this.xData.domain)
       .rangeRoundBands([0, _width], .1);
 
     //FIXME
     y.range([_height, 0])
-      .domain([0, 226405055]);
-      // .domain(this.yData.domain);
+      .domain(this.yData.domain);
     svg
       .attr('width', _width + margin.left + margin.right)
       .attr('height', _height + margin.top + margin.bottom);
@@ -153,15 +152,25 @@ var barChart = function(el, data) {
     dataCanvas
       .attr('width', _width)
       .attr('height', _height);
-    
-    dataCanvas.selectAll(".bar")
-          .data(this.data.data)
+
+    var company = dataCanvas.selectAll(".company")
+      .data(this.data.data);
+
+    company
+      .enter().append("g")
+      .attr("class", "g company")
+      .attr("transform", function(d) {return "translate(" + x(d.name) + ",0)"});
+
+    var bar = company.selectAll(".bar")
+          .data(function(d) { return d.revenue; })
+
+    bar
           .enter().append("rect")
-          .attr("class", "bar")
+          .attr("class", function(d) { return "bar " + d.name; })
           .attr("width", x.rangeBand())
-          .attr("height", function(d) { return _height - y(d.value); })
+          .attr("height", function(d) { return y(d.y0) - y(d.y1); })
           .attr("x", function(d) { return x(d.name); })
-          .attr("y", function(d) { return y(d.value); })
+          .attr("y", function(d) { return y(d.y1); })
           .on('mouseover', mouseover);
 
     // Append Axis.

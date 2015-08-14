@@ -647,6 +647,10 @@ article#production {
     font-size: 0.5em; }
   #explore-revenues .data-canvas rect {
     fill: #00B48D; }
+  #explore-revenues .data-canvas rect.cit {
+    fill: #6A246D; }
+  #explore-revenues .data-canvas rect.royalties {
+    fill: #4251A3; }
 
 #explore-line-growth {
   float: left;
