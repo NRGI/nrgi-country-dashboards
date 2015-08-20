@@ -652,6 +652,19 @@ article#production {
   #explore-revenues .data-canvas rect.royalties {
     fill: #4251A3; }
 
+#companies-line path.line.cit {
+  stroke: #6A246D; }
+#companies-line path.line.royalties {
+  stroke: #4251A3; }
+#companies-line .legend {
+  font-size: 0.5em; }
+  #companies-line .legend rect {
+    fill: #00B48D; }
+    #companies-line .legend rect.cit {
+      fill: #6A246D; }
+    #companies-line .legend rect.royalties {
+      fill: #4251A3; }
+
 #explore-line-growth {
   float: left;
   width: 100%;

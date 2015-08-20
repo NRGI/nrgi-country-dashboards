@@ -92,12 +92,14 @@ var lineChart = function(el, data) {
     var _this = this;
 
     lc = dataCanvas.select(".series").selectAll(".line")
-      .data(data.data)
+      .data(data.data);
+      
+    lcl = lc
       .enter()
       .append("g")
       .attr("class", function(d) {return "series "+d.name; })
 
-    lc
+    lclp = lcl
       .append("path")
       .attr("class", function(d) {return "line "+d.name; })
       .on("mouseover", mouseover);

@@ -1,7 +1,8 @@
-var pieData = {},
+var makeExploreData = {},
+    makeCompaniesData = {},
     lineData = {},
     barData = {};
-pieData = function(data) {
+makeExploreData = function(data) {
     this.drilldown = data.drilldown;
     this.data = data.records;
     this.cuts = data.cuts;
@@ -158,6 +159,82 @@ pieData = function(data) {
     out["years"] = this.years;
     return out;
 }
+makeCompaniesData = function(data) {
+
+  var parseDate = d3.time.format("%Y").parse;
+  
+  this.data = data.records;
+  this.data = d3.nest()
+    .key(function(d) {
+      return d["project_name"];
+    })
+    .key(function(d) {
+      return d.value_type;
+    })
+    .key(function(d) {
+      return d.year;
+    })
+    .rollup(function(items){
+      return d3.sum(items, function(d) {
+        return undefinedIsZero(parseFloat(d.value));
+      });
+    })
+    .entries(this.data)
+    .map(
+      function(d) {
+        obj = {};
+        obj["name"] = d.key;
+        obj["data"] = d.values.map(
+          function(v) {
+            vobj = {};
+            vobj["value_type"] = v.key;
+            vobj["name"] = v.key;
+            vobj["data"] = v.values.map(
+              function(vv) {
+                vvobj = {};
+                vvobj["name"] = v.key;
+                vvobj["year"] = vv.key;
+                vvobj["date"] = parseDate(vv.key);
+                vvobj["value"] = vv.values;
+                vvobj["company_name"] = d.key;
+                return vvobj;
+              }
+            );
+            return vobj;
+          }
+        );
+        obj["x"] = {
+          "domain": [parseDate("2006"), parseDate("2013")],
+          "label": "Time"
+        }
+        var maxY = d3.max($.map(obj.data, function(k) {
+            return $.map(k.data, function(l) {
+              return l.value;
+            });
+          }));
+        obj["y"] = {
+          "domain": [0, maxY],
+          "label": "Value"
+        }
+        return obj;
+      }
+    );
+    
+
+
+  var _d = {};
+  _d.data = this.data;
+  _d.companies = $.map(_d.data, function(k, v){
+    var cobj = {}
+    cobj["value"] = v;
+    cobj["name"] = k.name;
+    return cobj;
+  });
+  console.log(_d.companies);
+  return _d;
+}
+
+
 lineData = function(data) {
   var _data = data.data.records;
   var parseDate = d3.time.format("%Y").parse;
