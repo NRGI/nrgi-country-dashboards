@@ -236,6 +236,29 @@ article#production {
     fill: $col-15;
   }
 }
+#companies-line {
+  path.line {
+    &.cit {
+      stroke: $col-18;
+    }
+    &.royalties {
+      stroke: $col-15;
+    }
+  }
+
+  .legend {
+    font-size: 0.5em;
+    rect {
+      fill: $colour-commodity-default;
+      &.cit {
+        fill: $col-18;
+      }
+      &.royalties {
+        fill: $col-15;
+      }
+    }
+  }
+}
 #explore-line-growth {
   float: left;
   width: 100%;
