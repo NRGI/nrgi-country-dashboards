@@ -22,9 +22,9 @@ var lineChart = function(el, data) {
   };
 
   this.setData = function(data) {
-    this.data = data;
-    this.xData = this.data.x;
-    this.yData = this.data.y;
+    this.data = data.data;
+    this.xData = data.x;
+    this.yData = data.y;
     this.update();
   }
   
@@ -90,22 +90,6 @@ var lineChart = function(el, data) {
     height = _height,
     width = _width;
     var _this = this;
-
-    lc = dataCanvas.select(".series").selectAll(".line")
-      .data(data.data)
-      .enter()
-      .append("g")
-      .attr("class", function(d) {return "series "+d.name; })
-
-    lc
-      .append("path")
-      .attr("class", function(d) {return "line "+d.name; })
-      .on("mouseover", mouseover);
-
-    lc
-      .append("g")
-      .attr("class", "focus-circles")
-      .on("mouseover", mouseover);
 
     var yAxisGroup = svg.select('.y.axis');
 
@@ -176,19 +160,23 @@ var lineChart = function(el, data) {
       .attr('width', _width)
       .attr('height', _height);
 
-    // Add series, in all their glory
-    dataCanvas.selectAll(".series path.line")
-      .datum(function(d) { return d.data;})
-      .attr("d", line)
-      .on("mouseover", mouseover);
-      
-    // Pass data for each series to focus-circles
-    var focuscircle_series = dataCanvas.selectAll(".series g.focus-circles")
-      .datum(function(d) { return d;});
-      
-    // Create circle for each focuscircle-series, pass data
-    var focuscircle = focuscircle_series.selectAll(".focus-circle")
-      .data(function(d) { return d.data;});
+    // Create lines for all series
+    series = dataCanvas.select("g.series").selectAll(".line")
+      .data(this.data);
+
+    series
+      .enter()
+      .append("path")
+      .attr("class", function(d) { return "line "+d.name;})
+      .attr("d", function(d) { return line(d.data); });
+
+    series
+      .attr("d", function(d) { return line(d.data); });
+
+    // Create focus circle for each data point in each series
+    focuscircle = dataCanvas.select("g.focus-circles")
+      .selectAll(".focus-circle")
+      .data($.map(this.data, function(k) { return k.data; }));
 
     focuscircle
       .enter()
@@ -200,9 +188,6 @@ var lineChart = function(el, data) {
     focuscircle
         .attr("cx", function(d,i){ return x(d.date);})
         .attr("cy",function(d,i){return y(d.value);});
-
-    focuscircle.exit()
-      .remove();
 
     focuscircle
         .on("mouseover", circlemouseover)
