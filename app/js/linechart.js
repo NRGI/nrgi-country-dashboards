@@ -52,7 +52,8 @@ var lineChart = function(el, data) {
     // Line function.
     line = d3.svg.line()
       .x(function(d) { return x(d.date); })
-      .y(function(d) { return y(d.value); });
+      .y(function(d) { return y(d.value); })
+      .interpolate("monotone");
 
     // Chart elements.
     dataCanvas = svg.append("g")
