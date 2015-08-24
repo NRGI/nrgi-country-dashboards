@@ -549,8 +549,8 @@ nav#main {
 /* Article-specific styling */
 article#home {
   border-left: 10px solid #F15623;
-  background: transparent url("../img/waves.jpg") repeat scroll 0 0/cover;
-  /* credit: https://www.flickr.com/photos/chadskeers/5568184388/in/photolist-9u3pe7-qHkSA9-pNCwyN-qHkPBo-9pqDra-9pF2Bj-ecjHSb-9w8uvx-9smNCK-6qp5jn-4SNukr-bc5u1p-5JrAVv-bc5tAD-pNCv4o-ecdGat-cja5mC-pvfvw3-pvftRE-6sYLPX-bc5tzc-3NoZ6-b89NQP-b8bttp-qsbgmf-qpXLKs-qaNjqP-qsbgGW-qsbhFE-bc5tCv-qtb5T3-qtahB3-pNXozc-qKEaHo-qHkNxu-4HydK5-9vzCWM-9smMc4-9rWrJ7-5JrB9t-hNqmn-kbUuZb-qxA4ev-qgjdNr-qxA2zD-qxKMN4-pALm6E-qxA3JH-qxKKDe-9rKYAa */ }
+  background: transparent url("../img/oilwell.png") no-repeat scroll left -30px bottom 0;
+  min-height: 200px; }
 
 article#commodities {
   border-left: 10px solid #60C4B1; }
@@ -567,13 +567,19 @@ article#production {
   article#production h2 {
     border-bottom: 5px solid #27C4F4; }
 
+article#companies {
+  border-left: 10px solid #4251A3; }
+  article#companies h2 {
+    border-bottom: 5px solid #4251A3; }
+
+article#growth {
+  border-left: 10px solid #EF58A0; }
+  article#growth h2 {
+    border-bottom: 5px solid #EF58A0; }
+
 /* HEADER */
 .masthead {
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.7);
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,startColorStr="#B3FFFFFF",endColorStr="#B3FFFFFF");
-  -ms-filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,startColorStr="#B3FFFFFF",endColorStr="#B3FFFFFF");
-  margin: 150px 0px 150px 0px;
+  margin: 80px 0px 80px 0px;
   padding: 30px;
   color: #222222;
   text-align: right; }
@@ -593,7 +599,7 @@ article#production {
 
 /* CONTENT */
 .content-box {
-  margin-top: 100px;
+  margin-top: 50px;
   color: #000000;
   padding: 10px; }
 
@@ -608,10 +614,10 @@ article#production {
       margin: 0 auto;
       width: 100%; }
   #content .content-box {
-    padding: 20px 60px 60px; }
+    padding: 20px 60px 20px; }
 
 #main-content article {
-  min-height: 600px; }
+  min-height: 400px; }
 
 .table {
   font-size: 0.7em; }
