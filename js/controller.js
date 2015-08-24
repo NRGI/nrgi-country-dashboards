@@ -12,7 +12,7 @@ var generateExplorer = function(data) {
 
   // Company widget
   companiesData = makeCompaniesData(data);
-  var companiesChart = new lineChart("#companies-line", companiesData.data[10]);
+  var companiesChart = new lineChart("#companies-line", companiesData.data[12]);
   
   var companiesSelector = d3.select("#companies-selector");
   
@@ -23,7 +23,7 @@ var generateExplorer = function(data) {
     .enter()
     .append("option")
     .attr("class", "option")
-    .property("selected", function(d,i){ if (d.value == 10) { return true; } else { return false; }})
+    .property("selected", function(d,i){ if (d.value == 12) { return true; } else { return false; }})
     .attr("value", function(d,i){ return d.value;})
     .text(function(d,i){ return d.name;});
     
