@@ -234,7 +234,6 @@ makeCompaniesData = function(data) {
     cobj["name"] = k.name;
     return cobj;
   });
-  console.log(_d.companies);
   return _d;
 }
 
