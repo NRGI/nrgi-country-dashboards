@@ -1,0 +1,54 @@
+{
+  "records": [
+    {
+      "series": "Petroleum Funds", 
+      "value": "0", 
+      "year": "2010"
+    }, 
+    {
+      "series": "Petroleum Funds", 
+      "value": "104508984", 
+      "year": "2011"
+    }, 
+    {
+      "series": "Petroleum Funds", 
+      "value": "168467056", 
+      "year": "2012"
+    }, 
+    {
+      "series": "Petroleum Funds", 
+      "value": "871962187", 
+      "year": "2013"
+    }, 
+    {
+      "series": "Petroleum Funds", 
+      "value": "1630036415", 
+      "year": "2014"
+    }
+  ], 
+  "help": "", 
+  "success": true, 
+  "result": {
+    "fields": [
+      {
+        "id": "year", 
+        "type": "integer", 
+        "name": "year", 
+        "description": ""
+      }, 
+      {
+        "id": "value", 
+        "type": "integer", 
+        "name": "value", 
+        "description": ""
+      }, 
+      {
+        "id": "series", 
+        "type": "string", 
+        "name": "series", 
+        "description": ""
+      }
+    ], 
+    "resource_id": "petroleum-account"
+  }
+}

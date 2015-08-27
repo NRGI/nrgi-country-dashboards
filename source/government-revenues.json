@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "series": "General government revenue", 
+      "value": "2294000000", 
+      "year": "2004"
+    }, 
+    {
+      "series": "General government revenue", 
+      "value": "2633000000", 
+      "year": "2005"
+    }, 
+    {
+      "series": "General government revenue", 
+      "value": "3192000000", 
+      "year": "2006"
+    }, 
+    {
+      "series": "General government revenue", 
+      "value": "4052000000", 
+      "year": "2007"
+    }, 
+    {
+      "series": "General government revenue", 
+      "value": "4813000000", 
+      "year": "2008"
+    }, 
+    {
+      "series": "General government revenue", 
+      "value": "6017000000", 
+      "year": "2009"
+    }, 
+    {
+      "series": "General government revenue", 
+      "value": "7694000000", 
+      "year": "2010"
+    }, 
+    {
+      "series": "General government revenue", 
+      "value": "11441000000", 
+      "year": "2011"
+    }, 
+    {
+      "series": "General government revenue", 
+      "value": "13935000000", 
+      "year": "2012"
+    }, 
+    {
+      "series": "General government revenue", 
+      "value": "15630000000", 
+      "year": "2013"
+    }
+  ], 
+  "help": "", 
+  "success": true, 
+  "result": {
+    "fields": [
+      {
+        "id": "year", 
+        "type": "integer", 
+        "name": "year", 
+        "description": ""
+      }, 
+      {
+        "id": "value", 
+        "type": "integer", 
+        "name": "value", 
+        "description": ""
+      }, 
+      {
+        "id": "series", 
+        "type": "string", 
+        "name": "series", 
+        "description": ""
+      }
+    ], 
+    "resource_id": "government-revenues"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "records": [
+    {
+      "series": "Government debt", 
+      "value": "21395000000", 
+      "year": "2010"
+    }, 
+    {
+      "series": "Government debt", 
+      "value": "25453000000", 
+      "year": "2011"
+    }, 
+    {
+      "series": "Government debt", 
+      "value": "36962000000", 
+      "year": "2012"
+    }, 
+    {
+      "series": "Government debt", 
+      "value": "52301000000", 
+      "year": "2013"
+    }, 
+    {
+      "series": "Government debt", 
+      "value": "76632000000", 
+      "year": "2014"
+    }
+  ], 
+  "help": "", 
+  "success": true, 
+  "result": {
+    "fields": [
+      {
+        "id": "year", 
+        "type": "integer", 
+        "name": "year", 
+        "description": ""
+      }, 
+      {
+        "id": "value", 
+        "type": "integer", 
+        "name": "value", 
+        "description": ""
+      }, 
+      {
+        "id": "series", 
+        "type": "string", 
+        "name": "series", 
+        "description": ""
+      }
+    ], 
+    "resource_id": "government-debt"
+  }
+}

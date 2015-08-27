@@ -1,0 +1,59 @@
+{
+  "records": [
+    {
+      "commodity": "extractives", 
+      "value": "1.57", 
+      "year": "2008"
+    }, 
+    {
+      "commodity": "extractives", 
+      "value": "1.23", 
+      "year": "2009"
+    }, 
+    {
+      "commodity": "extractives", 
+      "value": "2.55", 
+      "year": "2010"
+    }, 
+    {
+      "commodity": "extractives", 
+      "value": "3.74", 
+      "year": "2011"
+    }, 
+    {
+      "commodity": "extractives", 
+      "value": "1.39", 
+      "year": "2012"
+    }, 
+    {
+      "commodity": "extractives", 
+      "value": "1.00", 
+      "year": "2013"
+    }
+  ], 
+  "help": "", 
+  "success": true, 
+  "result": {
+    "fields": [
+      {
+        "id": "year", 
+        "type": "integer", 
+        "name": "year", 
+        "description": ""
+      }, 
+      {
+        "id": "value", 
+        "type": "number", 
+        "name": "value", 
+        "description": ""
+      }, 
+      {
+        "id": "commodity", 
+        "type": "string", 
+        "name": "commodity", 
+        "description": ""
+      }
+    ], 
+    "resource_id": "data"
+  }
+}

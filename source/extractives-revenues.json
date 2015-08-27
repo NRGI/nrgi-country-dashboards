@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "series": "Extractive revenues", 
+      "value": "27000000", 
+      "year": "2004"
+    }, 
+    {
+      "series": "Extractive revenues", 
+      "value": "45000000", 
+      "year": "2005"
+    }, 
+    {
+      "series": "Extractive revenues", 
+      "value": "66000000", 
+      "year": "2006"
+    }, 
+    {
+      "series": "Extractive revenues", 
+      "value": "62000000", 
+      "year": "2007"
+    }, 
+    {
+      "series": "Extractive revenues", 
+      "value": "91000000", 
+      "year": "2008"
+    }, 
+    {
+      "series": "Extractive revenues", 
+      "value": "112000000", 
+      "year": "2009"
+    }, 
+    {
+      "series": "Extractive revenues", 
+      "value": "212000000", 
+      "year": "2010"
+    }, 
+    {
+      "series": "Extractive revenues", 
+      "value": "943000000", 
+      "year": "2011"
+    }, 
+    {
+      "series": "Extractive revenues", 
+      "value": "1161000000", 
+      "year": "2012"
+    }, 
+    {
+      "series": "Extractive revenues", 
+      "value": "1270000000", 
+      "year": "2013"
+    }
+  ], 
+  "help": "", 
+  "success": true, 
+  "result": {
+    "fields": [
+      {
+        "id": "year", 
+        "type": "integer", 
+        "name": "year", 
+        "description": ""
+      }, 
+      {
+        "id": "value", 
+        "type": "integer", 
+        "name": "value", 
+        "description": ""
+      }, 
+      {
+        "id": "series", 
+        "type": "string", 
+        "name": "series", 
+        "description": ""
+      }
+    ], 
+    "resource_id": "extractives-revenues"
+  }
+}
