@@ -173,6 +173,12 @@ var barChart = function(el, data) {
           .attr("y", function(d) { return y(d.y1); })
           .on('mouseover', mouseover);
 
+    bar
+          .attr("width", x.rangeBand())
+          .attr("height", function(d) { return y(d.y0) - y(d.y1); })
+          .attr("x", function(d) { return x(d.name); })
+          .attr("y", function(d) { return y(d.y1); })
+
     // Append Axis.
     svg.select(".x.axis")
       .attr("transform", "translate(" + margin.left + "," + (_height + margin.top + 10) + ")").transition()

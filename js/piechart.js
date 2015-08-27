@@ -5,7 +5,7 @@ var pieChart = function(el, data) {
   var el_left = $(el).offset().left;
   
   var _width, _height, svg, pie, arc, drilldown, cuts, legend, tip;
-  var margin = {top: 10, right: 32, bottom: 10, left: 32};
+  var margin = {top: 40, right: 32, bottom: 10, left: 32};
 
 
   // Calculate based on element (window) size
@@ -46,7 +46,7 @@ var pieChart = function(el, data) {
 
       // Create arc
       arc = d3.svg.arc()
-          .outerRadius(radius - 10)
+          .outerRadius(radius - 30)
           .innerRadius(radius - 100);
 
       // Create legend
@@ -95,7 +95,7 @@ var pieChart = function(el, data) {
 
       // Update arcs
       arc
-        .outerRadius(radius - 10)
+        .outerRadius(radius - 30)
         .innerRadius(radius - 100);
       datacanvas.selectAll(".arc")
         .attr("d", arc);
