@@ -508,7 +508,7 @@ nav#main {
   nav#main ul {
     margin-top: 0; }
   nav#main li {
-    margin-left: 25px;
+    margin-left: 15px;
     background-color: #00833D;
     float: left;
     font-size: 1em;
@@ -572,9 +572,9 @@ article#companies {
   article#companies h2 {
     border-bottom: 5px solid #4251A3; }
 
-article#growth {
+article#debt-revenue {
   border-left: 10px solid #EF58A0; }
-  article#growth h2 {
+  article#debt-revenue h2 {
     border-bottom: 5px solid #EF58A0; }
 
 /* HEADER */
@@ -671,10 +671,41 @@ article#growth {
     #companies-line .legend rect.royalties {
       fill: #4251A3; }
 
-#explore-line-growth {
-  float: left;
+#debt-revenue-chart {
   width: 100%;
   min-height: 350px; }
+  #debt-revenue-chart path.line.government-debt {
+    stroke: #F68B1F; }
+  #debt-revenue-chart path.line.petroleum-funds {
+    stroke: #222222; }
+  #debt-revenue-chart .legend {
+    font-size: 0.5em; }
+    #debt-revenue-chart .legend rect {
+      fill: #00B48D; }
+      #debt-revenue-chart .legend rect.government-debt {
+        fill: #F68B1F; }
+      #debt-revenue-chart .legend rect.petroleum-funds {
+        fill: #222222; }
+
+#govt-revenue-expenditure-extractives-chart {
+  width: 100%;
+  min-height: 350px; }
+  #govt-revenue-expenditure-extractives-chart path.line.general-government-revenue {
+    stroke: #4251A3; }
+  #govt-revenue-expenditure-extractives-chart path.line.government-expenditure {
+    stroke: #F68B1F; }
+  #govt-revenue-expenditure-extractives-chart path.line.extractive-revenues {
+    stroke: #222222; }
+  #govt-revenue-expenditure-extractives-chart .legend {
+    font-size: 0.5em; }
+    #govt-revenue-expenditure-extractives-chart .legend rect {
+      fill: #00B48D; }
+      #govt-revenue-expenditure-extractives-chart .legend rect.general-government-revenue {
+        fill: #4251A3; }
+      #govt-revenue-expenditure-extractives-chart .legend rect.government-expenditure {
+        fill: #F68B1F; }
+      #govt-revenue-expenditure-extractives-chart .legend rect.extractive-revenues {
+        fill: #222222; }
 
 #explore-slider {
   cursor: pointer;
@@ -897,15 +928,15 @@ article#growth {
   stroke: #00b48d;
   stroke-width: 4px;
   fill: none; }
-  .lineChart .line.Gold {
+  .lineChart .line.gold {
     stroke: #F68B1F; }
-  .lineChart .line.Oil {
+  .lineChart .line.oil {
     stroke: #222222; }
 .lineChart .legend {
   font-size: 0.5em; }
   .lineChart .legend rect {
     fill: #00B48D; }
-    .lineChart .legend rect.Gold {
+    .lineChart .legend rect.gold {
       fill: #F68B1F; }
-    .lineChart .legend rect.Oil {
+    .lineChart .legend rect.oil {
       fill: #222222; }

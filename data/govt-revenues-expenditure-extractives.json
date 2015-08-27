@@ -1,0 +1,142 @@
+{
+  "records": [{
+    "series": "General government revenue",
+    "value": "2294000000",
+    "year": "2004"
+  }, {
+    "series": "General government revenue",
+    "value": "2633000000",
+    "year": "2005"
+  }, {
+    "series": "General government revenue",
+    "value": "3192000000",
+    "year": "2006"
+  }, {
+    "series": "General government revenue",
+    "value": "4052000000",
+    "year": "2007"
+  }, {
+    "series": "General government revenue",
+    "value": "4813000000",
+    "year": "2008"
+  }, {
+    "series": "General government revenue",
+    "value": "6017000000",
+    "year": "2009"
+  }, {
+    "series": "General government revenue",
+    "value": "7694000000",
+    "year": "2010"
+  }, {
+    "series": "General government revenue",
+    "value": "11441000000",
+    "year": "2011"
+  }, {
+    "series": "General government revenue",
+    "value": "13935000000",
+    "year": "2012"
+  }, {
+    "series": "General government revenue",
+    "value": "15630000000",
+    "year": "2013"
+  }, {
+    "series": "Government expenditure",
+    "value": "2690000000",
+    "year": "2004"
+  }, {
+    "series": "Government expenditure",
+    "value": "3081000000",
+    "year": "2005"
+  }, {
+    "series": "Government expenditure",
+    "value": "4072000000",
+    "year": "2006"
+  }, {
+    "series": "Government expenditure",
+    "value": "5299000000",
+    "year": "2007"
+  }, {
+    "series": "Government expenditure",
+    "value": "7361000000",
+    "year": "2008"
+  }, {
+    "series": "Government expenditure",
+    "value": "8582000000",
+    "year": "2009"
+  }, {
+    "series": "Government expenditure",
+    "value": "12008000000",
+    "year": "2010"
+  }, {
+    "series": "Government expenditure",
+    "value": "15826000000",
+    "year": "2011"
+  }, {
+    "series": "Government expenditure",
+    "value": "23110000000",
+    "year": "2012"
+  }, {
+    "series": "Government expenditure",
+    "value": "25955000000",
+    "year": "2013"
+  }, {
+    "series": "Extractive revenues",
+    "value": "27000000",
+    "year": "2004"
+  }, {
+    "series": "Extractive revenues",
+    "value": "45000000",
+    "year": "2005"
+  }, {
+    "series": "Extractive revenues",
+    "value": "66000000",
+    "year": "2006"
+  }, {
+    "series": "Extractive revenues",
+    "value": "62000000",
+    "year": "2007"
+  }, {
+    "series": "Extractive revenues",
+    "value": "91000000",
+    "year": "2008"
+  }, {
+    "series": "Extractive revenues",
+    "value": "112000000",
+    "year": "2009"
+  }, {
+    "series": "Extractive revenues",
+    "value": "212000000",
+    "year": "2010"
+  }, {
+    "series": "Extractive revenues",
+    "value": "943000000",
+    "year": "2011"
+  }, {
+    "series": "Extractive revenues",
+    "value": "1161000000",
+    "year": "2012"
+  }, {
+    "series": "Extractive revenues",
+    "value": "1270000000",
+    "year": "2013"
+  }],
+  "result": {
+    "fields": [{
+      "id": "year",
+      "type": "integer",
+      "name": "year",
+      "description": ""
+    }, {
+      "id": "value",
+      "type": "integer",
+      "name": "value",
+      "description": ""
+    }, {
+      "id": "series",
+      "type": "string",
+      "name": "series",
+      "description": ""
+    }],
+    "resource_id": "extractives-revenues"
+  }
+}
