@@ -63,7 +63,7 @@ nav#main {
     margin-top: 0;
   }
   li {
-    margin-left: 25px;
+    margin-left: 15px;
     background-color: $nav-button-colour;
     float: left;
     font-size: 1em;
@@ -144,7 +144,7 @@ article#companies {
     border-bottom: 5px solid $col-15;
   }
 }
-article#growth {
+article#debt-revenue {
   border-left: 10px solid $col-21;
   h2 {
     border-bottom: 5px solid $col-21;
@@ -267,10 +267,59 @@ article#growth {
     }
   }
 }
-#explore-line-growth {
-  float: left;
+#debt-revenue-chart {
   width: 100%;
   min-height: 350px;
+  path.line {
+    &.government-debt {
+      stroke: $colour-gold;
+    }
+    &.petroleum-funds {
+      stroke: $colour-oil;
+    }
+  }
+  .legend {
+    font-size: 0.5em;
+    rect {
+      fill: $colour-commodity-default;
+      &.government-debt {
+        fill: $colour-gold;
+      }
+      &.petroleum-funds {
+        fill: $colour-oil;
+      }
+    }
+  }
+}
+#govt-revenue-expenditure-extractives-chart {
+  width: 100%;
+  min-height: 350px;
+  path.line {
+    &.general-government-revenue {
+      stroke: $col-15;
+    }
+    &.government-expenditure {
+      stroke: $colour-gold;
+    }
+    &.extractive-revenues {
+      stroke: $colour-oil;
+    }
+  }
+  .legend {
+    font-size: 0.5em;
+    rect {
+      fill: $colour-commodity-default;
+      &.general-government-revenue {
+        fill: $col-15;
+      }
+      &.government-expenditure {
+        fill: $colour-gold;
+      }
+      &.extractive-revenues {
+        fill: $colour-oil;
+      }
+    }
+  }
 }
 #explore-slider {
   cursor: pointer;
@@ -552,10 +601,10 @@ article#growth {
       stroke: #00b48d;
       stroke-width: 4px;
       fill: none;
-      &.Gold {
+      &.gold {
         stroke: $colour-gold;
       }
-      &.Oil {
+      &.oil {
         stroke: $colour-oil;
       }
   }
@@ -563,10 +612,10 @@ article#growth {
     font-size: 0.5em;
     rect {
       fill: $colour-commodity-default;
-      &.Gold {
+      &.gold {
         fill: $colour-gold;
       }
-      &.Oil {
+      &.oil {
         fill: $colour-oil;
       }
     }
