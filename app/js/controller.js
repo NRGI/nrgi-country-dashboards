@@ -1,6 +1,7 @@
 var exploreOptions, explorePieChart, pieD;
 var lineOptions, thisLineChart, lineD;
 var thisBarChart;
+var companiesChart
 
 // This creates the data explorer
 d3.json("data/gheiti-revenues.json", function(error, data) {
@@ -12,7 +13,7 @@ var generateExplorer = function(data) {
 
   // Company widget
   companiesData = makeCompaniesData(data);
-  var companiesChart = new lineChart("#companies-line", companiesData.data[12]);
+  companiesChart = new lineChart("#companies-line", companiesData.data[12]);
   
   var companiesSelector = d3.select("#companies-selector");
   
@@ -90,27 +91,40 @@ var generateExplorer = function(data) {
   thisBarChart = new barChart("#explore-revenues", barData(barD));
 }
 
-// Line chart
-// Should rename to something more descriptive
-var lineGDPOptions, thisGDPLineChart, lineGDPD;
-var url = 'data/gdp-extractives.json';
+// Debt and extractives chart
+var lineDPOptions, lineDPChart, lineDPData;
+var url = 'data/debt-petroleum.json';
 d3.json(url, function(error, data) {
-  lineGDPOptions = {
+  lineDPOptions = {
     "data": data,
-    "drilldown": "commodity"
+    "drilldown": "series"
   }
-  lineGDPD = lineData(lineGDPOptions);
-  thisGDPLineChart = new lineChart("#explore-line-growth", lineGDPD);
+  lineDPData = lineData(lineDPOptions);
+  lineDPChart = new lineChart("#debt-revenue-chart", lineDPData);
+});
+
+// Govt revenue, debt, extractives chart
+var lineGovRevenueData, lineGovRevenueChart;
+var url = 'data/govt-revenues-expenditure-extractives.json';
+d3.json(url, function(error, data) {
+  lineGovRevenueData = lineData({
+    "data": data,
+    "drilldown": "series"
+  });
+  lineGovRevenueChart = new lineChart("#govt-revenue-expenditure-extractives-chart",
+                             lineGovRevenueData);
 });
 
 // Resizing of charts on window size change
 // Uses underscore debounce to avoid crashing your browser
 var resizeCharts = _.debounce(function() {
-    explorePieChart.update();
     thisLineChart.update();
-    thisGDPLineChart.update();
+    explorePieChart.update();
+    companiesChart.update();
+    lineDPChart.update();
     thisBarChart.update();
-}, 300);
+    lineGovRevenueChart.update();
+}, 1000);
 $(window).resize(resizeCharts);
 
 // Show map
