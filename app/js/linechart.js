@@ -40,7 +40,7 @@ var lineChart = function(el, data) {
       .attr('class', 'd3-tip')
       .offset([-10, 0])
       .html(function(d) {
-        return "<strong>" + d.year + "</strong><br /><small>" + d.name + "</small><br /><small>$ " + dec(d.value) + "</small>";
+        return "<strong>" + d.year + "</strong><br /><small>" + d.name + "</small><br /><small>¢ " + dec(d.value) + "</small>";
       });
 
     // Define xAxis function.
@@ -168,7 +168,7 @@ var lineChart = function(el, data) {
     series
       .enter()
       .append("path")
-      .attr("class", function(d) { return "line "+d.name;})
+      .attr("class", function(d) { return "line " + slugify(d.name);})
       .attr("d", function(d) { return line(d.data); });
 
     series
@@ -216,12 +216,13 @@ var lineChart = function(el, data) {
       });
 
     legend.select("rect")
-        .attr("x", _width - 18)
+        .attr("x", _width + 35)
         .attr("width", 18)
         .attr("height", 18)
-        .attr("class", function(d) { return d });
+        .attr("class", function(d) { return slugify(d) });
+
     legend.select("text")
-        .attr("x", _width - 24)
+        .attr("x", _width + 29)
         .attr("y", 9)
         .attr("dy", ".35em")
         .style("text-anchor", "end")
@@ -259,14 +260,24 @@ var lineChart = function(el, data) {
   function circlemouseover(d) {
     thecircle = d3.select(this);
     tip.show(d);
-    the_line = d3.select(".line." + d.name);
+    the_line = d3.select(".line." + slugify(d.name));
     the_line.style("stroke-width", "6px");
   }
   function circlemouseout(d) {
     thecircle = d3.select(this);
     tip.hide();
-    the_line = d3.select(".line." + d.name);
+    the_line = d3.select(".line." + slugify(d.name));
     the_line.style("stroke-width", "4px");
+  }
+
+  function slugify(text)
+  {
+    return text.toString().toLowerCase()
+      .replace(/\s+/g, '-')           // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+      .replace(/^-+/, '')             // Trim - from start of text
+      .replace(/-+$/, '');            // Trim - from end of text
   }
 
   this.destroy = function() {
