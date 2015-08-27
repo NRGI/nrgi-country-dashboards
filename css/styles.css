@@ -741,6 +741,18 @@ article#debt-revenue {
     #explore-pie-companies .badge.Gold {
       background-color: #F68B1F; }
 
+.source {
+  font-size: 0.6em;
+  color: #333333;
+  float: right; }
+  .source p {
+    margin: 2px; }
+  .source ul {
+    margin: 0px;
+    padding: 0px; }
+    .source ul li {
+      list-style-type: square; }
+
 /* D3 TIP */
 .d3-tip {
   line-height: 1;
