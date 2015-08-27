@@ -365,6 +365,22 @@ article#debt-revenue {
   }
 }
 
+.source {
+  font-size: 0.6em;
+  color: #333333;
+  float:right;
+  p {
+    margin: 2px;
+  }
+  ul {
+    margin: 0px;
+    padding: 0px;
+    li {
+      list-style-type: square;
+    }
+  }
+}
+
 /* D3 TIP */
 
 .d3-tip {
