@@ -46,7 +46,7 @@ var pieChart = function(el, data) {
 
       // Create arc
       arc = d3.svg.arc()
-          .outerRadius(radius - 10)
+          .outerRadius(radius - 30)
           .innerRadius(radius - 100);
 
       // Create legend
@@ -95,7 +95,7 @@ var pieChart = function(el, data) {
 
       // Update arcs
       arc
-        .outerRadius(radius - 10)
+        .outerRadius(radius - 30)
         .innerRadius(radius - 100);
       datacanvas.selectAll(".arc")
         .attr("d", arc);
