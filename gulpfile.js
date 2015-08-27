@@ -39,10 +39,10 @@ gulp.task('gh-deploy', function() {
 });
 
 // Build task
-gulp.task('build', ['copy_files', 'styles', 'combinedata']);
+gulp.task('build', ['combinedata', 'copy_files', 'styles']);
 
 // Watch files for changes and reload
-gulp.task('serve', ['copy_files', 'styles', 'combinedata'], function() {
+gulp.task('serve', ['combinedata', 'copy_files', 'styles'], function() {
   browserSync({
     server: {
       baseDir: './dist'
