@@ -227,13 +227,15 @@ makeCompaniesData = function(data) {
     });
 
   var _d = {};
-  _d.data = this.data;
-  _d.companies = $.map(_d.data, function(k, v){
-    var cobj = {}
-    cobj["value"] = v;
-    cobj["name"] = k.name;
-    return cobj;
+  _d.data = {};
+
+  $.map(this.data, function(k, v){
+    _d.data[k.name] = k;
   });
+  _d.companies = $.map(_d.data, function(k, v){
+    return v;
+  });
+
   return _d;
 }
 
