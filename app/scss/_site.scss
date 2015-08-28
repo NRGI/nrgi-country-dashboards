@@ -244,9 +244,17 @@ article#debt-revenue {
     fill: $col-15;
   }
 }
+#companies-selector {
+  width:100%;
+}
+#companies-narrative {
+  font-size: 0.7em;
+  max-height:400px;
+  overflow-y: scroll;
+}
 #companies-line {
   path.line {
-    &.cit {
+    &.corporate-income-tax {
       stroke: $col-18;
     }
     &.royalties {
@@ -258,7 +266,7 @@ article#debt-revenue {
     font-size: 0.5em;
     rect {
       fill: $colour-commodity-default;
-      &.cit {
+      &.corporate-income-tax {
         fill: $col-18;
       }
       &.royalties {
