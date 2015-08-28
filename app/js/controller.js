@@ -1,7 +1,7 @@
 var exploreOptions, explorePieChart, pieD;
 var lineOptions, thisLineChart, lineD;
 var thisBarChart;
-var companiesChart
+var companiesChart, companiesData, companiesSelector, companyNarratives;
 
 // This creates the data explorer
 d3.json("data/gheiti-revenues.json", function(error, data) {
