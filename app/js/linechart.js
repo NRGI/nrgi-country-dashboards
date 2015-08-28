@@ -182,7 +182,7 @@ var lineChart = function(el, data) {
     focuscircle
       .enter()
       .append("circle")
-			.attr("class","focus-circle focus-circle"+i)
+			.attr("class","focus-circle")
       .style('opacity', 0)
 			.attr("r",12);
 
