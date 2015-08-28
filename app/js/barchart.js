@@ -161,6 +161,9 @@ var barChart = function(el, data) {
       .attr("class", "g company")
       .attr("transform", function(d) {return "translate(" + x(d.name) + ",0)"});
 
+    company
+      .attr("transform", function(d) {return "translate(" + x(d.name) + ",0)"});
+
     var bar = company.selectAll(".bar")
           .data(function(d) { return d.revenue; })
 
