@@ -161,12 +161,15 @@ var barChart = function(el, data) {
       .attr("class", "g company")
       .attr("transform", function(d) {return "translate(" + x(d.name) + ",0)"});
 
+    company
+      .attr("transform", function(d) {return "translate(" + x(d.name) + ",0)"});
+
     var bar = company.selectAll(".bar")
           .data(function(d) { return d.revenue; })
 
     bar
           .enter().append("rect")
-          .attr("class", function(d) { return "bar " + d.name; })
+          .attr("class", function(d) { return "bar " + slugify(d.name); })
           .attr("width", x.rangeBand())
           .attr("height", function(d) { return y(d.y0) - y(d.y1); })
           .attr("x", function(d) { return x(d.name); })
@@ -227,6 +230,16 @@ var barChart = function(el, data) {
           d3.select(this)
           .style("opacity", "1");
       });
+  }
+
+  function slugify(text)
+  {
+    return text.toString().toLowerCase()
+      .replace(/\s+/g, '-')           // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+      .replace(/^-+/, '')             // Trim - from start of text
+      .replace(/-+$/, '');            // Trim - from end of text
   }
 
   this.destroy = function() {

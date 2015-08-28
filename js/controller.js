@@ -1,7 +1,7 @@
 var exploreOptions, explorePieChart, pieD;
 var lineOptions, thisLineChart, lineD;
 var thisBarChart;
-var companiesChart
+var companiesChart, companiesData, companiesSelector, companyNarratives;
 
 // This creates the data explorer
 d3.json("data/gheiti-revenues.json", function(error, data) {
@@ -11,28 +11,24 @@ d3.json("data/gheiti-revenues.json", function(error, data) {
 
 var generateExplorer = function(data) {
 
-  // Company widget
+  // Company-specific widget
   companiesData = makeCompaniesData(data);
-  companiesChart = new lineChart("#companies-line", companiesData.data[12]);
-  
-  var companiesSelector = d3.select("#companies-selector");
-  
+  companiesChart = new lineChart("#companies-line", companiesData.data["Newmont Ghana Gold Ltd"]);
+  companiesSelector = d3.select("#companies-selector");
   var comp = companiesSelector.selectAll(".option")
     .data(companiesData.companies); 
-    
   comp
     .enter()
     .append("option")
     .attr("class", "option")
-    .property("selected", function(d,i){ if (d.value == 12) { return true; } else { return false; }})
-    .attr("value", function(d,i){ return d.value;})
-    .text(function(d,i){ return d.name;});
-    
+    .attr("value", function(d,i){ return d;})
+    .text(function(d,i){ return d;});
   companiesSelector
     .on("change", function(){
-      companiesChart.setData(companiesData.data[this.value]);
+      selectCompany(this.value);
     });
   
+  // Main explorer
   exploreOptions = {
     "records": data["records"],
     "drilldown": "commodity",
@@ -46,6 +42,8 @@ var generateExplorer = function(data) {
 
   explorePieCompanies = new companiesWidget(
     "#explore-pie-companies", pieD);
+
+  makeCompaniesClickable();
 
   // Create year slider
   var exploreSlider = document.getElementById( "explore-slider" );
@@ -76,6 +74,7 @@ var generateExplorer = function(data) {
     explorePieChart.setData(pieD);
 
     explorePieCompanies.setData(pieD);
+    makeCompaniesClickable();
     barD.data = pieD.companies;
     thisBarChart.setData(barData(barD));
   });
@@ -89,31 +88,84 @@ var generateExplorer = function(data) {
 
   barD = {'data' : pieD.companies}
   thisBarChart = new barChart("#explore-revenues", barData(barD));
+
+  // load company narratives, with default
+  loadCompanyNarratives("Newmont Ghana Gold Ltd");
+
 }
 
 // Debt and extractives chart
 var lineDPOptions, lineDPChart, lineDPData;
-var url = 'data/debt-petroleum.json';
-d3.json(url, function(error, data) {
-  lineDPOptions = {
-    "data": data,
-    "drilldown": "series"
-  }
-  lineDPData = lineData(lineDPOptions);
-  lineDPChart = new lineChart("#debt-revenue-chart", lineDPData);
-});
+function loadDebtExtractivesChart() {
+  var url = 'data/debt-petroleum.json';
+  d3.json(url, function(error, data) {
+    lineDPOptions = {
+      "data": data,
+      "drilldown": "series"
+    }
+    lineDPData = lineData(lineDPOptions);
+    lineDPChart = new lineChart("#debt-revenue-chart", lineDPData);
+  });
+}
 
-// Govt revenue, debt, extractives chart
+// Govt revenue, expenditure, extractives chart
 var lineGovRevenueData, lineGovRevenueChart;
 var url = 'data/govt-revenues-expenditure-extractives.json';
-d3.json(url, function(error, data) {
-  lineGovRevenueData = lineData({
-    "data": data,
-    "drilldown": "series"
+function loadRevenueExpenditureChart() {
+  d3.json(url, function(error, data) {
+    lineGovRevenueData = lineData({
+      "data": data,
+      "drilldown": "series"
+    });
+    lineGovRevenueChart = new lineChart("#govt-revenue-expenditure-extractives-chart",
+                               lineGovRevenueData);
   });
-  lineGovRevenueChart = new lineChart("#govt-revenue-expenditure-extractives-chart",
-                             lineGovRevenueData);
-});
+}
+
+// Show map
+function loadMap() {
+  $.getJSON("data/ghana-resource-volumes.json", function(data) {
+    var resourceMap = new nrgiMap("", data);
+  });
+}
+
+// Load narrative data
+function loadCompanyNarratives (default_company) {
+  url = "data/company-narratives.json"
+  d3.json(url, function(error, data) {
+    companyNarratives = {}
+    $.map(data.records, function(k, v) {
+      companyNarratives[k.company_name] = makeNewlines(k.narrative);
+    });
+    selectCompany(default_company);
+  });
+}
+
+function selectCompany(company_name) {
+  companiesChart.setData(companiesData.data[company_name]);
+  $("#companies-selector-selected").text(company_name);
+  $("#companies-narrative").html(companyNarratives[company_name]);
+  $("#companies-selector").val(company_name);
+}
+
+function makeNewlines(string) {
+    return string
+      .replace(/\n+/g, '<br />');
+}
+
+function makeCompaniesClickable() {
+  console.log($("#explore-pie-companies td.company-name"));
+  $("#explore-pie-companies td.company-name")
+    .each(function(company) {
+      var company_name = $(this).text();
+      $(this).html('<a data-name="' + company_name + '" href="">' + company_name + "</a>")
+      .on("click", function(e) {
+        e.preventDefault();
+        selectCompany(company_name);
+        $('html,body').animate({scrollTop: $("article#companies").offset().top},'slow');
+      });
+    });
+}
 
 // Resizing of charts on window size change
 // Uses underscore debounce to avoid crashing your browser
@@ -127,7 +179,6 @@ var resizeCharts = _.debounce(function() {
 }, 1000);
 $(window).resize(resizeCharts);
 
-// Show map
-$.getJSON("data/ghana-resource-volumes.json", function(data) {
-  thisMap = new nrgiMap("", data);
-});
+loadRevenueExpenditureChart();
+loadDebtExtractivesChart();
+loadMap();

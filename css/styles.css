@@ -651,14 +651,22 @@ article#debt-revenue {
   min-height: 380px; }
   #explore-revenues .axis text {
     font-size: 0.5em; }
-  #explore-revenues .data-canvas rect {
+  #explore-revenues rect {
     fill: #00B48D; }
-  #explore-revenues .data-canvas rect.cit {
+  #explore-revenues rect.corporate-income-tax {
     fill: #6A246D; }
-  #explore-revenues .data-canvas rect.royalties {
+  #explore-revenues rect.royalties {
     fill: #4251A3; }
 
-#companies-line path.line.cit {
+#companies-selector {
+  width: 100%; }
+
+#companies-narrative {
+  font-size: 0.7em;
+  max-height: 400px;
+  overflow-y: scroll; }
+
+#companies-line path.line.corporate-income-tax {
   stroke: #6A246D; }
 #companies-line path.line.royalties {
   stroke: #4251A3; }
@@ -666,7 +674,7 @@ article#debt-revenue {
   font-size: 0.5em; }
   #companies-line .legend rect {
     fill: #00B48D; }
-    #companies-line .legend rect.cit {
+    #companies-line .legend rect.corporate-income-tax {
       fill: #6A246D; }
     #companies-line .legend rect.royalties {
       fill: #4251A3; }
@@ -742,6 +750,7 @@ article#debt-revenue {
       background-color: #F68B1F; }
 
 .source {
+  margin-top: 10px;
   font-size: 0.6em;
   color: #333333;
   float: right; }
