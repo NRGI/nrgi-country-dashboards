@@ -234,13 +234,13 @@ article#debt-revenue {
   .axis text {
     font-size:0.5em;
   }
-  .data-canvas rect {
+  rect {
     fill: $colour-commodity-default;
   }
-  .data-canvas rect.cit {
+  rect.corporate-income-tax {
     fill: $col-18;
   }
-  .data-canvas rect.royalties {
+  rect.royalties {
     fill: $col-15;
   }
 }
