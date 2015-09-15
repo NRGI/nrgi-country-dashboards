@@ -18,7 +18,7 @@ companiesWidget = function(el, data) {
         thead
           .append("th").text("Company name");
         thead
-          .append("th").text("Revenue");
+          .append("th").text("Revenue (GHS)");
         thead
           .append("th").text("Commodities");
         
