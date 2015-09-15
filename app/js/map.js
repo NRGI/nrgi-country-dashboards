@@ -2,9 +2,6 @@ var nrgiMap = {};
 var nrgiMap = function(el, data) {
   var locations = data["records"].filter(filterByYear);
   var markers = {}
-  markers["Gold"] = new L.layerGroup();
-  markers["Oil"] = new L.layerGroup();
-  markers["Other"] = new L.layerGroup();
   for (var i in locations) {
   	var feature = locations[i];
     if (feature['lat'] == '') { continue; }
@@ -22,7 +19,8 @@ var nrgiMap = function(el, data) {
         if (feature["commodity"] in markers) {
           markers[feature["commodity"]].addLayer(marker);
         } else {
-          markers["Other"].addLayer(marker);
+					markers[feature["commodity"]] = new L.layerGroup();
+          markers[feature["commodity"]].addLayer(marker);
         };
     }
 
@@ -44,7 +42,8 @@ var nrgiMap = function(el, data) {
   layer_MapBox.addTo(map);
   L.control.layers({}, overlayMaps,{collapsed:false}).addTo(map);
   map.addLayer(markers["Gold"]);
-  map.addLayer(markers["Oil"]);
+  map.addLayer(markers["Bauxite"]);
+  map.addLayer(markers["Manganese"]);
   map.scrollWheelZoom.disable();
 
   function markerSize(volume) {
