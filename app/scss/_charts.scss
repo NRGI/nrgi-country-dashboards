@@ -1,0 +1,265 @@
+/* CHARTS */
+#explorer {
+  clear: both;
+}
+#explore-line {
+  .line {
+      &.gold {
+        stroke: $colour-gold;
+      }
+      &.oil-and-gas {
+        stroke: $colour-oil;
+      }
+			&.bauxite {
+				stroke: $colour-bauxite;
+			}
+			&.manganese {
+				stroke: $colour-manganese;
+			}
+  }
+  .legend {
+    rect {
+      &.gold {
+        fill: $colour-gold;
+      }
+      &.oil-and-gas {
+        fill: $colour-oil;
+      }
+			&.bauxite {
+				fill: $colour-bauxite;
+			}
+			&.manganese {
+				fill: $colour-manganese;
+			}
+    }
+  }
+}
+#explore-slider {
+  cursor: pointer;
+  margin-bottom:70px;
+  .noUi-base {
+    background-color: #cccccc;
+  }
+  .noUi-pips {
+    font: inherit;
+    font-size: 0.75em;
+    color: inherit;
+  }
+}
+#explore-pie {
+  height: 280px;
+  svg {
+    .segment, rect {
+      &.oil-and-gas {
+        fill: $colour-oil;
+      }
+      &.gold {
+        fill: $colour-gold;
+      }
+			&.bauxite {
+				fill: $colour-bauxite;
+			}
+			&.manganese {
+				fill: $colour-manganese;
+			}
+    }
+  }
+}
+#explore-pie-companies {
+  padding: 5px;
+  .badge {
+    background-color: $colour-commodity-default;
+    border-radius: 0;
+    display: block;
+    &.oil-and-gas {
+      background-color: $colour-oil;
+    }
+    &.gold {
+      background-color: $colour-gold;
+    }
+    &.manganese {
+      background-color: $colour-manganese;
+    }
+    &.bauxite {
+      background-color: $colour-bauxite;
+    }
+  }
+}
+#explore-revenues {
+  width: 100%;
+  min-height: 380px;
+  .axis text {
+    font-size:0.5em;
+  }
+  rect {
+    fill: $colour-commodity-default;
+  }
+  rect.corporate-income-tax {
+    fill: $col-18;
+  }
+  rect.royalties {
+    fill: $col-15;
+  }
+}
+#companies-selector {
+  width:100%;
+}
+#companies-narrative {
+  font-size: 0.7em;
+  max-height:400px;
+  overflow-y: scroll;
+}
+#companies-line {
+  path.line {
+    &.corporate-income-tax {
+      stroke: $col-18;
+    }
+    &.royalties {
+      stroke: $col-15;
+    }
+  }
+  .legend {
+    rect {
+      &.corporate-income-tax {
+        fill: $col-18;
+      }
+      &.royalties {
+        fill: $col-15;
+      }
+    }
+  }
+}
+#debt-revenue-chart {
+  path.line {
+    &.government-debt {
+      stroke: $colour-gold;
+    }
+    &.petroleum-funds {
+      stroke: $colour-oil;
+    }
+  }
+  .legend {
+    rect {
+      fill: $colour-commodity-default;
+      &.government-debt {
+        fill: $colour-gold;
+      }
+      &.petroleum-funds {
+        fill: $colour-oil;
+      }
+    }
+  }
+}
+#govt-revenue-expenditure-extractives-chart {
+  path.line {
+    &.general-government-revenue {
+      stroke: $col-15;
+    }
+    &.government-expenditure {
+      stroke: $colour-gold;
+    }
+    &.extractive-revenues {
+      stroke: $colour-oil;
+    }
+  }
+  .legend {
+    rect {
+      fill: $colour-commodity-default;
+      &.general-government-revenue {
+        fill: $col-15;
+      }
+      &.government-expenditure {
+        fill: $colour-gold;
+      }
+      &.extractive-revenues {
+        fill: $colour-oil;
+      }
+    }
+  }
+}
+.map {
+    z-index: 0;
+}
+#productionMap {
+    height: 500px;
+    .leaflet-overlay-pane path {
+      stroke: $colour-commodity-default;
+      fill: $colour-commodity-default;
+	    &.gold {
+	      stroke: $colour-gold;
+	      fill: $colour-gold;
+	    }
+	    &.oil-and-gas {
+	      stroke: $colour-oil;
+	      fill: $colour-oil;
+	    }
+	    &.bauxite {
+	      stroke: $colour-bauxite;
+	      fill: $colour-bauxite;
+	    }
+	    &.manganese {
+	      stroke: $colour-manganese;
+	      fill: $colour-manganese;
+	    }
+    }
+}
+
+
+/* D3 TIP */
+
+.d3-tip {
+  line-height: 1;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  pointer-events: none;
+  font-size:0.8em;
+  top:0;
+
+  /* Creates a small triangle extender for the tooltip */
+  &::after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    pointer-events: none;
+  }
+
+  /* Northward tooltips */
+  &.n:after {
+    content: "\25BC";
+    margin: -2px 0 0 0;
+    top: 100%;
+    left: 0;
+    text-align: center;
+  }
+
+  /* Eastward tooltips */
+  &.e:after {
+    content: "\25C0";
+    margin: -4px 0 0 0;
+    top: 50%;
+    left: -8px;
+  }
+
+  /* Southward tooltips */
+  &.s:after {
+    content: "\25B2";
+    margin: 0 0 1px 0;
+    top: -8px;
+    left: 0;
+    text-align: center;
+  }
+
+  /* Westward tooltips */
+  &.w:after {
+    content: "\25B6";
+    margin: -4px 0 0 -1px;
+    top: 50%;
+    left: 100%;
+  }
+}

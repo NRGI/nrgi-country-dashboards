@@ -1,0 +1,49 @@
+/* Chart */
+
+.chart {
+  width: 100%;
+  display: block;
+}
+
+.chart .small-label {
+    fill: tint(#000000, 44%);
+}
+
+.chart .axis text {
+    font-size: 0.875rem;
+    fill: rgba(#000000, 0.64);
+    font-weight: bold;
+}
+
+.chart .axis-lines {
+    stroke: rgba(#000000, 0.12);
+    stroke-width: 1px;
+    fill: none;
+  }
+
+.chart .x.axis {
+  .tick line {
+      display: none;
+  }
+  .domain {
+      display: none;
+  }
+}
+
+.lineChart {
+	min-height: 400px;
+  .area {
+      fill: #ffffff;
+    }
+  .line {
+      stroke: #cccccc;
+      stroke-width: 4px;
+      fill: none;
+  }
+  .legend {
+    font-size: 0.5em;
+    rect {
+      fill: #cccccc;
+    }
+  }
+}

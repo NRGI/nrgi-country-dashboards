@@ -1,0 +1,11 @@
+.pieChart {
+  width:100%;
+  text-align: center;
+  display: inline-block;
+	.legend {
+    font-size: 0.5em;
+	}
+  .segment, rect {
+    fill: #cccccc;
+  }
+}
