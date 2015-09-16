@@ -194,15 +194,9 @@ var barChart = function(el, data) {
       .style("text-anchor", "end")
 
     svg.selectAll(".x.axis text")
+      .attr("title", function() { return d3.select(this).text(); })
       .text(function() { 
         return truncate(d3.select(this).text(), 13, "..."); });
-
-    if (this.xData && this.xData.label) {
-      svg.select(".x.axis .label")
-        .text(this.xData.label)
-        .attr("x", _width / 2)
-        .attr("y", 35);
-    }
 
     if (this.yData && this.yData.label) {
       svg.select(".y.axis .label")
