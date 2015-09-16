@@ -49,10 +49,19 @@ companiesWidget = function(el, data) {
         .select(".company-commodity")
         .html(function(d) {
           companiesbadges = $.map(d.commodities, function(v) {
-            return '<span class="badge ' + v.key + '">' + v.key + '</span>' });
+            return '<span class="badge ' + slugify(v.key) + '">' + v.key + '</span>' });
           return companiesbadges.join("");});
         
     }
+	  function slugify(text)
+	  {
+	    return text.toString().toLowerCase()
+	      .replace(/\s+/g, '-')           // Replace spaces with -
+	      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+	      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+	      .replace(/^-+/, '')             // Trim - from start of text
+	      .replace(/-+$/, '');            // Trim - from end of text
+	  }
 
     var dec = d3.format(',.2f');
 
