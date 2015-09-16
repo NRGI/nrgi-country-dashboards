@@ -1,5 +1,5 @@
 var nrgiMap = {};
-var nrgiMap = function(el, data) {
+var nrgiMap = function(elID, data) {
   var locations = data["records"].filter(filterByYear);
   var markers = {}
   for (var i in locations) {
@@ -11,7 +11,7 @@ var nrgiMap = function(el, data) {
         		feature['long']
               ), markerSize(feature['value']), {
               fillOpacity: 0.8,
-              className: feature["commodity"]
+              className: slugify(feature["commodity"])
           }
         );
         var popupContent = getPopupContent(feature);
@@ -33,7 +33,7 @@ var nrgiMap = function(el, data) {
           function(k) { 
               return markers[k];
         });
-  var map = new L.Map('map', {
+  var map = new L.Map(elID, {
       center: new L.LatLng(5.7,-1),
       zoom: 8,
       layers: lm,
@@ -57,7 +57,7 @@ var nrgiMap = function(el, data) {
   }
 
   function getPopupContent(feature) {
-    var pc = '<dt>' + feature['project_name'] + '</dt>\
+    var pc = '<dt>' + feature['name'] + '</dt>\
      <dl>Location: ' + feature['location'] + '<br />\
      Production volume: ' + feature['value'] + '\
      ' + feature['value_unit'] + '<br />\
@@ -71,5 +71,15 @@ var nrgiMap = function(el, data) {
   }
   function isNumeric(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
+  }
+
+  function slugify(text)
+  {
+    return text.toString().toLowerCase()
+      .replace(/\s+/g, '-')           // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+      .replace(/^-+/, '')             // Trim - from start of text
+      .replace(/-+$/, '');            // Trim - from end of text
   }
 }
