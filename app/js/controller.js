@@ -125,7 +125,7 @@ function loadRevenueExpenditureChart() {
 // Show map
 function loadMap() {
   $.getJSON("data/ghana-resource-volumes.json", function(data) {
-    var resourceMap = new nrgiMap("", data);
+    var resourceMap = new nrgiMap("productionMap", data);
   });
 }
 
