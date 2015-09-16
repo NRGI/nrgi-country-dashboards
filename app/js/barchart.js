@@ -26,6 +26,7 @@ var barChart = function(el, data) {
     this.data = data;
     this.xData = this.data.x;
     this.yData = this.data.y;
+    this.currency = this.data.currency;
     this.update();
   }
   
@@ -37,13 +38,6 @@ var barChart = function(el, data) {
     x = d3.scale.ordinal();
     y = d3.scale.linear();
     
-    tip = d3.tip()
-      .attr('class', 'd3-tip')
-      .offset([-10, 0])
-      .html(function(d) {
-        return "<strong>" + d.company_name + "</strong><br /><small>" + d.name + "<br />$ " + dec(d.value) + "</small>";
-      });
-
     // Define xAxis function.
     xAxis = d3.svg.axis()
       .scale(x)
@@ -71,8 +65,6 @@ var barChart = function(el, data) {
     dataCanvas.append("g")
       .attr("class", "legends");
 
-    svg.call(tip);
-
     this.setData(data);
   };
   this.update = function() {
@@ -80,6 +72,15 @@ var barChart = function(el, data) {
     height = _height,
     width = _width;
     var _this = this;
+    
+    var currency = this.currency;
+    tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function(d) {
+        return "<strong>" + d.company_name + "</strong><br /><small>" + d.name + "<br />" + currency + " " + dec(d.value) + "</small>";
+      });
+    svg.call(tip);
 
     var yAxisGroup = svg.select('.y.axis');
 

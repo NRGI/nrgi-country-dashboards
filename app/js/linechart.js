@@ -25,6 +25,7 @@ var lineChart = function(el, data) {
     this.data = data.data;
     this.xData = data.x;
     this.yData = data.y;
+		this.currency = data.currency;
     this.update();
   }
   
@@ -36,14 +37,7 @@ var lineChart = function(el, data) {
     x = d3.time.scale();
     y = d3.scale.linear();
     
-    tip = d3.tip()
-      .attr('class', 'd3-tip')
-      .offset([-10, 0])
-      .html(function(d) {
-        return "<strong>" + d.year + "</strong><br /><small>" + d.name + "</small><br /><small>¢ " + dec(d.value) + "</small>";
-      });
-
-    // Define xAxis function.
+		//Define xAxis function.
     xAxis = d3.svg.axis()
       .scale(x)
       .ticks(6)
@@ -82,8 +76,6 @@ var lineChart = function(el, data) {
     dataCanvas.append("g")
       .attr("class", "legends");
 
-    svg.call(tip);
-
     this.setData(data);
   };
   this.update = function() {
@@ -91,6 +83,16 @@ var lineChart = function(el, data) {
     height = _height,
     width = _width;
     var _this = this;
+
+		var currency = this.currency;
+	  tip = d3.tip()
+	    .attr('class', 'd3-tip')
+	    .offset([-10, 0])
+	    .html(function(d) {
+	      return "<strong>" + d.year + "</strong><br /><small>" + d.name + "</small><br /><small>" + currency + " " + dec(d.value) + "</small>";
+	    });
+
+    svg.call(tip);
 
     var yAxisGroup = svg.select('.y.axis');
 

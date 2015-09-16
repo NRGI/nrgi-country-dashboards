@@ -38,6 +38,7 @@ var generateExplorer = function(data) {
   }
   pieD = makeExploreData(exploreOptions);
   pieD.data = pieD.commodities;
+	pieD.currency = "GHS";
   explorePieChart = new pieChart("#explore-pie", pieD);
 
   explorePieCompanies = new companiesWidget(

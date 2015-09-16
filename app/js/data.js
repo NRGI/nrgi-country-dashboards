@@ -205,7 +205,7 @@ makeCompaniesData = function(data) {
         );
         obj["x"] = {
           "domain": [parseDate("2006"), parseDate("2013")],
-          "label": "Time"
+          "label": "Year"
         }
         var maxY = d3.max($.map(obj.data, function(k) {
             return $.map(k.data, function(l) {
@@ -214,8 +214,9 @@ makeCompaniesData = function(data) {
           }));
         obj["y"] = {
           "domain": [0, maxY],
-          "label": "Value"
+          "label": "Revenue"
         }
+				obj["currency"] = "GHS";
         return obj;
       }
     );
@@ -322,13 +323,14 @@ lineData = function(data) {
 
   _d["x"] = {
     "domain": [yd_min, yd_max],
-    "label": "Time"
+    "label": "Year"
   }
 
   _d["y"] = {
     "domain": [0, maxY],
-    "label": "Value"
+    "label": "Revenue"
   }
+	_d.currency = "GHS";
   return _d;
 }
 
@@ -360,5 +362,6 @@ barData = function(data) {
     "domain": [0, yMax],
     "label": "Revenue"
   }
+	out.currency = "GHS"
   return out;
 }

@@ -31,13 +31,6 @@ var pieChart = function(el, data) {
           .append("g")
           .attr("transform", "translate(" + width / 2 + "," + height + ")");
 
-      tip = d3.tip()
-        .attr('class', 'd3-tip')
-        .offset([-10, 0])
-        .html(function(d) {
-          return "<strong>" + d.data[drilldown] + "</strong><br /><small>Revenue: $ " + dec(d.data.value) + "</small>";
-        });
-
       // Make pie only 180 rather than 360 degrees, and rotate 90 deg CCW
       pie = d3.layout.pie()
           .value(function(d) { return +d.value; })
@@ -54,8 +47,6 @@ var pieChart = function(el, data) {
       legend = datacanvas.append("g")
 					.attr("class", "legends");
 
-      svg.call(tip);
-
       this.setData(data);
   }
   
@@ -63,6 +54,7 @@ var pieChart = function(el, data) {
       this.data = data.data;
       this.drilldown = data.drilldown;
       this.cuts = data.cuts;
+      this.currency = data.currency;
       this.update();
   }
   
@@ -74,6 +66,16 @@ var pieChart = function(el, data) {
       height = _height,
       radius = Math.min(width/2, height);
       drilldown = this.drilldown;
+      
+      var currency = this.currency;
+      tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+          return "<strong>" + d.data[drilldown] + "</strong><br /><small>Revenue: " + currency + " " + dec(d.data.value) + "</small>";
+        });
+      svg.call(tip);
+      
       svg
         .attr("width", width)
         .attr("height", height);
