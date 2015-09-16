@@ -12,11 +12,6 @@ h1, h2, h3, h4 {
   text-shadow: 1px 1px 10px #ffffff;
   font-family: "Open Sans Condensed", sans-serif;
 }
-h1 {
-  font-size: 6.5em;
-  margin: 0.2em 0;
-}
-
 h2 {
   font-size: 2em;
 }
@@ -64,6 +59,7 @@ nav#main {
   }
   li {
     margin-left: 15px;
+		margin-bottom: 10px;
     background-color: $nav-button-colour;
     float: left;
     font-size: 1em;
@@ -101,10 +97,13 @@ nav#main {
   font-size: 1.9em;
   text-shadow: 1px 1px 2px #ffffff;
   padding: 10px;
-  float: none;
+	float:none;
   line-height: 1.5em;
   width: 300px;
   @extend .transitioner;
+	img {
+		max-height:80px;
+	}
 }
 .navbar-default {
   background: none;
@@ -117,8 +116,54 @@ nav#main {
 /* Article-specific styling */ 
 article#home {
   border-left: 10px solid $colour-home;
-  background: rgba(0, 0, 0, 0) url("../img/oilwell.png") no-repeat scroll left -30px bottom 0;
-  min-height:200px;
+	position:relative;
+	.masthead {
+	  margin: 80px 0px 80px 40px;
+	  padding: 30px;
+	  color: #222222;
+		h1 {
+		  padding: 5px 15px 0px 15px;
+		  font-weight: bold;
+		  color: #ffffff;
+		  text-shadow: 1px 1px 2px #000000;
+		  font-size: 4.5em;
+			margin-bottom:0;
+		}
+		h2 {
+		  color: #ffffff;
+		  text-shadow: 1px 1px 2px #666666;
+		  margin: 0.2em 0;
+			text-align:right;
+			a {
+				text-decoration:none;
+				&:hover {
+					color: #ffffff;
+				}
+			}
+		}
+		.header-box {
+		  max-width: 1000px;
+		}
+		p {
+			color: #ffffff;
+		}
+	}
+	#homeMap {
+	  height:100%;
+	  width: 100%;
+	  bottom: 0;
+	  left: 0;
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	  z-index: 0;
+	}
+	.inner {
+	  margin-top: 70px;
+	  min-width: 470px;
+	  position: relative;
+	  z-index: 999;
+	}
 }
 article#commodities {
   border-left: 10px solid $colour-commodities;
@@ -149,27 +194,6 @@ article#debt-revenue {
   h2 {
     border-bottom: 5px solid $col-21;
   }
-}
-
-/* HEADER */
-.masthead {
-  margin: 80px 0px 80px 0px;
-  padding: 30px;
-  color: #222222;
-  text-align: right;
-}
-.masthead h1 {
-  padding: 5px 15px 0px 15px;
-  font-weight: bold;
-  color: $colour-home;
-  text-shadow: 1px 1px 2px #000000;
-}
-.masthead h2 {
-  color: $colour-home;
-  text-shadow: 1px 1px 2px #666666;
-}
-.header-box {
-  max-width: 1000px;
 }
 /* CONTENT */
 .content-box {
@@ -250,7 +274,21 @@ article#debt-revenue {
     body{font-size: 1.5em;}
     .thumbnail{
         width: 300px;}
-    article#home {
+		article#home .masthead h1 {
+			font-size: 2em;
+			padding: 0;
+			color: #000000;
+		  text-shadow: 1px 1px 2px #eeeeee;
+		}
+		article#home .masthead h2 {
+			font-size: 1.5em;
+			color:#000000;
+			text-align:left;
+			a:hover {
+				color: $colour-home;
+			}
+		}
+    #homeMap {
       display:none;
     }
     nav#main {

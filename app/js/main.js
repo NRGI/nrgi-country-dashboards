@@ -7,6 +7,13 @@ $(document).ready(function(){
     document.location.hash = aHref;
   });
   $('body').scrollspy({ target: '#main' });
+  $(".scrollTo").click(function(e) {
+    e.preventDefault();
+    var aHref = $(this).attr('href');
+    var aTag = $("article"+ aHref +"");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+    document.location.hash = aHref;
+  })
 });
 
 $(window).scroll(function() {
