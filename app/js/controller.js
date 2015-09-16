@@ -62,7 +62,6 @@ var generateExplorer = function(data) {
     mode: 'steps',
     filter: filterNormal
     },
-    direction: 'rtl'
   });
   
   // Add event handler when year slider moved
@@ -72,6 +71,7 @@ var generateExplorer = function(data) {
     pieD = makeExploreData(exploreOptions);
     
     pieD.data = pieD.commodities;
+		pieD.currency = "GHS";
     explorePieChart.setData(pieD);
 
     explorePieCompanies.setData(pieD);
