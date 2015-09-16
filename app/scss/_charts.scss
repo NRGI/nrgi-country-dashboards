@@ -45,6 +45,10 @@
     font-size: 0.75em;
     color: inherit;
   }
+	.noUi-handle {
+		background-color: $colour-commodities;
+		box-shadow: none;
+	}
 }
 #explore-pie {
   height: 280px;
