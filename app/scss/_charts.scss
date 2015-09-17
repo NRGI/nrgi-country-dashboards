@@ -104,11 +104,22 @@
 }
 #explore-revenues-oil, #explore-revenues-mining {
   width: 100%;
-  rect.corporate-income-tax {
-    fill: $col-18;
-  }
-  rect.royalties {
-    fill: $col-15;
+  rect {
+    &.corporate-income-tax {
+      fill: $col-18;
+    }
+    &.royalties {
+      fill: $col-15;
+    }
+    &.ground-rent {
+      fill: $col-1;
+    }
+    &.carried-interest, &.dividend {
+      fill: $col-4;
+    }
+    &.property-rate {
+      fill: $col-9;
+    }  
   }
 }
 #companies-selector {
@@ -127,15 +138,31 @@
     &.royalties {
       stroke: $col-15;
     }
+    &.ground-rent {
+      stroke: $col-1;
+    }
+    &.carried-interest, &.dividend {
+      stroke: $col-4;
+    }
+    &.property-rate {
+      stroke: $col-9;
+    }
   }
-  .legend {
-    rect {
-      &.corporate-income-tax {
-        fill: $col-18;
-      }
-      &.royalties {
-        fill: $col-15;
-      }
+  .legend rect {
+    &.corporate-income-tax {
+      fill: $col-18;
+    }
+    &.royalties {
+      fill: $col-15;
+    }
+    &.ground-rent {
+      fill: $col-1;
+    }
+    &.carried-interest, &.dividend {
+      fill: $col-4;
+    }
+    &.property-rate {
+      fill: $col-9;
     }
   }
 }
