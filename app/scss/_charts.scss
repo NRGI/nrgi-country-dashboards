@@ -185,6 +185,7 @@
 }
 #productionMap {
     height: 500px;
+    font-family: inherit;
     .leaflet-overlay-pane path {
       stroke: $colour-commodity-default;
       fill: $colour-commodity-default;
