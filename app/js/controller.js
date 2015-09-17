@@ -197,7 +197,8 @@ var resizeCharts = _.debounce(function() {
     explorePieChart.update();
     companiesChart.update();
     lineDPChart.update();
-    thisBarChart.update();
+    barChartMining.update();
+    barChartOil.update();
     lineGovRevenueChart.update();
 }, 1000);
 $(window).resize(resizeCharts);
