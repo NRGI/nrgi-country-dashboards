@@ -94,7 +94,7 @@
                 </div>
               </div>
               <div class="row">
-                <div id="explore-pie-container" class="col-md-6">
+                <div id="explore-pie-container" class="col-md-12">
                   <h3>Commodities</h3>
                   <div id="explore-pie"></div>
                   <div class="source">
@@ -105,26 +105,53 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <h3>Contribution by revenue streams</h3>
-                  <div id="explore-revenues" class="barChart"></div>
+              </div>
+
+              <!-- Begin commodities -->
+              <div class="row">
+                <!-- Mining -->
+                <div class="col-md-6 split-commodities">
+                  <div class="row">
+                    <h3>Mining: contribution by revenue streams</h3>
+                    <div id="explore-revenues-mining" class="barChart"></div>
+                  </div>
+                  <div class="row">
+                    <div id="explore-companies-mining-container">
+                      <h3>Mining: Companies</h3>
+                      <div id="explore-companies-mining" class="explore-companies-list"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Oil and Gas -->
+                <div class="col-md-6 split-commodities">
+                  <div class="row">
+                    <h3>Oil and Gas: contribution by revenue streams</h3>
+                    <div id="explore-revenues-oil" class="barChart"></div>
+                  </div>
+
+                  <div class="row">
+                    <div id="explore-companies-oil-container">
+                      <h3>Oil and Gas: Companies</h3>
+                      <div id="explore-companies-oil" class="explore-companies-list"></div>
+                    </div>
                 </div>
               </div>
-              <div class="row">
-                <div id="explore-pie-companies-container" class="col-md-12">
-                  <h3>Companies</h3>
-                  <div id="explore-pie-companies"></div>
-                  <div class="source">
-                    <p>Source:</p>
-                    <ul>
-                      <li>EITI website: https://eiti.org/Ghana</li>
-                      <li>Companies are listed in order of revenue contribution,
-                        for the year selected above using the time slider.</li>
-                    </ul>
-                  </div>
+              <!-- End of commodities -->
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="source">
+                  <p>Source:</p>
+                  <ul>
+                    <li>EITI website: https://eiti.org/Ghana</li>
+                    <li>Companies are listed in order of revenue contribution,
+                      for the year selected above using the time slider.</li>
+                  </ul>
                 </div>
               </div>
             </div>
+          </div>
+
           </div>
         </article>
         <article id="companies">
