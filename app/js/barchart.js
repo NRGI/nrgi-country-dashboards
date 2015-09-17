@@ -46,20 +46,20 @@ var barChart = function(el, data) {
 
     // Chart elements.
     dataCanvas = svg.append("g")
-        .attr('class', 'data-canvas')
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr('class', 'data-canvas')
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     svg.append("g")
       .attr("class", "x axis")
       .append("text")
-        .attr("class", "label")
-        .attr("text-anchor", "middle");
+      .attr("class", "label")
+      .attr("text-anchor", "middle");
 
     svg.append("g")
       .attr("class", "y axis")
       .append("text")
-        .attr("class", "label")
-        .attr("text-anchor", "middle");
+      .attr("class", "label")
+      .attr("text-anchor", "middle");
 
     // Create legend
     dataCanvas.append("g")
@@ -104,7 +104,7 @@ var barChart = function(el, data) {
 
     yAxisGroup.selectAll('.label-min')
       .data([this.yData.domain[0]])
-    .enter().append('text')
+      .enter().append('text')
       .attr('class', 'label-min')
       .attr('x', 0)
       .attr('y', _height + margin.top)
@@ -117,7 +117,7 @@ var barChart = function(el, data) {
 
     yAxisGroup.selectAll('.label-max')
       .data([this.yData.domain[1]])
-    .enter().append('text')
+      .enter().append('text')
       .attr('class', 'label-max')
       .attr('x', 0)
       .attr('y', 0)
@@ -154,6 +154,39 @@ var barChart = function(el, data) {
       .attr('width', _width)
       .attr('height', _height);
 
+    // Update legends
+    var legends = dataCanvas.select(".legends");
+    var legend = legends
+        .selectAll(".legend")
+        .data($.map(this.data.data[0].revenue, function(k) { return k.name; }));
+
+    legend
+      .enter()
+      .append("g")
+      .attr("class", "legend")
+      .html("<rect/><text/>");
+
+    legend
+      .attr("transform", function (d, i) {
+        var lw = _width - 120;
+        // Needs to be this to compensate for a) width, b) datacanvas transform
+        lh =  (i * 20);
+        return "translate(" + lw + "," + lh + ")";
+      });
+
+    legend.select("rect")
+      .attr("x", 0)
+      .attr("width", 18)
+      .attr("height", 18)
+      .attr("class", function(d) { return slugify(d) });
+
+    legend.select("text")
+      .attr("x", 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "start")
+      .text(function (d) { return d; });
+
     var company = dataCanvas.selectAll(".company")
       .data(this.data.data);
 
@@ -169,19 +202,19 @@ var barChart = function(el, data) {
           .data(function(d) { return d.revenue; })
 
     bar
-          .enter().append("rect")
-          .attr("class", function(d) { return "bar " + slugify(d.name); })
-          .attr("width", x.rangeBand())
-          .attr("height", function(d) { return y(d.y0) - y(d.y1); })
-          .attr("x", function(d) { return x(d.name); })
-          .attr("y", function(d) { return y(d.y1); })
-          .on('mouseover', mouseover);
+      .enter().append("rect")
+      .attr("class", function(d) { return "bar " + slugify(d.name); })
+      .attr("width", x.rangeBand())
+      .attr("height", function(d) { return y(d.y0) - y(d.y1); })
+      .attr("x", function(d) { return x(d.name); })
+      .attr("y", function(d) { return y(d.y1); })
+      .on('mouseover', mouseover);
 
     bar
-          .attr("width", x.rangeBand())
-          .attr("height", function(d) { return y(d.y0) - y(d.y1); })
-          .attr("x", function(d) { return x(d.name); })
-          .attr("y", function(d) { return y(d.y1); })
+      .attr("width", x.rangeBand())
+      .attr("height", function(d) { return y(d.y0) - y(d.y1); })
+      .attr("x", function(d) { return x(d.name); })
+      .attr("y", function(d) { return y(d.y1); })
 
     // Append Axis.
     svg.select(".x.axis")
