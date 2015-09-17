@@ -34,7 +34,7 @@
     }
   }
 }
-#explore-slider {
+#explore-slider, #production-slider {
   cursor: pointer;
   margin-bottom:70px;
   .noUi-base {
@@ -45,14 +45,21 @@
     font-size: 0.75em;
     color: inherit;
   }
-	.noUi-base {
-		background-color: $colour-commodities;
-	}
   .noUi-handle {
     cursor: pointer;
     background-color: #000000;
     box-shadow: none;
   }
+}
+#explore-slider {
+	.noUi-base {
+		background-color: $colour-commodities;
+	}
+}
+#production-slider {
+	.noUi-base {
+		background-color: $col-12;
+	}
 }
 #explore-pie {
   height: 280px;
