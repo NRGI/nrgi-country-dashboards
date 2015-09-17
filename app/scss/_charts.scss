@@ -69,10 +69,9 @@
     }
   }
 }
-#explore-pie-companies {
+.explore-companies-list {
   padding: 5px;
   .badge {
-    background-color: $colour-commodity-default;
     border-radius: 0;
     display: block;
     &.oil-and-gas {
@@ -89,12 +88,11 @@
     }
   }
 }
-#explore-revenues {
+.split-commodities {
+  padding: 30px;
+}
+#explore-revenues-oil, #explore-revenues-mining {
   width: 100%;
-  min-height: 380px;
-  .axis text {
-    font-size:0.5em;
-  }
   rect.corporate-income-tax {
     fill: $col-18;
   }
