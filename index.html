@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Ghana Country Dashboard</title>
+        <title>Ghana Extractives Dashboard</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,6 +14,7 @@
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <!-- Latest compiled and minified JavaScript -->
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="js/vendor/noUiSlider.8.0.2/nouislider.min.css">
@@ -37,7 +38,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <span class="navbar-brand">Ghana Extractives Dashboard</span>
+                <span class="navbar-brand"><img src="img/gheiti.png" alt="GHEITI - Ghana Extractives Dashboard" /></span>
               </div>
               <div class="collapse navbar-collapse" id="menu-collapse">
                 <ul class="nav nav-slider">
@@ -54,13 +55,12 @@
         </header>
         <div id="content">
         <article id="home">
+          <div id="homeMap"></div>
           <div class="inner">
             <div class="header-box">
               <div class="masthead">
-                <h1>Exploring</h1>
-                <h2>Ghana's extractives industries</h2>
-                <p>This site allows you to dig into the detail of Ghana's
-                  <br />extractives industries. Scroll down to begin!</p>
+                <h1>Data Analysis of Ghana’s Extractive Sector</h1>
+                <h2><a href="#commodities" class="scrollTo">Scroll down to begin <i class="fa fa-chevron-down"></i></a></h2>
               </div>
             </div>
           </div>
@@ -71,8 +71,7 @@
             <div class="content-box">
               <div class="row">
                 <div class="col-md-12">
-                    <h2>Prior to 2013, gold was the largest
-                      source of revenue from extractive industries.</h2>
+                    <h2>Trend analysis of production level per type of commodity</h2>
                     <div class="chart-container">
                       <div id="explore-line" class="lineChart"></div>
                     </div>
@@ -87,43 +86,85 @@
               </div>
               <div class="row">
                 <div class="col-md-12">
-                  <h2>Revenue by commodity and company</h2>
-                        <div id="explore-slider-container">
-                          <h3>Year</h3>
-                          <div id="explore-slider"></div>
-                        </div>
+                  <h2>Revenue by commodity and fiscal streams</h2>
+                  <div id="explore-slider-container">
+                    <h3>Select year</h3>
+                    <div id="explore-slider"></div>
+                  </div>
                 </div>
               </div>
               <div class="row">
-                <div id="explore-pie-container" class="col-md-6">
+                <div id="explore-pie-container" class="col-md-12">
                   <h3>Commodities</h3>
                   <div id="explore-pie"></div>
-                </div>
-                <div class="col-md-6">
-                  <h3>Revenues</h3>
-                  <div id="explore-revenues" class="lineChart"></div>
+                  <div class="source">
+                    <p>Source:</p>
+                    <ul>
+                      <li>Revenues represent the aggregate of commodities 
+                        as reported in GHEITI reports</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
+
+              <!-- Begin commodities -->
               <div class="row">
-                <div id="explore-pie-companies-container" class="col-md-12">
-                  <h3>Companies</h3>
-                  <div id="explore-pie-companies"></div>
+                <!-- Mining -->
+                <div class="col-md-6 split-commodities">
+                  <div class="row">
+                    <h3>Mining: contribution by revenue streams</h3>
+                    <div id="explore-revenues-mining" class="barChart"></div>
+                  </div>
+                  <div class="row">
+                    <div id="explore-companies-mining-container">
+                      <h3>Mining: companies</h3>
+                      <div id="explore-companies-mining" class="explore-companies-list"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Oil and Gas -->
+                <div class="col-md-6 split-commodities">
+                  <div class="row">
+                    <h3>Oil and gas: contribution by revenue streams</h3>
+                    <div id="explore-revenues-oil" class="barChart"></div>
+                  </div>
+
+                  <div class="row">
+                    <div id="explore-companies-oil-container">
+                      <h3>Oil and gas: companies</h3>
+                      <div id="explore-companies-oil" class="explore-companies-list"></div>
+                    </div>
+                </div>
+              </div>
+              <!-- End of commodities -->
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="source">
+                  <p>Source:</p>
+                  <ul>
+                    <li>EITI website: https://eiti.org/Ghana</li>
+                    <li>Companies are listed in order of revenue contribution,
+                      for the year selected above using the time slider.</li>
+                  </ul>
                 </div>
               </div>
             </div>
+          </div>
+
           </div>
         </article>
         <article id="companies">
           <div class="inner">
             <div class="content-box">
               <div class="row">
-                <div class="col-md-4 col-md-offset-8">
-                  <select id="companies-selector"></select>
+                <div class="col-md-12">
+                  <h2>Company: <span id="companies-selector-selected"></span></h2>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
-                  <h2>Company: <span id="companies-selector-selected"></span></h2>
+                <div class="col-md-4 col-md-offset-8">
+                  <select id="companies-selector"></select>
                 </div>
               </div>
               <div class="row">
@@ -132,7 +173,7 @@
                   <div id="companies-narrative"></div>
                 </div>
                 <div class="col-md-8">
-                  <h3>Company revenue by year</h3>
+                  <h3>Company contribution by revenue stream</h3>
                   <div class="row">
                     <div class="col-md-12">
                       <div id="companies-line" class="lineChart"></div>
@@ -155,8 +196,9 @@
               <div class="row">
                 <div class="col-md-12">
                   <h2>Production volumes across the country</h2>
+                  <div id="production-slider"></div>
                   <div class="map-container">
-                    <div id="map" class="globalMap"></div>
+                    <div id="productionMap" class="globalMap"></div>
                   </div>
                 </div>
                 <div class="source">
@@ -174,7 +216,7 @@
             <div class="content-box">
               <div class="row">
                 <div class="col-md-12">
-                  <h2>Comparing government revenue and expenditure with extractives revenue.</h2>
+                  <h2>Comparing government revenue and expenditure with extractives revenue</h2>
                   <div class="chart-container">
                     <div id="govt-revenue-expenditure-extractives-chart" class="lineChart"></div>
                   </div>
@@ -189,12 +231,12 @@
               </div>
               <div class="row">
                 <div class="col-md-12">
-                  <h2>Comparing accumulation in the Ghana Petroleum Funds with government debt.</h2>
+                  <h2>Comparing accumulation in the Ghana Petroleum Funds with government debt</h2>
                   <div class="chart-container">
                     <div id="debt-revenue-chart" class="lineChart"></div>
                   </div>
                   <div class="source">
-                    <p>Source</p>
+                    <p>Source:</p>
                     <ul>
                       <li><a href="http://www.mofep.gov.gh/sites/default/files/reports/petroleum/2014_Reconciliation_Report_on_the_Petroleum_Holding_Fund.pdf">2014 Reconciliation Report on the Petroleum Holding Fund</a>, p20</li>
                       <li>International Monetary Fund, World Economic Outlook Database, April 2015. Variable: GGXWDG</li>

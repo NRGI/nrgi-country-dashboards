@@ -462,10 +462,6 @@ h1, h2, h3, h4 {
   text-shadow: 1px 1px 10px #ffffff;
   font-family: "Open Sans Condensed", sans-serif; }
 
-h1 {
-  font-size: 6.5em;
-  margin: 0.2em 0; }
-
 h2 {
   font-size: 2em; }
 
@@ -480,7 +476,8 @@ p {
   margin-bottom: 20px; }
 
 .transitioner, a, nav#main li, .navbar-default .navbar-brand, .navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:hover {
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand img, .navbar-default .navbar-brand:focus img,
+.navbar-default .navbar-brand:hover img {
   -webkit-transition: all .2s ease-in-out;
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.2s;
@@ -509,6 +506,7 @@ nav#main {
     margin-top: 0; }
   nav#main li {
     margin-left: 15px;
+    margin-bottom: 10px;
     background-color: #00833D;
     float: left;
     font-size: 1em;
@@ -524,6 +522,8 @@ nav#main {
   nav#main.brand-shrink .navbar-brand {
     line-height: 1em;
     font-size: 1.7em; }
+    nav#main.brand-shrink .navbar-brand img {
+      max-height: 60px; }
   nav#main.brand-shrink li {
     font-size: 0.8em; }
   nav#main :after {
@@ -538,6 +538,9 @@ nav#main {
   float: none;
   line-height: 1.5em;
   width: 300px; }
+  .navbar-default .navbar-brand img, .navbar-default .navbar-brand:focus img,
+  .navbar-default .navbar-brand:hover img {
+    max-height: 80px; }
 
 .navbar-default {
   background: none;
@@ -549,8 +552,45 @@ nav#main {
 /* Article-specific styling */
 article#home {
   border-left: 10px solid #F15623;
-  background: transparent url("../img/oilwell.png") no-repeat scroll left -30px bottom 0;
-  min-height: 200px; }
+  position: relative; }
+  article#home .masthead {
+    margin: 80px 0px 80px 40px;
+    padding: 30px;
+    color: #222222; }
+    article#home .masthead h1 {
+      padding: 5px 15px 0px 15px;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 1px 1px 2px #000000;
+      font-size: 4.5em;
+      margin-bottom: 0; }
+    article#home .masthead h2 {
+      color: #ffffff;
+      text-shadow: 1px 1px 2px #666666;
+      margin: 0.2em 0;
+      text-align: right; }
+      article#home .masthead h2 a {
+        text-decoration: none; }
+        article#home .masthead h2 a:hover {
+          color: #ffffff; }
+    article#home .masthead .header-box {
+      max-width: 1000px; }
+    article#home .masthead p {
+      color: #ffffff; }
+  article#home #homeMap {
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0; }
+  article#home .inner {
+    margin-top: 70px;
+    min-width: 470px;
+    position: relative;
+    z-index: 999; }
 
 article#commodities {
   border-left: 10px solid #60C4B1; }
@@ -577,26 +617,6 @@ article#debt-revenue {
   article#debt-revenue h2 {
     border-bottom: 5px solid #EF58A0; }
 
-/* HEADER */
-.masthead {
-  margin: 80px 0px 80px 0px;
-  padding: 30px;
-  color: #222222;
-  text-align: right; }
-
-.masthead h1 {
-  padding: 5px 15px 0px 15px;
-  font-weight: bold;
-  color: #F15623;
-  text-shadow: 1px 1px 2px #000000; }
-
-.masthead h2 {
-  color: #F15623;
-  text-shadow: 1px 1px 2px #666666; }
-
-.header-box {
-  max-width: 1000px; }
-
 /* CONTENT */
 .content-box {
   margin-top: 50px;
@@ -622,40 +642,188 @@ article#debt-revenue {
 .table {
   font-size: 0.7em; }
 
+.source {
+  width: 400px;
+  margin-top: 10px;
+  font-size: 0.6em;
+  color: #333333;
+  float: right; }
+  .source p {
+    margin: 2px; }
+  .source ul {
+    margin: 0px;
+    padding: 0px; }
+    .source ul li {
+      list-style-type: square; }
+
+/* FOOTER */
+.footer-box {
+  background-color: #222222;
+  padding: 10px;
+  clear: both;
+  color: #ffffff; }
+  .footer-box a {
+    color: #ffffff;
+    border-bottom: 1px dashed; }
+    .footer-box a:hover {
+      border-bottom: none;
+      text-decoration: none;
+      color: #cccccc; }
+  .footer-box .footer-right {
+    font-size: 0.6em; }
+
+/* HELPERS */
+.clearer {
+  clear: both; }
+
+/* STYLING FOR MOBILE */
+@media (max-width: 768px) {
+  h2, .footer h2 {
+    font-size: 1.8em; }
+
+  body {
+    font-size: 1.5em; }
+
+  .thumbnail {
+    width: 300px; }
+
+  article#home .masthead h1 {
+    font-size: 2em;
+    padding: 0;
+    color: #000000;
+    text-shadow: 1px 1px 2px #eeeeee; }
+
+  article#home .masthead h2 {
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left; }
+    article#home .masthead h2 a:hover {
+      color: #F15623; }
+
+  #homeMap {
+    display: none; }
+
+  nav#main {
+    top: 0px;
+    background: #ffffff;
+    margin-bottom: 15px; }
+    nav#main .navbar-collapse {
+      background: #ffffff; }
+      nav#main .navbar-collapse ul {
+        margin-left: 0; }
+        nav#main .navbar-collapse ul li, nav#main .navbar-collapse ul li a {
+          margin-left: 0;
+          float: none;
+          background: #eeeeee;
+          box-shadow: none;
+          color: #000000; }
+          nav#main .navbar-collapse ul li:hover, nav#main .navbar-collapse ul li a:hover {
+            background: #666666;
+            color: #ffffff; }
+    nav#main .navbar-brand, nav#main .navbar-brand:hover {
+      font-size: 1.1em !important;
+      padding: 0px;
+      line-height: 1em; }
+    nav#main .navbar-toggle {
+      margin-top: 0; }
+
+  .navbar-header {
+    padding: 10px; }
+
+  #content {
+    margin-top: 50px; }
+    #content .content-box {
+      padding: 20px;
+      margin-top: 0px; }
+    #content h1, #content h2, #content h3, #content h4 {
+      margin-bottom: 4px; }
+
+  .footer-right {
+    padding-top: inherit;
+    font-size: 1em; }
+
+  .table {
+    font-size: 0.45em; }
+    .table .badge {
+      font-weight: normal;
+      padding: 3px 2px; }
+
+  .lineChart {
+    height: 200px; } }
 /* CHARTS */
-.map {
-  z-index: 0; }
-
-.globalMap {
-  height: 500px; }
-  .globalMap g .leaflet-clickable {
-    stroke: #00B48D;
-    fill: #00B48D; }
-  .globalMap g .leaflet-clickable.Gold {
-    stroke: #F68B1F;
-    fill: #F68B1F; }
-  .globalMap g .leaflet-clickable.Oil {
-    stroke: #222222;
-    fill: #222222; }
-
 #explorer {
   clear: both; }
 
-#explore-line {
-  float: left;
-  width: 100%;
-  min-height: 350px; }
+#explore-line .line.gold {
+  stroke: #F68B1F; }
+#explore-line .line.oil-and-gas {
+  stroke: #222222; }
+#explore-line .line.bauxite {
+  stroke: #6A246D; }
+#explore-line .line.manganese {
+  stroke: #00833D; }
+#explore-line .legend rect.gold {
+  fill: #F68B1F; }
+#explore-line .legend rect.oil-and-gas {
+  fill: #222222; }
+#explore-line .legend rect.bauxite {
+  fill: #6A246D; }
+#explore-line .legend rect.manganese {
+  fill: #00833D; }
 
-#explore-revenues {
-  width: 100%;
-  min-height: 380px; }
-  #explore-revenues .axis text {
-    font-size: 0.5em; }
-  #explore-revenues rect {
-    fill: #00B48D; }
-  #explore-revenues rect.corporate-income-tax {
+#explore-slider, #production-slider {
+  cursor: pointer;
+  margin-bottom: 70px; }
+  #explore-slider .noUi-base, #production-slider .noUi-base {
+    background-color: #cccccc; }
+  #explore-slider .noUi-pips, #production-slider .noUi-pips {
+    font: inherit;
+    font-size: 0.75em;
+    color: inherit; }
+  #explore-slider .noUi-handle, #production-slider .noUi-handle {
+    cursor: pointer;
+    background-color: #000000;
+    box-shadow: none; }
+
+#explore-slider .noUi-base {
+  background-color: #60C4B1; }
+
+#production-slider .noUi-base {
+  background-color: #27C4F4; }
+
+#explore-pie {
+  height: 280px; }
+  #explore-pie svg .segment.oil-and-gas, #explore-pie svg rect.oil-and-gas {
+    fill: #222222; }
+  #explore-pie svg .segment.gold, #explore-pie svg rect.gold {
+    fill: #F68B1F; }
+  #explore-pie svg .segment.bauxite, #explore-pie svg rect.bauxite {
     fill: #6A246D; }
-  #explore-revenues rect.royalties {
+  #explore-pie svg .segment.manganese, #explore-pie svg rect.manganese {
+    fill: #00833D; }
+
+.explore-companies-list {
+  padding: 5px; }
+  .explore-companies-list .badge {
+    border-radius: 0;
+    display: block; }
+    .explore-companies-list .badge.oil-and-gas {
+      background-color: #222222; }
+    .explore-companies-list .badge.gold {
+      background-color: #F68B1F; }
+    .explore-companies-list .badge.manganese {
+      background-color: #00833D; }
+    .explore-companies-list .badge.bauxite {
+      background-color: #6A246D; }
+
+.split-commodities {
+  padding: 30px; }
+
+#explore-revenues-oil, #explore-revenues-mining {
+  width: 100%; }
+  #explore-revenues-oil rect.corporate-income-tax, #explore-revenues-mining rect.corporate-income-tax {
+    fill: #6A246D; }
+  #explore-revenues-oil rect.royalties, #explore-revenues-mining rect.royalties {
     fill: #4251A3; }
 
 #companies-selector {
@@ -670,97 +838,58 @@ article#debt-revenue {
   stroke: #6A246D; }
 #companies-line path.line.royalties {
   stroke: #4251A3; }
-#companies-line .legend {
-  font-size: 0.5em; }
-  #companies-line .legend rect {
+#companies-line .legend rect.corporate-income-tax {
+  fill: #6A246D; }
+#companies-line .legend rect.royalties {
+  fill: #4251A3; }
+
+#debt-revenue-chart path.line.government-debt {
+  stroke: #F68B1F; }
+#debt-revenue-chart path.line.petroleum-funds {
+  stroke: #222222; }
+#debt-revenue-chart .legend rect {
+  fill: #00B48D; }
+  #debt-revenue-chart .legend rect.government-debt {
+    fill: #F68B1F; }
+  #debt-revenue-chart .legend rect.petroleum-funds {
+    fill: #222222; }
+
+#govt-revenue-expenditure-extractives-chart path.line.general-government-revenue {
+  stroke: #4251A3; }
+#govt-revenue-expenditure-extractives-chart path.line.government-expenditure {
+  stroke: #F68B1F; }
+#govt-revenue-expenditure-extractives-chart path.line.extractive-revenues {
+  stroke: #222222; }
+#govt-revenue-expenditure-extractives-chart .legend rect {
+  fill: #00B48D; }
+  #govt-revenue-expenditure-extractives-chart .legend rect.general-government-revenue {
+    fill: #4251A3; }
+  #govt-revenue-expenditure-extractives-chart .legend rect.government-expenditure {
+    fill: #F68B1F; }
+  #govt-revenue-expenditure-extractives-chart .legend rect.extractive-revenues {
+    fill: #222222; }
+
+.map {
+  z-index: 0; }
+
+#productionMap {
+  height: 500px;
+  font-family: inherit; }
+  #productionMap .leaflet-overlay-pane path {
+    stroke: #00B48D;
     fill: #00B48D; }
-    #companies-line .legend rect.corporate-income-tax {
+    #productionMap .leaflet-overlay-pane path.gold {
+      stroke: #F68B1F;
+      fill: #F68B1F; }
+    #productionMap .leaflet-overlay-pane path.oil-and-gas {
+      stroke: #222222;
+      fill: #222222; }
+    #productionMap .leaflet-overlay-pane path.bauxite {
+      stroke: #6A246D;
       fill: #6A246D; }
-    #companies-line .legend rect.royalties {
-      fill: #4251A3; }
-
-#debt-revenue-chart {
-  width: 100%;
-  min-height: 350px; }
-  #debt-revenue-chart path.line.government-debt {
-    stroke: #F68B1F; }
-  #debt-revenue-chart path.line.petroleum-funds {
-    stroke: #222222; }
-  #debt-revenue-chart .legend {
-    font-size: 0.5em; }
-    #debt-revenue-chart .legend rect {
-      fill: #00B48D; }
-      #debt-revenue-chart .legend rect.government-debt {
-        fill: #F68B1F; }
-      #debt-revenue-chart .legend rect.petroleum-funds {
-        fill: #222222; }
-
-#govt-revenue-expenditure-extractives-chart {
-  width: 100%;
-  min-height: 350px; }
-  #govt-revenue-expenditure-extractives-chart path.line.general-government-revenue {
-    stroke: #4251A3; }
-  #govt-revenue-expenditure-extractives-chart path.line.government-expenditure {
-    stroke: #F68B1F; }
-  #govt-revenue-expenditure-extractives-chart path.line.extractive-revenues {
-    stroke: #222222; }
-  #govt-revenue-expenditure-extractives-chart .legend {
-    font-size: 0.5em; }
-    #govt-revenue-expenditure-extractives-chart .legend rect {
-      fill: #00B48D; }
-      #govt-revenue-expenditure-extractives-chart .legend rect.general-government-revenue {
-        fill: #4251A3; }
-      #govt-revenue-expenditure-extractives-chart .legend rect.government-expenditure {
-        fill: #F68B1F; }
-      #govt-revenue-expenditure-extractives-chart .legend rect.extractive-revenues {
-        fill: #222222; }
-
-#explore-slider {
-  cursor: pointer;
-  margin-bottom: 70px; }
-  #explore-slider .noUi-base {
-    background-color: #cccccc; }
-  #explore-slider .noUi-pips {
-    font: inherit;
-    font-size: 0.75em;
-    color: inherit; }
-
-#explore-pie {
-  height: 280px;
-  width: 100%;
-  text-align: center; }
-  #explore-pie svg {
-    display: inline-block; }
-    #explore-pie svg .segment, #explore-pie svg rect {
-      fill: #00B48D; }
-      #explore-pie svg .segment.Oil, #explore-pie svg rect.Oil {
-        fill: #222222; }
-      #explore-pie svg .segment.Gold, #explore-pie svg rect.Gold {
-        fill: #F68B1F; }
-
-#explore-pie-companies {
-  padding: 5px; }
-  #explore-pie-companies .badge {
-    background-color: #00B48D;
-    border-radius: 0;
-    display: block; }
-    #explore-pie-companies .badge.Oil {
-      background-color: #222222; }
-    #explore-pie-companies .badge.Gold {
-      background-color: #F68B1F; }
-
-.source {
-  margin-top: 10px;
-  font-size: 0.6em;
-  color: #333333;
-  float: right; }
-  .source p {
-    margin: 2px; }
-  .source ul {
-    margin: 0px;
-    padding: 0px; }
-    .source ul li {
-      list-style-type: square; }
+    #productionMap .leaflet-overlay-pane path.manganese {
+      stroke: #00833D;
+      fill: #00833D; }
 
 /* D3 TIP */
 .d3-tip {
@@ -809,93 +938,7 @@ article#debt-revenue {
     top: 50%;
     left: 100%; }
 
-/* FOOTER */
-.footer-box {
-  background-color: #222222;
-  padding: 10px;
-  clear: both;
-  color: #ffffff; }
-  .footer-box a {
-    color: #ffffff;
-    border-bottom: 1px dashed; }
-    .footer-box a:hover {
-      border-bottom: none;
-      text-decoration: none;
-      color: #cccccc; }
-  .footer-box .footer-right {
-    font-size: 0.6em; }
-
-/* HELPERS */
-.clearer {
-  clear: both; }
-
-/* STYLING FOR MOBILE */
-@media (max-width: 768px) {
-  h2, .footer h2 {
-    font-size: 1.8em; }
-
-  body {
-    font-size: 1.5em; }
-
-  .thumbnail {
-    width: 300px; }
-
-  article#home {
-    display: none; }
-
-  nav#main {
-    top: 0px;
-    background: #ffffff;
-    margin-bottom: 15px; }
-    nav#main .navbar-collapse {
-      background: #ffffff; }
-      nav#main .navbar-collapse ul {
-        margin-left: 0; }
-        nav#main .navbar-collapse ul li, nav#main .navbar-collapse ul li a {
-          margin-left: 0;
-          float: none;
-          background: #eeeeee;
-          box-shadow: none;
-          color: #000000; }
-          nav#main .navbar-collapse ul li:hover, nav#main .navbar-collapse ul li a:hover {
-            background: #666666;
-            color: #ffffff; }
-    nav#main .navbar-brand, nav#main .navbar-brand:hover {
-      font-size: 1.1em !important;
-      padding: 0px;
-      line-height: 1em; }
-    nav#main .navbar-toggle {
-      margin-top: 0; }
-
-  .navbar-header {
-    padding: 10px; }
-
-  #content {
-    margin-top: 50px; }
-    #content .content-box {
-      padding: 20px;
-      margin-top: 0px; }
-    #content h1, #content h2, #content h3, #content h4 {
-      margin-bottom: 4px; }
-
-  .footer-right {
-    padding-top: inherit;
-    font-size: 1em; }
-
-  .table {
-    font-size: 0.45em; }
-    .table .badge {
-      font-weight: normal;
-      padding: 3px 2px; } }
 /* Chart */
-.chart-item {
-  width: 100%;
-  max-width: 44rem;
-  margin-left: auto;
-  margin-right: auto;
-  vertical-align: top;
-  word-spacing: normal; }
-
 .chart {
   width: 100%;
   display: block; }
@@ -918,46 +961,35 @@ article#debt-revenue {
 .chart .x.axis .domain {
   display: none; }
 
-.lineChart, .barChart, .scatterplotChart {
+.lineChart {
+  height: 400px; }
+  .lineChart .area {
+    fill: #ffffff; }
+  .lineChart .line {
+    stroke: #cccccc;
+    stroke-width: 4px;
+    fill: none; }
+  .lineChart .legend {
+    font-size: 0.5em; }
+    .lineChart .legend rect {
+      fill: #cccccc; }
+
+.pieChart {
+  width: 100%;
+  text-align: center;
+  display: inline-block; }
+  .pieChart .legend {
+    font-size: 0.5em; }
+  .pieChart .segment, .pieChart rect {
+    fill: #cccccc; }
+
+.barChart {
   min-height: 400px; }
-
-.flare {
-  min-height: 300px; }
-
-.segment .flare text {
-  display: block; }
-
-.flare div.tooltip, .lineChart div.tooltip {
-  position: absolute;
-  text-align: left;
-  padding: 0 10px 10px 10px;
-  font: 15px sans-serif;
-  background: white;
-  border: 0px;
-  border-radius: 8px;
-  pointer-events: none; }
-  .flare div.tooltip dl dd, .lineChart div.tooltip dl dd {
-    float: left; }
-  .flare div.tooltip dl dt, .lineChart div.tooltip dl dt {
-    float: left;
-    clear: left;
-    margin-right: 4px; }
-
-.lineChart .area {
-  fill: #ffffff; }
-.lineChart .line {
-  stroke: #00b48d;
-  stroke-width: 4px;
-  fill: none; }
-  .lineChart .line.gold {
-    stroke: #F68B1F; }
-  .lineChart .line.oil {
-    stroke: #222222; }
-.lineChart .legend {
-  font-size: 0.5em; }
-  .lineChart .legend rect {
-    fill: #00B48D; }
-    .lineChart .legend rect.gold {
-      fill: #F68B1F; }
-    .lineChart .legend rect.oil {
-      fill: #222222; }
+  .barChart rect {
+    fill: #cccccc; }
+  .barChart .axis text {
+    font-size: 0.5em; }
+  .barChart .legend {
+    font-size: 0.5em; }
+    .barChart .legend rect {
+      fill: #cccccc; }

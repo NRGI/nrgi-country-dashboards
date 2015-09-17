@@ -4,8 +4,8 @@ var pieChart = function(el, data) {
   var el_top = $(el).offset().top;
   var el_left = $(el).offset().left;
   
-  var _width, _height, svg, pie, arc, drilldown, cuts, legend, tip;
-  var margin = {top: 40, right: 32, bottom: 10, left: 32};
+  var _width, _height, svg, pie, arc, drilldown, cuts, legend, tip, datacanvas;
+  var margin = {top: 10, right: 32, bottom: 10, left: 32};
 
 
   // Calculate based on element (window) size
@@ -23,19 +23,13 @@ var pieChart = function(el, data) {
   this._init = function() {
       this._calcSize();
       svg = this.$el.append('svg')
+					.attr("class", "pieChart")
           .attr("width", width)
           .attr("height", height);
 
       datacanvas = svg
           .append("g")
           .attr("transform", "translate(" + width / 2 + "," + height + ")");
-
-      tip = d3.tip()
-        .attr('class', 'd3-tip')
-        .offset([-10, 0])
-        .html(function(d) {
-          return "<strong>" + d.data[drilldown] + "</strong><br /><small>Revenue: $ " + dec(d.data.value) + "</small>";
-        });
 
       // Make pie only 180 rather than 360 degrees, and rotate 90 deg CCW
       pie = d3.layout.pie()
@@ -50,25 +44,8 @@ var pieChart = function(el, data) {
           .innerRadius(radius - 100);
 
       // Create legend
-      legend = datacanvas.selectAll(".legend")
-          .data(["Oil", "Gold", "Other"])
-          .enter().append("g")
-          .attr("class", "legend")
-          .attr("transform", function (d, i) {
-            var lw = width * 1.5;
-            lw -= 80;
-            lh = -height + 20 + (i * 20);
-            return "translate(-" + lw + "," + lh + ")";
-          });
-      legend.append("rect")
-          .attr("width", 18)
-          .attr("height", 18);
-      legend.append("text")
-          .attr("y", 9)
-          .attr("dy", ".35em")
-          .style("text-anchor", "end");
-
-      svg.call(tip);
+      legend = datacanvas.append("g")
+					.attr("class", "legends");
 
       this.setData(data);
   }
@@ -77,6 +54,7 @@ var pieChart = function(el, data) {
       this.data = data.data;
       this.drilldown = data.drilldown;
       this.cuts = data.cuts;
+      this.currency = data.currency;
       this.update();
   }
   
@@ -87,6 +65,17 @@ var pieChart = function(el, data) {
       width = _width,
       height = _height,
       radius = Math.min(width/2, height);
+      drilldown = this.drilldown;
+      
+      var currency = this.currency;
+      tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+          return "<strong>" + d.data[drilldown] + "</strong><br /><small>Revenue: " + currency + " " + dec(d.data.value) + "</small>";
+        });
+      svg.call(tip);
+      
       svg
         .attr("width", width)
         .attr("height", height);
@@ -100,28 +89,43 @@ var pieChart = function(el, data) {
       datacanvas.selectAll(".arc")
         .attr("d", arc);
 
-      // Update legends
-      datacanvas.selectAll(".legend")
-        .attr("transform", function (d, i) {
-          var lw = width * 1.5;
-          // Needs to be this to compensate for a) width, b) datacanvas transform
-          lw -= 100;
-          lh = -height + 20 + (i * 20);
-          return "translate(-" + lw + "," + lh + ")";
-        });
-      legend.select("rect")
-          .attr("x", width - 18)
-          .attr("class", function(d) { return d });
-      legend.select("text")
-          .attr("x", width - 24)
-          .text(function (d) { return d; });
+	    // Update legends
+	    var legends = datacanvas.select(".legends");
+	    var legend = legends
+	        .selectAll(".legend")
+	        .data(this.data);
+
+	    legend
+	      .enter()
+	      .append("g")
+	      .attr("class", "legend")
+	      .html("<rect/><text/>");
+
+	    legend
+	      .attr("transform", function (d, i) {
+	        var lw = _width * 1.5;
+	        // Needs to be this to compensate for a) width, b) datacanvas transform
+	        lw -= 100;
+	        lh =  -height + 20 + (i * 20);
+	        return "translate(-" + lw + "," + lh + ")";
+	      });
+
+	    legend.select("rect")
+	        .attr("x", _width - 18)
+	        .attr("width", 18)
+	        .attr("height", 18)
+	        .attr("class", function(d) { return slugify(d[drilldown]); });
+
+	    legend.select("text")
+	        .attr("x", _width - 24)
+	        .attr("y", 9)
+	        .attr("dy", ".35em")
+	        .style("text-anchor", "end")
+	        .text(function (d) { return d[drilldown]; });
 
       var value = this.value === "count"
           ? function() { return 1; }
           : function(d) { return d.value; };
-
-      // Create arcs
-      drilldown = this.drilldown;
 
       var g = datacanvas.selectAll(".arc")
                  .data(pie(this.data));
@@ -135,7 +139,7 @@ var pieChart = function(el, data) {
           .attr("class", "arc segment")
           .each(function(d) { this._current = d; })
           .attr("class", function(d) {
-            return "arc segment " + d.data[drilldown];
+            return "arc segment " + slugify(d.data[drilldown]);
           })
           .on("mouseover", mouseover)
           .on("mouseout", mouseleave);
@@ -172,5 +176,15 @@ var pieChart = function(el, data) {
   
   var dec = d3.format(',.2f');
   
+  function slugify(text)
+  {
+    return text.toString().toLowerCase()
+      .replace(/\s+/g, '-')           // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+      .replace(/^-+/, '')             // Trim - from start of text
+      .replace(/-+$/, '');            // Trim - from end of text
+  }
+
   this._init();
 };
