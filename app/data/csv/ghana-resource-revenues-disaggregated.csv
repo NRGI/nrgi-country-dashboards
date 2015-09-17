@@ -1,0 +1,761 @@
+project_name,tax_id,commodity,location,region,concession_size,value,value_type,value_unit,year,lat,long
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,5962066.0,Royalties,GHS,2006,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,6286906.0,Royalties,GHS,2007,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,8710130.0,Royalties,GHS,2008,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,14100164.0,Royalties,GHS,2009,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,17360307.0,Royalties,GHS,2010,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,19665202.0,Royalties,GHS,2011,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,25303243.0,Royalties,GHS,2012,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,22421988.0,Royalties,GHS,2013,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Corporate income tax,GHS,2006,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,         ,Corporate income tax,GHS,2007,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,            ,Corporate income tax,GHS,2008,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Corporate income tax,GHS,2009,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Corporate income tax,GHS,2010,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Corporate income tax,GHS,2011,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Corporate income tax,GHS,2012,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Corporate income tax,GHS,2013,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Ground rent,GHS,2006,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Ground rent,GHS,2007,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Ground rent,GHS,2008,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Ground rent,GHS,2009,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Ground rent,GHS,2010,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Ground rent,GHS,2011,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Ground rent,GHS,2012,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Ground rent,GHS,2013,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Dividend,GHS,2006,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Dividend,GHS,2007,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Dividend,GHS,2008,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Dividend,GHS,2009,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Dividend,GHS,2010,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Dividend,GHS,2011,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,,Dividend,GHS,2012,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,1130685.0,Dividend,GHS,2013,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,405236.0,Property rate,GHS,2006,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,419541.0,Property rate,GHS,2007,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,419560.0,Property rate,GHS,2008,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,419560.0,Property rate,GHS,2009,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,424600.0,Property rate,GHS,2010,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,424600.0,Property rate,GHS,2011,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,430253.0,Property rate,GHS,2012,6.1973888,-1.6870297
+AngloGold Ashanti (Ghana) Ltd,721G000012,Gold,Obuasi,Ashanti ,568.24,430253.0,Property rate,GHS,2013,6.1973888,-1.6870297
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,3165506.0,Royalties,GHS,2006,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,2480936.0,Royalties,GHS,2007,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,4940817.0,Royalties,GHS,2008,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,6825738.0,Royalties,GHS,2009,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,9070786.0,Royalties,GHS,2010,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,13691446.0,Royalties,GHS,2011,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,15713823.0,Royalties,GHS,2012,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,17235132.0,Royalties,GHS,2013,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,725000.0,Corporate income tax,GHS,2006,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,1578964.0,Corporate income tax,GHS,2007,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Corporate income tax,GHS,2008,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,4945548.0,Corporate income tax,GHS,2009,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,8557346.0,Corporate income tax,GHS,2010,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,56794976.0,Corporate income tax,GHS,2011,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,15623729.0,Corporate income tax,GHS,2012,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,5344374.0,Corporate income tax,GHS,2013,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Ground rent,GHS,2006,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Ground rent,GHS,2007,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Ground rent,GHS,2008,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Ground rent,GHS,2009,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Ground rent,GHS,2010,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Ground rent,GHS,2011,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Ground rent,GHS,2012,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Ground rent,GHS,2013,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Dividend,GHS,2006,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Dividend,GHS,2007,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Dividend,GHS,2008,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Dividend,GHS,2009,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Dividend,GHS,2010,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Dividend,GHS,2011,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Dividend,GHS,2012,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Dividend,GHS,2013,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,27511.0,Property rate,GHS,2006,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,35938.0,Property rate,GHS,2007,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,45375.0,Property rate,GHS,2008,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,55183.0,Property rate,GHS,2009,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,65000.0,Property rate,GHS,2010,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,,Property rate,GHS,2011,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,99893.0,Property rate,GHS,2012,5.2526101,-2.0490137
+AngloGold (Iduapriem) Ltd,421G000014,Gold,Iduapriem,Western,31.0,99903.0,Property rate,GHS,2013,5.2526101,-2.0490137
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,851122.0,Royalties,GHS,2006,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,270765.0,Royalties,GHS,2007,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,314320.0,Royalties,GHS,2008,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Royalties,GHS,2009,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Royalties,GHS,2010,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Royalties,GHS,2011,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Royalties,GHS,2012,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Royalties,GHS,2013,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,,Corporate income tax,GHS,2006,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,,Corporate income tax,GHS,2007,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,        ,Corporate income tax,GHS,2008,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Corporate income tax,GHS,2009,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Corporate income tax,GHS,2010,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Corporate income tax,GHS,2011,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Corporate income tax,GHS,2012,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Corporate income tax,GHS,2013,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,,Ground rent,GHS,2006,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,,Ground rent,GHS,2007,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,,Ground rent,GHS,2008,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Ground rent,GHS,2009,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Ground rent,GHS,2010,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Ground rent,GHS,2011,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Ground rent,GHS,2012,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Ground rent,GHS,2013,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,,Dividend,GHS,2006,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,,Dividend,GHS,2007,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,,Dividend,GHS,2008,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Dividend,GHS,2009,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Dividend,GHS,2010,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Dividend,GHS,2011,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Dividend,GHS,2012,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Dividend,GHS,2013,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,15900.0,Property rate,GHS,2006,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,30000.0,Property rate,GHS,2007,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,30000.0,Property rate,GHS,2008,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Property rate,GHS,2009,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Property rate,GHS,2010,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Property rate,GHS,2011,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Property rate,GHS,2012,6.452944,-2.3149591
+AngloGold Bibiani (Central African Gold),,Gold,Bibiani,Western ,,NA,Property rate,GHS,2013,6.452944,-2.3149591
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Royalties,GHS,2006,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Royalties,GHS,2007,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Royalties,GHS,2008,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Royalties,GHS,2009,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Royalties,GHS,2010,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Royalties,GHS,2011,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Royalties,GHS,2012,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Royalties,GHS,2013,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Corporate income tax,GHS,2006,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Corporate income tax,GHS,2007,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Corporate income tax,GHS,2008,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Corporate income tax,GHS,2009,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Corporate income tax,GHS,2010,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Corporate income tax,GHS,2011,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Corporate income tax,GHS,2012,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Corporate income tax,GHS,2013,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Ground rent,GHS,2006,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Ground rent,GHS,2007,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Ground rent,GHS,2008,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Ground rent,GHS,2009,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Ground rent,GHS,2010,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Ground rent,GHS,2011,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Ground rent,GHS,2012,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Ground rent,GHS,2013,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,2569956.0,Dividend,GHS,2006,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,3749228.0,Dividend,GHS,2007,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,1348489.0,Dividend,GHS,2008,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,1973364.0,Dividend,GHS,2009,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,2976370.0,Dividend,GHS,2010,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,3392503.0,Dividend,GHS,2011,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,,Dividend,GHS,2012,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,,Dividend,GHS,2013,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Property rate,GHS,2006,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Property rate,GHS,2007,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Property rate,GHS,2008,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Property rate,GHS,2009,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Property rate,GHS,2010,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Property rate,GHS,2011,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Property rate,GHS,2012,,
+Government of Ghana Shares in Anglogold global,,Gold,Global,NA,NA,NA,Property rate,GHS,2013,,
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Royalties,GHS,2006,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Royalties,GHS,2007,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Royalties,GHS,2008,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Royalties,GHS,2009,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Royalties,GHS,2010,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,6729929.0,Royalties,GHS,2011,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,16256814.0,Royalties,GHS,2012,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,14925065.0,Royalties,GHS,2013,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Corporate income tax,GHS,2006,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Corporate income tax,GHS,2007,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Corporate income tax,GHS,2008,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Corporate income tax,GHS,2009,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Corporate income tax,GHS,2010,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,,Corporate income tax,GHS,2011,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,,Corporate income tax,GHS,2012,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,,Corporate income tax,GHS,2013,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Ground rent,GHS,2006,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Ground rent,GHS,2007,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Ground rent,GHS,2008,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Ground rent,GHS,2009,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Ground rent,GHS,2010,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,,Ground rent,GHS,2011,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,,Ground rent,GHS,2012,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,,Ground rent,GHS,2013,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Dividend,GHS,2006,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Dividend,GHS,2007,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Dividend,GHS,2008,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Dividend,GHS,2009,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Dividend,GHS,2010,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,,Dividend,GHS,2011,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,,Dividend,GHS,2012,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,,Dividend,GHS,2013,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Property rate,GHS,2006,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Property rate,GHS,2007,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Property rate,GHS,2008,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Property rate,GHS,2009,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,NA,Property rate,GHS,2010,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,,Property rate,GHS,2011,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,28000.0,Property rate,GHS,2012,4.95613,-1.74714
+Adamus Resources Ltd,524G000234,Gold,Nkroful,Western ,75.7,28000.0,Property rate,GHS,2013,4.95613,-1.74714
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,1464248.0,Royalties,GHS,2006,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,2075180.0,Royalties,GHS,2007,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,3071895.0,Royalties,GHS,2008,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,7720269.0,Royalties,GHS,2009,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,9600151.0,Royalties,GHS,2010,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,14872591.0,Royalties,GHS,2011,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,21828134.0,Royalties,GHS,2012,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,26291802.8,Royalties,GHS,2013,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Corporate income tax,GHS,2006,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Corporate income tax,GHS,2007,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Corporate income tax,GHS,2008,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Corporate income tax,GHS,2009,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Corporate income tax,GHS,2010,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Corporate income tax,GHS,2011,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Corporate income tax,GHS,2012,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,47740270.0,Corporate income tax,GHS,2013,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Ground rent,GHS,2006,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Ground rent,GHS,2007,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,         ,Ground rent,GHS,2008,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Ground rent,GHS,2009,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Ground rent,GHS,2010,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Ground rent,GHS,2011,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Ground rent,GHS,2012,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Ground rent,GHS,2013,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Dividend,GHS,2006,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Dividend,GHS,2007,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Dividend,GHS,2008,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Dividend,GHS,2009,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Dividend,GHS,2010,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Dividend,GHS,2011,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Dividend,GHS,2012,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Dividend,GHS,2013,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,21369.0,Property rate,GHS,2006,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,85738.0,Property rate,GHS,2007,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,35745.0,Property rate,GHS,2008,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Property rate,GHS,2009,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Property rate,GHS,2010,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Property rate,GHS,2011,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,,Property rate,GHS,2012,5.292,-1.4359
+GSR (Wassa) Ltd,324G000112,Gold,Akyempim,Western ,110.22,56000.0,Property rate,GHS,2013,5.292,-1.4359
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,1709490.0,Royalties,GHS,2006,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,1960264.0,Royalties,GHS,2007,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,4644642.0,Royalties,GHS,2008,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,6636492.0,Royalties,GHS,2009,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,9366302.0,Royalties,GHS,2010,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,12573619.0,Royalties,GHS,2011,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,22813726.0,Royalties,GHS,2012,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,23433004.0,Royalties,GHS,2013,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Corporate income tax,GHS,2006,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,              ,Corporate income tax,GHS,2007,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Corporate income tax,GHS,2008,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Corporate income tax,GHS,2009,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Corporate income tax,GHS,2010,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Corporate income tax,GHS,2011,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Corporate income tax,GHS,2012,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Corporate income tax,GHS,2013,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Ground rent,GHS,2006,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Ground rent,GHS,2007,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Ground rent,GHS,2008,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Ground rent,GHS,2009,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Ground rent,GHS,2010,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Ground rent,GHS,2011,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Ground rent,GHS,2012,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Ground rent,GHS,2013,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,         ,Dividend,GHS,2006,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,              ,Dividend,GHS,2007,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Dividend,GHS,2008,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Dividend,GHS,2009,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Dividend,GHS,2010,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Dividend,GHS,2011,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Dividend,GHS,2012,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Dividend,GHS,2013,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,13795.0,Property rate,GHS,2006,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,17241.0,Property rate,GHS,2007,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,20967.0,Property rate,GHS,2008,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,20966.0,Property rate,GHS,2009,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Property rate,GHS,2010,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,,Property rate,GHS,2011,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,39239.0,Property rate,GHS,2012,5.5171,-2.0644
+GSR (Prestea/Bogoso) Ltd,621G000008,Gold,Prestea/Bogosu,Western ,271.85,39239.0,Property rate,GHS,2013,5.5171,-2.0644
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,11097676.0,Royalties,GHS,2006,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,12209689.0,Royalties,GHS,2007,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,17447492.0,Royalties,GHS,2008,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,23891906.0,Royalties,GHS,2009,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,43747093.0,Royalties,GHS,2010,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,57693232.0,Royalties,GHS,2011,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,102422421.0,Royalties,GHS,2012,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,97439101.74,Royalties,GHS,2013,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,13928380.0,Corporate income tax,GHS,2006,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,13895969.0,Corporate income tax,GHS,2007,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,27731000.0,Corporate income tax,GHS,2008,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Corporate income tax,GHS,2009,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,78650353.0,Corporate income tax,GHS,2010,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,214666712.0,Corporate income tax,GHS,2011,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,285134160.0,Corporate income tax,GHS,2012,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,112642038.0,Corporate income tax,GHS,2013,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Ground rent,GHS,2006,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Ground rent,GHS,2007,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Ground rent,GHS,2008,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Ground rent,GHS,2009,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Ground rent,GHS,2010,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Ground rent,GHS,2011,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Ground rent,GHS,2012,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Ground rent,GHS,2013,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,1840000.0,Dividend,GHS,2006,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Dividend,GHS,2007,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Dividend,GHS,2008,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Dividend,GHS,2009,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,14342500.0,Dividend,GHS,2010,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,39722000.0,Dividend,GHS,2011,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,19049000.0,Dividend,GHS,2012,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Dividend,GHS,2013,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,159184.0,Property rate,GHS,2006,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,198972.0,Property rate,GHS,2007,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,210902.0,Property rate,GHS,2008,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,309349.0,Property rate,GHS,2009,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,308754.0,Property rate,GHS,2010,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,,Property rate,GHS,2011,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,473314.0,Property rate,GHS,2012,5.3109351,-1.9924259
+Gold Fields (Gh) Ltd,565G000001,Gold,Tarkwa,Western,204.22,285170.0,Property rate,GHS,2013,5.3109351,-1.9924259
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,3513063.0,Royalties,GHS,2006,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,3370783.0,Royalties,GHS,2007,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,4084413.0,Royalties,GHS,2008,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,7791169.0,Royalties,GHS,2009,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,12638871.0,Royalties,GHS,2010,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,18607347.0,Royalties,GHS,2011,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,25032098.0,Royalties,GHS,2012,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,22526890.23,Royalties,GHS,2013,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,6177611.0,Corporate income tax,GHS,2006,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,            ,Corporate income tax,GHS,2007,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,2052824.0,Corporate income tax,GHS,2008,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,7078709.0,Corporate income tax,GHS,2009,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,30472900.0,Corporate income tax,GHS,2010,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,53362556.0,Corporate income tax,GHS,2011,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,14399918.0,Corporate income tax,GHS,2012,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,5589789.0,Corporate income tax,GHS,2013,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Ground rent,GHS,2006,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Ground rent,GHS,2007,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Ground rent,GHS,2008,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Ground rent,GHS,2009,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Ground rent,GHS,2010,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Ground rent,GHS,2011,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Ground rent,GHS,2012,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Ground rent,GHS,2013,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,2760000.0,Dividend,GHS,2006,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Dividend,GHS,2007,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Dividend,GHS,2008,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Dividend,GHS,2009,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,4288800.0,Dividend,GHS,2010,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Dividend,GHS,2011,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Dividend,GHS,2012,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Dividend,GHS,2013,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,23714.0,Property rate,GHS,2006,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,37609.0,Property rate,GHS,2007,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Property rate,GHS,2008,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,36783.0,Property rate,GHS,2009,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Property rate,GHS,2010,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,,Property rate,GHS,2011,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,57608.0,Property rate,GHS,2012,5.5141878,-1.8634682
+Abosso Goldfields (Gh) Ltd (Damang),614G000005,Gold,Damang,Western,53.4,61035.0,Property rate,GHS,2013,5.5141878,-1.8634682
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,1495487.0,Royalties,GHS,2006,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,1785624.0,Royalties,GHS,2007,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,3282768.0,Royalties,GHS,2008,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,5662177.0,Royalties,GHS,2009,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,17247431.0,Royalties,GHS,2010,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,19129768.0,Royalties,GHS,2011,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,40456808.0,Royalties,GHS,2012,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,42141163.19,Royalties,GHS,2013,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Corporate income tax,GHS,2006,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Corporate income tax,GHS,2007,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Corporate income tax,GHS,2008,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Corporate income tax,GHS,2009,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,15085.0,Corporate income tax,GHS,2010,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,28890606.0,Corporate income tax,GHS,2011,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,151607924.0,Corporate income tax,GHS,2012,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,80176637.0,Corporate income tax,GHS,2013,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,3070.0,Ground rent,GHS,2006,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,1553.0,Ground rent,GHS,2007,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,3060.0,Ground rent,GHS,2008,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Ground rent,GHS,2009,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Ground rent,GHS,2010,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Ground rent,GHS,2011,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Ground rent,GHS,2012,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Ground rent,GHS,2013,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Dividend,GHS,2006,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Dividend,GHS,2007,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Dividend,GHS,2008,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Dividend,GHS,2009,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Dividend,GHS,2010,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Dividend,GHS,2011,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Dividend,GHS,2012,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Dividend,GHS,2013,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,15000.0,Property rate,GHS,2006,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,35000.0,Property rate,GHS,2007,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,35000.0,Property rate,GHS,2008,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,35000.0,Property rate,GHS,2009,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,,Property rate,GHS,2010,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,57492.0,Property rate,GHS,2011,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,57507.0,Property rate,GHS,2012,6.26999,-2.31648
+Chirano Gold Mines Ltd,109G000038,Gold,Chirano,Western ,36.34,175000.0,Property rate,GHS,2013,6.26999,-2.31648
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,1304324.0,Royalties,GHS,2006,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,8823620.0,Royalties,GHS,2007,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,12658757.0,Royalties,GHS,2008,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,20656555.0,Royalties,GHS,2009,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,26624466.0,Royalties,GHS,2010,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,47812791.0,Royalties,GHS,2011,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,47038208.0,Royalties,GHS,2012,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,48289010.26,Royalties,GHS,2013,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Corporate income tax,GHS,2006,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Corporate income tax,GHS,2007,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Corporate income tax,GHS,2008,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Corporate income tax,GHS,2009,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Corporate income tax,GHS,2010,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,103297879.0,Corporate income tax,GHS,2011,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,244235080.0,Corporate income tax,GHS,2012,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,178116045.0,Corporate income tax,GHS,2013,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Ground rent,GHS,2006,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,77.0,Ground rent,GHS,2007,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Ground rent,GHS,2008,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Ground rent,GHS,2009,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Ground rent,GHS,2010,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Ground rent,GHS,2011,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Ground rent,GHS,2012,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Ground rent,GHS,2013,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Dividend,GHS,2006,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Dividend,GHS,2007,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Dividend,GHS,2008,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Dividend,GHS,2009,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Dividend,GHS,2010,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Dividend,GHS,2011,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Dividend,GHS,2012,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Dividend,GHS,2013,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Property rate,GHS,2006,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Property rate,GHS,2007,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Property rate,GHS,2008,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Property rate,GHS,2009,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Property rate,GHS,2010,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Property rate,GHS,2011,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Property rate,GHS,2012,6.97449,-2.37935
+Newmont Ghana Gold Ltd,516G000001,Gold,Kenyase,Brong Ahafo,464.93,,Property rate,GHS,2013,6.97449,-2.37935
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Royalties,GHS,2006,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Royalties,GHS,2007,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Royalties,GHS,2008,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Royalties,GHS,2009,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Royalties,GHS,2010,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Royalties,GHS,2011,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Royalties,GHS,2012,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,8342795.0,Royalties,GHS,2013,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Corporate income tax,GHS,2006,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Corporate income tax,GHS,2007,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Corporate income tax,GHS,2008,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Corporate income tax,GHS,2009,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Corporate income tax,GHS,2010,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Corporate income tax,GHS,2011,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,NA,Corporate income tax,GHS,2012,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Corporate income tax,GHS,2013,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Ground rent,GHS,2006,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Ground rent,GHS,2007,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Ground rent,GHS,2008,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Ground rent,GHS,2009,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Ground rent,GHS,2010,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Ground rent,GHS,2011,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Ground rent,GHS,2012,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Ground rent,GHS,2013,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Dividend,GHS,2006,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Dividend,GHS,2007,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Dividend,GHS,2008,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Dividend,GHS,2009,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Dividend,GHS,2010,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Dividend,GHS,2011,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Dividend,GHS,2012,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Dividend,GHS,2013,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Property rate,GHS,2006,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Property rate,GHS,2007,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Property rate,GHS,2008,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Property rate,GHS,2009,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Property rate,GHS,2010,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Property rate,GHS,2011,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Property rate,GHS,2012,6.33856,-0.99564
+Newmont Golden Ridge Ltd,,Gold,Abirem,Eastern Region,62.75,,Property rate,GHS,2013,6.33856,-0.99564
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Royalties,GHS,2006,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Royalties,GHS,2007,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Royalties,GHS,2008,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Royalties,GHS,2009,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Royalties,GHS,2010,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Royalties,GHS,2011,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,24051513.0,Royalties,GHS,2012,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,27624584.2,Royalties,GHS,2013,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Corporate income tax,GHS,2006,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Corporate income tax,GHS,2007,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Corporate income tax,GHS,2008,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Corporate income tax,GHS,2009,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Corporate income tax,GHS,2010,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Corporate income tax,GHS,2011,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,,Corporate income tax,GHS,2012,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,,Corporate income tax,GHS,2013,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Ground rent,GHS,2006,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Ground rent,GHS,2007,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Ground rent,GHS,2008,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Ground rent,GHS,2009,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Ground rent,GHS,2010,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Ground rent,GHS,2011,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,,Ground rent,GHS,2012,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,,Ground rent,GHS,2013,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Dividend,GHS,2006,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Dividend,GHS,2007,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Dividend,GHS,2008,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Dividend,GHS,2009,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Dividend,GHS,2010,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Dividend,GHS,2011,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,,Dividend,GHS,2012,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,,Dividend,GHS,2013,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Property rate,GHS,2006,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Property rate,GHS,2007,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Property rate,GHS,2008,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Property rate,GHS,2009,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Property rate,GHS,2010,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,NA,Property rate,GHS,2011,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,,Property rate,GHS,2012,5.9602024,-1.8951464
+Perseus Mining (Ghana) Ltd,624V003018,Gold,Ayanfuri,Central ,49.2,,Property rate,GHS,2013,5.9602024,-1.8951464
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Royalties,GHS,2006,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Royalties,GHS,2007,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Royalties,GHS,2008,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Royalties,GHS,2009,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Royalties,GHS,2010,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Royalties,GHS,2011,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,713299.0,Royalties,GHS,2012,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,2807223.0,Royalties,GHS,2013,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Corporate income tax,GHS,2006,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Corporate income tax,GHS,2007,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Corporate income tax,GHS,2008,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Corporate income tax,GHS,2009,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Corporate income tax,GHS,2010,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Corporate income tax,GHS,2011,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,,Corporate income tax,GHS,2012,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,,Corporate income tax,GHS,2013,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Ground rent,GHS,2006,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Ground rent,GHS,2007,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Ground rent,GHS,2008,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Ground rent,GHS,2009,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Ground rent,GHS,2010,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Ground rent,GHS,2011,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,,Ground rent,GHS,2012,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,,Ground rent,GHS,2013,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Dividend,GHS,2006,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Dividend,GHS,2007,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Dividend,GHS,2008,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Dividend,GHS,2009,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Dividend,GHS,2010,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Dividend,GHS,2011,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,,Dividend,GHS,2012,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,,Dividend,GHS,2013,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Property rate,GHS,2006,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Property rate,GHS,2007,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Property rate,GHS,2008,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Property rate,GHS,2009,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Property rate,GHS,2010,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,NA,Property rate,GHS,2011,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,42792.0,Property rate,GHS,2012,6.452944,-2.3149591
+Noble Mining Ltd,524V018617,Gold,Bibiani,Western,49.0,150000.0,Property rate,GHS,2013,6.452944,-2.3149591
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Royalties,GHS,2006,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Royalties,GHS,2007,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Royalties,GHS,2008,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Royalties,GHS,2009,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Royalties,GHS,2010,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Royalties,GHS,2011,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,3091400.0,Royalties,GHS,2012,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,409095.0,Royalties,GHS,2013,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Corporate income tax,GHS,2006,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Corporate income tax,GHS,2007,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Corporate income tax,GHS,2008,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Corporate income tax,GHS,2009,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Corporate income tax,GHS,2010,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Corporate income tax,GHS,2011,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,,Corporate income tax,GHS,2012,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,,Corporate income tax,GHS,2013,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Ground rent,GHS,2006,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Ground rent,GHS,2007,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Ground rent,GHS,2008,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Ground rent,GHS,2009,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Ground rent,GHS,2010,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Ground rent,GHS,2011,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,,Ground rent,GHS,2012,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,,Ground rent,GHS,2013,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Dividend,GHS,2006,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Dividend,GHS,2007,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Dividend,GHS,2008,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Dividend,GHS,2009,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Dividend,GHS,2010,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Dividend,GHS,2011,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,,Dividend,GHS,2012,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,,Dividend,GHS,2013,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Property rate,GHS,2006,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Property rate,GHS,2007,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Property rate,GHS,2008,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Property rate,GHS,2009,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Property rate,GHS,2010,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,NA,Property rate,GHS,2011,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,2956.0,Property rate,GHS,2012,5.4348895,-2.141486
+Prestea Sankofa Ltd,,Gold,Prestea,Western,3.43,2786.0,Property rate,GHS,2013,5.4348895,-2.141486
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,608614.0,Royalties,GHS,2006,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,542476.0,Royalties,GHS,2007,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,453089.0,Royalties,GHS,2008,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,580502.0,Royalties,GHS,2009,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,1033823.0,Royalties,GHS,2010,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,689863.0,Royalties,GHS,2011,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,1985269.0,Royalties,GHS,2012,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,3383198.0,Royalties,GHS,2013,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Corporate income tax,GHS,2006,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Corporate income tax,GHS,2007,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Corporate income tax,GHS,2008,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Corporate income tax,GHS,2009,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Corporate income tax,GHS,2010,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Corporate income tax,GHS,2011,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Corporate income tax,GHS,2012,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Corporate income tax,GHS,2013,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,3954.0,Ground rent,GHS,2006,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Ground rent,GHS,2007,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,7980.0,Ground rent,GHS,2008,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Ground rent,GHS,2009,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Ground rent,GHS,2010,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Ground rent,GHS,2011,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Ground rent,GHS,2012,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Ground rent,GHS,2013,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Dividend,GHS,2006,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Dividend,GHS,2007,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Dividend,GHS,2008,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Dividend,GHS,2009,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Dividend,GHS,2010,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,898369.0,Dividend,GHS,2011,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Dividend,GHS,2012,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Dividend,GHS,2013,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,7000.0,Property rate,GHS,2006,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,11576.0,Property rate,GHS,2007,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,11576.0,Property rate,GHS,2008,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,11574.0,Property rate,GHS,2009,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Property rate,GHS,2010,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,,Property rate,GHS,2011,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,11576.0,Property rate,GHS,2012,6.2425255,-2.2845655
+Ghana Bauxite Company Ltd,665G000003,Bauxite,Awaso,Western,29.39,36000.0,Property rate,GHS,2013,6.2425255,-2.2845655
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,1019488.0,Royalties,GHS,2006,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,1030516.0,Royalties,GHS,2007,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,1652108.0,Royalties,GHS,2008,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,2753226.0,Royalties,GHS,2009,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,3764675.0,Royalties,GHS,2010,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,6685574.0,Royalties,GHS,2011,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,10114274.0,Royalties,GHS,2012,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,10286750.0,Royalties,GHS,2013,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,,Corporate income tax,GHS,2006,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,98317.0,Corporate income tax,GHS,2007,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,2453755.0,Corporate income tax,GHS,2008,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,5476872.0,Corporate income tax,GHS,2009,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,7554049.0,Corporate income tax,GHS,2010,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,42813036.0,Corporate income tax,GHS,2011,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,17071860.0,Corporate income tax,GHS,2012,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,26797164.0,Corporate income tax,GHS,2013,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,,Ground rent,GHS,2006,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,,Ground rent,GHS,2007,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,,Ground rent,GHS,2008,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,,Ground rent,GHS,2009,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,,Ground rent,GHS,2010,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,,Ground rent,GHS,2011,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,,Ground rent,GHS,2012,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,,Ground rent,GHS,2013,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,24596.0,Dividend,GHS,2006,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,104194.0,Dividend,GHS,2007,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,68639.0,Dividend,GHS,2008,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,504466.0,Dividend,GHS,2009,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,832542.0,Dividend,GHS,2010,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,,Dividend,GHS,2011,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,1668375.0,Dividend,GHS,2012,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,,Dividend,GHS,2013,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,10556.0,Property rate,GHS,2006,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,13549.0,Property rate,GHS,2007,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,17853.0,Property rate,GHS,2008,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,25358.0,Property rate,GHS,2009,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,31697.0,Property rate,GHS,2010,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,,Property rate,GHS,2011,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,50643.0,Property rate,GHS,2012,5.273368,-1.9821333
+Ghana Manganese Co. Ltd,365G000002,Manganese,Nsuta,Western,175.94,50643.0,Property rate,GHS,2013,5.273368,-1.9821333
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Royalties,GHS,2006,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Royalties,GHS,2007,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Royalties,GHS,2008,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Royalties,GHS,2009,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Royalties,GHS,2010,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,122941190.0,Royalties,GHS,2011,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,150642410.0,Royalties,GHS,2012,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,175006213.0,Royalties,GHS,2013,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Corporate income tax,GHS,2006,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Corporate income tax,GHS,2007,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Corporate income tax,GHS,2008,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Corporate income tax,GHS,2009,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Corporate income tax,GHS,2010,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Corporate income tax,GHS,2011,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Corporate income tax,GHS,2012,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,216985497.56,Corporate income tax,GHS,2013,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Ground rent,GHS,2006,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Ground rent,GHS,2007,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Ground rent,GHS,2008,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Ground rent,GHS,2009,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,106891.5,Ground rent,GHS,2010,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,92848.32,Ground rent,GHS,2011,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,99305.51,Ground rent,GHS,2012,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,133312.65,Ground rent,GHS,2013,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Carried interest,GHS,2006,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Carried interest,GHS,2007,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Carried interest,GHS,2008,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Carried interest,GHS,2009,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Carried interest,GHS,2010,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,233587963.67,Carried interest,GHS,2011,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,286220579.38,Carried interest,GHS,2012,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,332511716.0,Carried interest,GHS,2013,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Property rate,GHS,2006,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Property rate,GHS,2007,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Property rate,GHS,2008,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Property rate,GHS,2009,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Property rate,GHS,2010,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Property rate,GHS,2011,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Property rate,GHS,2012,4.49275,-2.91667
+Jubilee Fields Partners,,Oil and Gas,Jubilee Field,Offshore,,,Property rate,GHS,2013,4.49275,-2.91667
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Royalties,GHS,2006,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Royalties,GHS,2007,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Royalties,GHS,2008,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Royalties,GHS,2009,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,314755.0,Royalties,GHS,2010,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,132982.0,Royalties,GHS,2011,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,104193.0,Royalties,GHS,2012,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,403276.0,Royalties,GHS,2013,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Corporate income tax,GHS,2006,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Corporate income tax,GHS,2007,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Corporate income tax,GHS,2008,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Corporate income tax,GHS,2009,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Corporate income tax,GHS,2010,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Corporate income tax,GHS,2011,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Corporate income tax,GHS,2012,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Corporate income tax,GHS,2013,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Ground rent,GHS,2006,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Ground rent,GHS,2007,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Ground rent,GHS,2008,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Ground rent,GHS,2009,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,605.0,Ground rent,GHS,2010,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,0.0,Ground rent,GHS,2011,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,3025.0,Ground rent,GHS,2012,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,555.0,Ground rent,GHS,2013,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Carried interest,GHS,2006,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Carried interest,GHS,2007,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Carried interest,GHS,2008,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Carried interest,GHS,2009,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Carried interest,GHS,2010,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Carried interest,GHS,2011,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Carried interest,GHS,2012,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Carried interest,GHS,2013,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Property rate,GHS,2006,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Property rate,GHS,2007,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Property rate,GHS,2008,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Property rate,GHS,2009,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Property rate,GHS,2010,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Property rate,GHS,2011,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Property rate,GHS,2012,,
+Saltpond Offshore Fields,,Oil and Gas,Saltpond Field,Offshore,,,Property rate,GHS,2013,,
