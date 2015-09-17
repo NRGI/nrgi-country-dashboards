@@ -1,6 +1,6 @@
 var exploreOptions, explorePieChart, pieD;
 var lineOptions, thisLineChart, lineD;
-var thisBarChart;
+var barChartMining, barChartOil;
 var companiesChart, companiesData, companiesSelector, companyNarratives;
 
 // This creates the data explorer
@@ -41,8 +41,17 @@ var generateExplorer = function(data) {
 	pieD.currency = "GHS";
   explorePieChart = new pieChart("#explore-pie", pieD);
 
-  explorePieCompanies = new companiesWidget(
-    "#explore-pie-companies", pieD);
+  exploreCompaniesMining = new companiesWidget(
+    "#explore-companies-mining", {
+      "companies": pieD.companies["Mining"],
+      "years": pieD.years
+    });
+
+  exploreCompaniesOil = new companiesWidget(
+    "#explore-companies-oil", {
+      "companies": pieD.companies["Oil and Gas"],
+      "years": pieD.years
+    });
 
   makeCompaniesClickable();
 
@@ -74,10 +83,20 @@ var generateExplorer = function(data) {
 		pieD.currency = "GHS";
     explorePieChart.setData(pieD);
 
-    explorePieCompanies.setData(pieD);
+    exploreCompaniesMining.setData({
+      "years": pieD.years,
+      "companies": pieD.companies["Mining"]
+    });
+    exploreCompaniesOil.setData({
+      "years": pieD.years,
+      "companies": pieD.companies["Oil and Gas"]
+    });
     makeCompaniesClickable();
-    barD.data = pieD.companies;
-    thisBarChart.setData(barData(barD));
+
+    barDataMining.data = pieD.companies["Mining"];
+    barChartMining.setData(barData(barDataMining));
+    barDataOil.data = pieD.companies["Oil and Gas"];
+    barChartOil.setData(barData(barDataOil));
   });
   // Create line chart for commodities
   lineOptions = {
@@ -87,8 +106,10 @@ var generateExplorer = function(data) {
   lineD = lineData(lineOptions);
   thisLineChart = new lineChart("#explore-line", lineD);
 
-  barD = {'data' : pieD.companies}
-  thisBarChart = new barChart("#explore-revenues", barData(barD));
+  barDataMining = {'data' : pieD.companies["Mining"]}
+  barChartMining = new barChart("#explore-revenues-mining", barData(barDataMining));
+  barDataOil = {'data' : pieD.companies["Oil and Gas"]}
+  barChartOil = new barChart("#explore-revenues-oil", barData(barDataOil));
 
   // load company narratives, with default
   loadCompanyNarratives("Newmont Ghana Gold Ltd");
@@ -151,12 +172,11 @@ function selectCompany(company_name) {
 
 function makeNewlines(string) {
     return string
-      .replace(/\n+/g, '<br />');
+      .replace(/\n|\r/g, '<br /><br />');
 }
 
 function makeCompaniesClickable() {
-  console.log($("#explore-pie-companies td.company-name"));
-  $("#explore-pie-companies td.company-name")
+  $(".explore-companies-list td.company-name")
     .each(function(company) {
       var company_name = $(this).text();
       $(this).html('<a data-name="' + company_name + '" href="">' + company_name + "</a>")
