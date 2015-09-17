@@ -180,13 +180,14 @@ function makeCompaniesClickable() {
   $(".explore-companies-list td.company-name")
     .each(function(company) {
       var company_name = $(this).text();
-      $(this).html('<a data-name="' + company_name + '" href="">' + company_name + "</a>")
-      .on("click", function(e) {
-        e.preventDefault();
-        selectCompany(company_name);
-        $('html,body').animate({scrollTop: $("article#companies").offset().top},'slow');
-      });
+      $(this).html('<a class="company-clickable" data-name="' + company_name + '" href="">' + company_name + "</a>");
     });
+  $(document).on("click", ".company-clickable", function(e) {
+    e.preventDefault();
+    var company_name = $(this).text();
+    selectCompany(company_name);
+    $('html,body').animate({scrollTop: $("article#companies").offset().top},'slow');
+  });
 }
 
 // Resizing of charts on window size change
