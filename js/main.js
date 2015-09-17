@@ -1,6 +1,5 @@
 $(document).ready(function() {
   h = document.location.hash;
-  console.log(h);
   setTimeout(function() {setPanel(h)}, 500);
 });
 function setPanel(aHref) {
