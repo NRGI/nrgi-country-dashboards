@@ -2,6 +2,7 @@ var exploreOptions, explorePieChart, pieD;
 var lineOptions, thisLineChart, lineD;
 var barChartMining, barChartOil;
 var companiesChart, companiesData, companiesSelector, companyNarratives;
+var resourceMap;
 
 // This creates the data explorer
 d3.json("data/gheiti-revenues.json", function(error, data) {
@@ -147,7 +148,7 @@ function loadRevenueExpenditureChart() {
 // Show map
 function loadMap() {
   $.getJSON("data/ghana-resource-volumes.json", function(data) {
-    var resourceMap = new nrgiMap("productionMap", data);
+    resourceMap = new nrgiMap("productionMap", data, 2013);
   });
 }
 
