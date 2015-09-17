@@ -45,10 +45,14 @@
     font-size: 0.75em;
     color: inherit;
   }
-	.noUi-handle {
+	.noUi-base {
 		background-color: $colour-commodities;
-		box-shadow: none;
 	}
+  .noUi-handle {
+    cursor: pointer;
+    background-color: #000000;
+    box-shadow: none;
+  }
 }
 #explore-pie {
   height: 280px;
