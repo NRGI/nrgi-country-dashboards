@@ -149,6 +149,28 @@ function loadRevenueExpenditureChart() {
 function loadMap() {
   $.getJSON("data/ghana-resource-volumes.json", function(data) {
     resourceMap = new nrgiMap("productionMap", data, 2013);
+    // Create year slider
+    var productionSlider = document.getElementById( "production-slider" );
+    function filterNormal(value, type) {
+      return 1;
+    }
+    mapYears = $.map(data.records, function(k, v) { return k.year; })
+    noUiSlider.create(productionSlider, {
+      start: [parseInt(d3.max(mapYears))],
+      step: 1,
+      range: {
+        'min': parseInt(d3.min(mapYears)),
+        'max': parseInt(d3.max(mapYears))
+      },
+      pips: {
+      mode: 'steps',
+      filter: filterNormal
+      },
+    });
+    productionSlider.noUiSlider.on('set', function(){
+      var year = parseInt(productionSlider.noUiSlider.get());
+      resourceMap.setYear(year);
+    });
   });
 }
 
