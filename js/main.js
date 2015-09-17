@@ -1,19 +1,27 @@
+$(document).ready(function() {
+  h = document.location.hash;
+  console.log(h);
+  setTimeout(function() {setPanel(h)}, 500);
+});
+function setPanel(aHref) {
+  // Must start with a hash
+  var aTag = $("article"+ aHref +"");
+  $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+  document.location.hash = aHref;
+}
 $(document).ready(function(){
   $(".nav-slider li a").click(function(e){
     e.preventDefault();
+    setPanel
     var aHref = $(this).attr('href');
-    var aTag = $("article"+ aHref +"");
-    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
-    document.location.hash = aHref;
+    setPanel(aHref);
   });
   $('body').scrollspy({ target: '#main' });
   $(".scrollTo").click(function(e) {
     e.preventDefault();
     var aHref = $(this).attr('href');
-    var aTag = $("article"+ aHref +"");
-    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
-    document.location.hash = aHref;
-  })
+    setPanel(aHref);
+  });
 });
 $(window).scroll(function() {
   if ($(document).scrollTop() > 50) {
@@ -22,17 +30,8 @@ $(window).scroll(function() {
     $('nav').removeClass('brand-shrink');
   }
 });
-$(window).on('activate.bs.scrollspy', function(e) {
-  var $hash, $node;
-  $hash = $("a[href^='#']", e.target).attr("href").replace(/^#/, '');
-  $node = $('#' + $hash);
-  if ($node.length) {
-    $node.attr('id', '');
-  }
-  document.location.hash = $hash;
-  if ($node.length) {
-    return $node.attr('id', $hash);
-  }
+$(window).load(function(e) {
+  history.replaceState({}, "", $("a[href^='#']", e.target).attr("href"));
 });
 layer_MapBox = new L.tileLayer(
 'https://d.tiles.mapbox.com/v3/markbrough.nf87l3dn/{z}/{x}/{y}.png',{

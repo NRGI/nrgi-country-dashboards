@@ -55,7 +55,7 @@ var nrgiMap = function(elID, data, year) {
         maxZoom: 18, attribution: 'MapBox Streets'
     })
     map = new L.Map(elID, {
-        center: new L.LatLng(5.7,-1),
+        center: new L.LatLng(5.8,-1),
         zoom: 8,
         maxZoom: 15
     });
