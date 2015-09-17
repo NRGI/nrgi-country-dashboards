@@ -40,6 +40,13 @@ makeExploreData = function(data) {
         // Create companies: roll up sum of revenue under company name
         robj["companies"] = d3.nest()
           .key(function(d) {
+            if (d.commodity == "Oil and Gas") {
+              return "Oil and Gas";
+            } else {
+              return "Mining";
+            }
+          })
+          .key(function(d) {
             return d["project_name"];
           })
           .rollup(function(items){
@@ -85,29 +92,33 @@ makeExploreData = function(data) {
               return vobj;
             }
           );
-          obj["companies"] = d.values.companies.map(
-            function(v) {
-              var y0 = 0;
-              vobj = {};
-              vobj["name"] = v.key;
-              vobj["value"] = v.values.sum;
-              vobj["commodities"] = v.values.commodities;
-              vobj["revenue"] = v.values.revenue.map(
-                function(r) {
-                  robj = {}
-                  robj["company_name"] = v.key;
-                  robj["name"] = r.key;
-                  robj["value"] = r.values;
-                  robj["y0"] = y0;
-                  robj["y1"] = y0 += r.values;
-                  return robj;
-                }
-              );
-              return vobj;
-            }
-          ).sort(function (a,b) {
+          obj["companies"] = {}
+          d.values.companies.map(
+            function(cv) {
+              obj["companies"][cv.key] = cv.values.map(function(v) {
+                var y0 = 0;
+                vobj = {};
+                vobj["name"] = v.key;
+                vobj["value"] = v.values.sum;
+                vobj["commodities"] = v.values.commodities;
+                vobj["revenue"] = v.values.revenue.map(
+                  function(r) {
+                    robj = {}
+                    robj["company_name"] = v.key;
+                    robj["name"] = r.key;
+                    robj["value"] = r.values;
+                    robj["y0"] = y0;
+                    robj["y1"] = y0 += r.values;
+                    return robj;
+                  }
+                );
+                return vobj;
+              }
+            ).sort(function (a,b) {
               return b.value - a.value;
             });
+          }
+          )
           return obj;
         }
       );
