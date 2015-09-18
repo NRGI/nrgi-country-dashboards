@@ -29,8 +29,17 @@ $(window).scroll(function() {
     $('nav').removeClass('brand-shrink');
   }
 });
-$(window).load(function(e) {
-  history.replaceState({}, "", $("a[href^='#']", e.target).attr("href"));
+$(window).on('activate.bs.scrollspy', function(e) {
+  var $hash, $node;
+  $hash = $("a[href^='#']", e.target).attr("href").replace(/^#/, '');
+  $node = $('#' + $hash);
+  if ($node.length) {
+    $node.attr('id', '');
+  }
+  document.location.hash = $hash;
+  if ($node.length) {
+    return $node.attr('id', $hash);
+  }
 });
 layer_MapBox = new L.tileLayer(
 'https://d.tiles.mapbox.com/v3/markbrough.nf87l3dn/{z}/{x}/{y}.png',{
