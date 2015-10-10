@@ -41,6 +41,7 @@ var generateExplorer = function(data) {
   pieD.data = pieD.commodities;
 	pieD.currency = "GHS";
   explorePieChart = new pieChart("#explore-pie", pieD);
+  setExploreYear("2013");
 
   exploreCompaniesMining = new companiesWidget(
     "#explore-companies-mining", {
@@ -98,6 +99,8 @@ var generateExplorer = function(data) {
     barChartMining.setData(barData(barDataMining));
     barDataOil.data = pieD.companies["Oil and Gas"];
     barChartOil.setData(barData(barDataOil));
+
+    setExploreYear(year);
   });
   // Create line chart for commodities
   lineOptions = {
@@ -213,6 +216,10 @@ function makeCompaniesClickable() {
     selectCompany(company_name);
     $('html,body').animate({scrollTop: $("article#companies").offset().top},'slow');
   });
+}
+
+function setExploreYear(year) {
+  $(".explore-year").text(year);
 }
 
 // Resizing of charts on window size change
