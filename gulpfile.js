@@ -28,7 +28,7 @@ gulp.task('combinedata', function() {
                "gdp-extractives-combined.json")
   dataCombiner(["source/government-debt.json", "source/petroleum-account.json"],
                "debt-petroleum.json")
-  dataCombiner(["source/government-revenues.json", "source/government-expenditure.json",
+  dataCombiner(["source/government-revenues.json",
     "source/extractives-revenues.json"],
                "govt-revenues-expenditure-extractives.json")
 });
