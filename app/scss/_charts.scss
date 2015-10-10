@@ -114,7 +114,7 @@
     &.ground-rent {
       fill: $col-1;
     }
-    &.carried-interest, &.dividend {
+    &.carried-participating-interest, &.dividend {
       fill: $col-4;
     }
     &.property-rate {
@@ -141,7 +141,7 @@
     &.ground-rent {
       stroke: $col-1;
     }
-    &.carried-interest, &.dividend {
+    &.carried-participating-interest, &.dividend {
       stroke: $col-4;
     }
     &.property-rate {
@@ -158,7 +158,7 @@
     &.ground-rent {
       fill: $col-1;
     }
-    &.carried-interest, &.dividend {
+    &.carried-participating-interest, &.dividend {
       fill: $col-4;
     }
     &.property-rate {
