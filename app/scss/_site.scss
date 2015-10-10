@@ -81,6 +81,9 @@ nav#main {
     .navbar-brand {
       line-height: 1em;
       font-size: 1.7em;
+      img {
+        max-height:60px;
+      }
     }
     li {
       font-size: 0.8em;
@@ -103,6 +106,7 @@ nav#main {
   @extend .transitioner;
 	img {
 		max-height:80px;
+    @extend .transitioner;
 	}
 }
 .navbar-default {
@@ -224,12 +228,9 @@ article#debt-revenue {
   font-size: 0.7em;
 }
 
-.source {
-	width: 400px;
-  margin-top:10px;
+.graph-notes {
   font-size: 0.6em;
   color: #333333;
-  float:right;
   p {
     margin: 2px;
   }
@@ -239,6 +240,10 @@ article#debt-revenue {
     li {
       list-style-type: square;
     }
+  }
+  h3 {
+    font-size: 1.6em;
+    margin: 0.5em 0;
   }
 }
 
