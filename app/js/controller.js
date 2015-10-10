@@ -117,7 +117,9 @@ var generateExplorer = function(data) {
 
 }
 
+
 // Debt and extractives chart
+/*
 var lineDPOptions, lineDPChart, lineDPData;
 function loadDebtExtractivesChart() {
   var url = 'data/debt-petroleum.json';
@@ -130,6 +132,7 @@ function loadDebtExtractivesChart() {
     lineDPChart = new lineChart("#debt-revenue-chart", lineDPData);
   });
 }
+*/
 
 // Govt revenue, expenditure, extractives chart
 var lineGovRevenueData, lineGovRevenueChart;
@@ -218,7 +221,7 @@ var resizeCharts = _.debounce(function() {
     thisLineChart.update();
     explorePieChart.update();
     companiesChart.update();
-    lineDPChart.update();
+    /*lineDPChart.update();*/
     barChartMining.update();
     barChartOil.update();
     lineGovRevenueChart.update();
@@ -226,5 +229,5 @@ var resizeCharts = _.debounce(function() {
 $(window).resize(resizeCharts);
 
 loadRevenueExpenditureChart();
-loadDebtExtractivesChart();
+/*loadDebtExtractivesChart();*/
 loadMap();
