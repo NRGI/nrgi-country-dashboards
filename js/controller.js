@@ -41,6 +41,7 @@ var generateExplorer = function(data) {
   pieD.data = pieD.commodities;
 	pieD.currency = "GHS";
   explorePieChart = new pieChart("#explore-pie", pieD);
+  setExploreYear("2013");
 
   exploreCompaniesMining = new companiesWidget(
     "#explore-companies-mining", {
@@ -98,6 +99,8 @@ var generateExplorer = function(data) {
     barChartMining.setData(barData(barDataMining));
     barDataOil.data = pieD.companies["Oil and Gas"];
     barChartOil.setData(barData(barDataOil));
+
+    setExploreYear(year);
   });
   // Create line chart for commodities
   lineOptions = {
@@ -117,7 +120,9 @@ var generateExplorer = function(data) {
 
 }
 
+
 // Debt and extractives chart
+/*
 var lineDPOptions, lineDPChart, lineDPData;
 function loadDebtExtractivesChart() {
   var url = 'data/debt-petroleum.json';
@@ -130,6 +135,7 @@ function loadDebtExtractivesChart() {
     lineDPChart = new lineChart("#debt-revenue-chart", lineDPData);
   });
 }
+*/
 
 // Govt revenue, expenditure, extractives chart
 var lineGovRevenueData, lineGovRevenueChart;
@@ -212,13 +218,17 @@ function makeCompaniesClickable() {
   });
 }
 
+function setExploreYear(year) {
+  $(".explore-year").text(year);
+}
+
 // Resizing of charts on window size change
 // Uses underscore debounce to avoid crashing your browser
 var resizeCharts = _.debounce(function() {
     thisLineChart.update();
     explorePieChart.update();
     companiesChart.update();
-    lineDPChart.update();
+    /*lineDPChart.update();*/
     barChartMining.update();
     barChartOil.update();
     lineGovRevenueChart.update();
@@ -226,5 +236,5 @@ var resizeCharts = _.debounce(function() {
 $(window).resize(resizeCharts);
 
 loadRevenueExpenditureChart();
-loadDebtExtractivesChart();
+/*loadDebtExtractivesChart();*/
 loadMap();

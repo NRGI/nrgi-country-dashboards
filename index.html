@@ -46,7 +46,7 @@
                   <li><a href="#commodities">Commodities</a></li>
                   <li><a href="#companies">Companies</a></li>
                   <li><a href="#production">Production</a></li>
-                  <li><a href="#debt-revenue">Debt and revenues</a></li>
+                  <li><a href="#debt-revenue">Revenues</a></li>
                   <li><a href="#about">About</a></li>
                 </ul>
               </div>
@@ -71,15 +71,24 @@
             <div class="content-box">
               <div class="row">
                 <div class="col-md-12">
-                    <h2>Trend analysis of production level per type of commodity</h2>
+                    <h2>Trend analysis of revenue per commodity</h2>
                     <div class="chart-container">
                       <div id="explore-line" class="lineChart"></div>
                     </div>
-                    <div class="source">
-                      <p>Source:</p>
-                      <ul>
-                        <li>EITI website: https://eiti.org/Ghana</li>
-                      </ul>
+                    <div class="graph-notes row">
+                      <div class="col-md-4">
+                        <h3>Notes</h3>
+                        <p>Zero values signify data unavailable or no production.</p>
+                      </div>
+                      <div class="col-md-4">
+                        <h3>Source</h3>
+                        <p>Revenues represent the aggregate of commodities 
+                            as reported in GHEITI reports: http://gheiti.gov.gh/</p>
+                      </div>
+                      <div class="col-md-4">
+                        <h3>Data</h3>
+                        <p><a class="btn btn-default" href="data/csv/ghana-resource-revenues-disaggregated.csv"><i class="fa fa-download"></i> Disaggregated resource revenues</a></p>
+                      </div>
                     </div>
                 </div>
                 <div class="clearer"> </div>
@@ -95,14 +104,22 @@
               </div>
               <div class="row">
                 <div id="explore-pie-container" class="col-md-12">
-                  <h3>Commodities</h3>
+                  <h3>Commodities (<span class="explore-year"></span>)</h3>
                   <div id="explore-pie"></div>
-                  <div class="source">
-                    <p>Source:</p>
-                    <ul>
-                      <li>Revenues represent the aggregate of commodities 
-                        as reported in GHEITI reports</li>
-                    </ul>
+                  <div class="graph-notes row">
+                    <div class="col-md-4">
+                      <h3>Notes</h3>
+                      <p>Zero values signify data unavailable or no production.</p>
+                    </div>
+                    <div class="col-md-4">
+                      <h3>Source</h3>
+                      <p>Revenues represent the aggregate of commodities 
+                          as reported in GHEITI reports: http://gheiti.gov.gh/</p>
+                    </div>
+                    <div class="col-md-4">
+                      <h3>Data</h3>
+                      <p><a class="btn btn-default" href="data/csv/ghana-resource-revenues-disaggregated.csv"><i class="fa fa-download"></i> Disaggregated resource revenues</a></p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -112,12 +129,12 @@
                 <!-- Mining -->
                 <div class="col-md-6 split-commodities">
                   <div class="row">
-                    <h3>Mining: contribution by revenue streams</h3>
+                    <h3>Mining: revenue streams by company (<span class="explore-year"></span>)</h3>
                     <div id="explore-revenues-mining" class="barChart"></div>
                   </div>
                   <div class="row">
                     <div id="explore-companies-mining-container">
-                      <h3>Mining: companies</h3>
+                      <h3>Mining: companies (<span class="explore-year"></span>)</h3>
                       <div id="explore-companies-mining" class="explore-companies-list"></div>
                     </div>
                   </div>
@@ -125,33 +142,36 @@
                 <!-- Oil and Gas -->
                 <div class="col-md-6 split-commodities">
                   <div class="row">
-                    <h3>Oil and gas: contribution by revenue streams</h3>
+                    <h3>Oil and gas: revenue streams by project (<span class="explore-year"></span>)</h3>
                     <div id="explore-revenues-oil" class="barChart"></div>
                   </div>
 
                   <div class="row">
                     <div id="explore-companies-oil-container">
-                      <h3>Oil and gas: companies</h3>
+                      <h3>Oil and gas: projects (<span class="explore-year"></span>)</h3>
                       <div id="explore-companies-oil" class="explore-companies-list"></div>
                     </div>
                 </div>
               </div>
               <!-- End of commodities -->
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="source">
-                  <p>Source:</p>
-                  <ul>
-                    <li>EITI website: https://eiti.org/Ghana</li>
-                    <li>Companies are listed in order of revenue contribution,
-                      for the year selected above using the time slider.</li>
-                  </ul>
-                </div>
+            <div class="graph-notes row">
+              <div class="col-md-4">
+                <h3>Notes</h3>
+                <p>Companies are listed in order of revenue contribution,
+                      for the year selected above using the time slider.
+                    Zero values signify data unavailable or no production.</p>
+              </div>
+              <div class="col-md-4">
+                <h3>Source</h3>
+                <p>GHEITI website: http://gheiti.gov.gh/</p>
+              </div>
+              <div class="col-md-4">
+                <h3>Data</h3>
+                <p><a class="btn btn-default" href="data/csv/ghana-resource-revenues-disaggregated.csv"><i class="fa fa-download"></i> Disaggregated resource revenues</a></p>
               </div>
             </div>
           </div>
-
           </div>
         </article>
         <article id="companies">
@@ -174,17 +194,27 @@
                   <div id="companies-narrative"></div>
                 </div>
                 <div class="col-md-8">
-                  <h3>Company contribution by revenue stream</h3>
+                  <h3>Trend in revenue stream by project</h3>
                   <div class="row">
                     <div class="col-md-12">
                       <div id="companies-line" class="lineChart"></div>
                     </div>
                   </div>
-                  <div class="source">
-                    <p>Source:</p>
-                    <ul>
-                      <li>EITI website: https://eiti.org/Ghana</li>
-                    </ul>
+                  <div class="graph-notes row">
+                    <div class="col-md-4">
+                      <h3>Notes</h3>
+                      <p>Companies are listed in order of revenue contribution,
+                            for the year selected above using the time slider.
+                          Zero values signify data unavailable or no production.</p>
+                    </div>
+                    <div class="col-md-4">
+                      <h3>Source</h3>
+                      <p>GHEITI website: http://gheiti.gov.gh/</p>
+                    </div>
+                    <div class="col-md-4">
+                      <h3>Data</h3>
+                      <p><a class="btn btn-default" href="data/csv/ghana-resource-revenues-disaggregated.csv"><i class="fa fa-download"></i> Disaggregated resource revenues</a></p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -196,17 +226,27 @@
             <div class="content-box">
               <div class="row">
                 <div class="col-md-12">
-                  <h2>Production volumes across the country</h2>
+                  <h2>Production volume per company (project) per year</h2>
                   <div id="production-slider"></div>
                   <div class="map-container">
                     <div id="productionMap" class="globalMap"></div>
                   </div>
-                </div>
-                <div class="source">
-                  <p>Source:</p>
-                  <ul>
-                    <li>2013 data. From EITI website: https://eiti.org/Ghana</li>
-                  </ul>
+                  <div class="graph-notes row">
+                    <div class="col-md-4">
+                      <h3>Notes</h3>
+                      <p>Click on a marker to view the production volume 
+                        for that location. Zero values signify data 
+                        unavailable or no production.</p>
+                    </div>
+                    <div class="col-md-4">
+                      <h3>Source</h3>
+                      <p>GHEITI website: http://gheiti.gov.gh/</p>
+                    </div>
+                    <div class="col-md-4">
+                      <h3>Data</h3>
+                      <p><a class="btn btn-default" href="data/csv/ghana-resource-volumes.csv"><i class="fa fa-download"></i> Resource volume production</a></p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -217,19 +257,25 @@
             <div class="content-box">
               <div class="row">
                 <div class="col-md-12">
-                  <h2>Comparing government revenue and expenditure with extractives revenue</h2>
+                  <h2>Comparing government revenue with extractive sector revenue</h2>
                   <div class="chart-container">
                     <div id="govt-revenue-expenditure-extractives-chart" class="lineChart"></div>
                   </div>
-                  <div class="source">
-                    <p>Source:</p>
-                    <ul>
-                      <li>IMF World Economic Outlook, April 2015</li>
-                      <li>EITI website: https://eiti.org/Ghana</li>
-                    </ul>
+                  <div class="graph-notes row">
+                    <div class="col-md-offset-4 col-md-4">
+                      <h3>Source</h3>
+                      <p>IMF World Economic Outlook, April 2015; GHEITI 
+                        website: http://gheiti.gov.gh</p>
+                    </div>
+                    <div class="col-md-4">
+                      <h3>Data</h3>
+                      <p><a class="btn btn-default" href="data/csv/extractive-revenues.csv"><i class="fa fa-download"></i> Total extractives revenues</a></p>
+                      <p><a class="btn btn-default" href="data/csv/government-revenues.csv"><i class="fa fa-download"></i> Total government revenues</a></p>
+                    </div>
                   </div>
                 </div>
               </div>
+              <!-- 
               <div class="row">
                 <div class="col-md-12">
                   <h2>Comparing accumulation in the Ghana Petroleum Funds with government debt</h2>
@@ -245,6 +291,7 @@
                   </div>
                 </div>
               </div>
+              -->
             </div>
           </div>
         </article>
@@ -349,8 +396,8 @@
                 <div class="col-md-6 footer-right">
                   <p>&copy; Natural Resource Governance Institute 2015<br />
                     Openly licensed under the
-                     <a href="https://raw.githubusercontent.com/NRGI/nrgi-country-dashboards/master/LICENSE">
-                       GNU General Public License</a></p>
+                     <a href="http://creativecommons.org/licenses/by-sa/4.0/">
+                       Creative Commons Attribution-ShareAlike License</a></p>
                 </div>
               </div>
             </div>

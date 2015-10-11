@@ -168,7 +168,7 @@ var barChart = function(el, data) {
 
     legend
       .attr("transform", function (d, i) {
-        var lw = _width - 120;
+        var lw = _width - 160;
         // Needs to be this to compensate for a) width, b) datacanvas transform
         lh =  (i * 20);
         return "translate(" + lw + "," + lh + ")";

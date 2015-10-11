@@ -16,7 +16,7 @@ companiesWidget = function(el, data) {
           .attr("class", "table");
         var thead = table.append("thead");
         thead
-          .append("th").text("Company name");
+          .append("th").text("Company / project name");
         thead
           .append("th").text("Revenue (GHS)");
         thead

@@ -642,19 +642,19 @@ article#debt-revenue {
 .table {
   font-size: 0.7em; }
 
-.source {
-  width: 400px;
-  margin-top: 10px;
+.graph-notes {
   font-size: 0.6em;
-  color: #333333;
-  float: right; }
-  .source p {
+  color: #333333; }
+  .graph-notes p {
     margin: 2px; }
-  .source ul {
+  .graph-notes ul {
     margin: 0px;
     padding: 0px; }
-    .source ul li {
+    .graph-notes ul li {
       list-style-type: square; }
+  .graph-notes h3 {
+    font-size: 1.6em;
+    margin: 0.5em 0; }
 
 /* FOOTER */
 .footer-box {
@@ -827,7 +827,7 @@ article#debt-revenue {
     fill: #4251A3; }
   #explore-revenues-oil rect.ground-rent, #explore-revenues-mining rect.ground-rent {
     fill: #CF3D1E; }
-  #explore-revenues-oil rect.carried-interest, #explore-revenues-oil rect.dividend, #explore-revenues-mining rect.carried-interest, #explore-revenues-mining rect.dividend {
+  #explore-revenues-oil rect.carried-participating-interest, #explore-revenues-oil rect.dividend, #explore-revenues-mining rect.carried-participating-interest, #explore-revenues-mining rect.dividend {
     fill: #FFC60B; }
   #explore-revenues-oil rect.property-rate, #explore-revenues-mining rect.property-rate {
     fill: #00833D; }
@@ -846,7 +846,7 @@ article#debt-revenue {
   stroke: #4251A3; }
 #companies-line path.line.ground-rent {
   stroke: #CF3D1E; }
-#companies-line path.line.carried-interest, #companies-line path.line.dividend {
+#companies-line path.line.carried-participating-interest, #companies-line path.line.dividend {
   stroke: #FFC60B; }
 #companies-line path.line.property-rate {
   stroke: #00833D; }
@@ -856,7 +856,7 @@ article#debt-revenue {
   fill: #4251A3; }
 #companies-line .legend rect.ground-rent {
   fill: #CF3D1E; }
-#companies-line .legend rect.carried-interest, #companies-line .legend rect.dividend {
+#companies-line .legend rect.carried-participating-interest, #companies-line .legend rect.dividend {
   fill: #FFC60B; }
 #companies-line .legend rect.property-rate {
   fill: #00833D; }
