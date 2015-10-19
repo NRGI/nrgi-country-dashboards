@@ -175,6 +175,9 @@ var lineChart = function(el, data) {
 
     series
       .attr("d", function(d) { return line(d.data); });
+      
+    series
+      .exit().remove();
 
     // Create focus circle for each data point in each series
     focuscircle = dataCanvas.select("g.focus-circles")
@@ -195,12 +198,14 @@ var lineChart = function(el, data) {
     focuscircle
         .on("mouseover", circlemouseover)
         .on("mouseout", circlemouseout);
+        
+    focuscircle.exit().remove();
 
     // Update legends
     var legends = dataCanvas.select(".legends");
     var legend = legends
         .selectAll(".legend")
-        .data($.map(data.data, function(k) { return k.name; }));
+        .data($.map(this.data, function(k) { return k.name; }));
 
     legend
       .enter()
@@ -229,6 +234,9 @@ var lineChart = function(el, data) {
         .attr("dy", ".35em")
         .style("text-anchor", "end")
         .text(function (d) { return d; });
+        
+    legend
+        .exit().remove();
 
     // Append Axis.
     svg.select(".x.axis")

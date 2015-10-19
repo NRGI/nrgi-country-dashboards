@@ -825,7 +825,7 @@ article#debt-revenue {
     fill: #6A246D; }
   #explore-revenues-oil rect.royalties, #explore-revenues-mining rect.royalties {
     fill: #4251A3; }
-  #explore-revenues-oil rect.ground-rent, #explore-revenues-mining rect.ground-rent {
+  #explore-revenues-oil rect.ground-rent, #explore-revenues-oil rect.surface-rentals, #explore-revenues-mining rect.ground-rent, #explore-revenues-mining rect.surface-rentals {
     fill: #CF3D1E; }
   #explore-revenues-oil rect.carried-participating-interest, #explore-revenues-oil rect.dividend, #explore-revenues-mining rect.carried-participating-interest, #explore-revenues-mining rect.dividend {
     fill: #FFC60B; }
@@ -844,7 +844,7 @@ article#debt-revenue {
   stroke: #6A246D; }
 #companies-line path.line.royalties {
   stroke: #4251A3; }
-#companies-line path.line.ground-rent {
+#companies-line path.line.ground-rent, #companies-line path.line.surface-rentals {
   stroke: #CF3D1E; }
 #companies-line path.line.carried-participating-interest, #companies-line path.line.dividend {
   stroke: #FFC60B; }
@@ -854,7 +854,7 @@ article#debt-revenue {
   fill: #6A246D; }
 #companies-line .legend rect.royalties {
   fill: #4251A3; }
-#companies-line .legend rect.ground-rent {
+#companies-line .legend rect.ground-rent, #companies-line .legend rect.surface-rentals {
   fill: #CF3D1E; }
 #companies-line .legend rect.carried-participating-interest, #companies-line .legend rect.dividend {
   fill: #FFC60B; }
