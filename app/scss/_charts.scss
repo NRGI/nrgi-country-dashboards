@@ -111,7 +111,7 @@
     &.royalties {
       fill: $col-15;
     }
-    &.ground-rent {
+    &.ground-rent, &.surface-rentals {
       fill: $col-1;
     }
     &.carried-participating-interest, &.dividend {
@@ -138,7 +138,7 @@
     &.royalties {
       stroke: $col-15;
     }
-    &.ground-rent {
+    &.ground-rent, &.surface-rentals {
       stroke: $col-1;
     }
     &.carried-participating-interest, &.dividend {
@@ -155,7 +155,7 @@
     &.royalties {
       fill: $col-15;
     }
-    &.ground-rent {
+    &.ground-rent, &.surface-rentals {
       fill: $col-1;
     }
     &.carried-participating-interest, &.dividend {
