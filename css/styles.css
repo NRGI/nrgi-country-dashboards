@@ -592,6 +592,11 @@ article#home {
     position: relative;
     z-index: 999; }
 
+article#about {
+  border-left: 10px solid #F15623; }
+  article#about h2 {
+    border-bottom: 5px solid #F15623; }
+
 article#commodities {
   border-left: 10px solid #60C4B1; }
   article#commodities h2 {
@@ -616,6 +621,11 @@ article#debt-revenue {
   border-left: 10px solid #EF58A0; }
   article#debt-revenue h2 {
     border-bottom: 5px solid #EF58A0; }
+
+article#data {
+  border-left: 10px solid #222222; }
+  article#data h2 {
+    border-bottom: 5px solid #222222; }
 
 /* CONTENT */
 .content-box {

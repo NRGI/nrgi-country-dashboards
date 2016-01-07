@@ -175,7 +175,7 @@ var lineChart = function(el, data) {
 
     series
       .attr("d", function(d) { return line(d.data); });
-      
+
     series
       .exit().remove();
 
@@ -198,7 +198,7 @@ var lineChart = function(el, data) {
     focuscircle
         .on("mouseover", circlemouseover)
         .on("mouseout", circlemouseout);
-        
+
     focuscircle.exit().remove();
 
     // Update legends
@@ -234,7 +234,7 @@ var lineChart = function(el, data) {
         .attr("dy", ".35em")
         .style("text-anchor", "end")
         .text(function (d) { return d; });
-        
+
     legend
         .exit().remove();
 
