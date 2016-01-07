@@ -169,6 +169,12 @@ article#home {
 	  z-index: 999;
 	}
 }
+article#about {
+  border-left: 10px solid $colour-home;
+  h2 {
+    border-bottom: 5px solid $colour-home;
+  }
+}
 article#commodities {
   border-left: 10px solid $colour-commodities;
   h2 {
@@ -197,6 +203,12 @@ article#debt-revenue {
   border-left: 10px solid $col-21;
   h2 {
     border-bottom: 5px solid $col-21;
+  }
+}
+article#data {
+  border-left: 10px solid $colour-oil;
+  h2 {
+    border-bottom: 5px solid $colour-oil;
   }
 }
 /* CONTENT */
@@ -351,4 +363,7 @@ article#debt-revenue {
         padding: 3px 2px;
       }
     }
+		.lineChart {
+			height: 200px;
+		}
 }
