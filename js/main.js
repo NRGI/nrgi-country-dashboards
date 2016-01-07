@@ -41,14 +41,3 @@ $(window).on('activate.bs.scrollspy', function(e) {
     return $node.attr('id', $hash);
   }
 });
-layer_MapBox = new L.tileLayer(
-'https://d.tiles.mapbox.com/v3/markbrough.nf87l3dn/{z}/{x}/{y}.png',{
-    maxZoom: 18, attribution: 'MapBox Streets'
-})
-var homeMap = new L.Map("homeMap", {
-    center: new L.LatLng(5.7,-1),
-    zoom: 8,
-    maxZoom: 15
-});
-layer_MapBox.addTo(homeMap);
-homeMap.scrollWheelZoom.disable();
