@@ -119,11 +119,12 @@ nav#main {
 
 /* Article-specific styling */ 
 article#home {
+  background: rgba(0, 0, 0, 0) url("../img/background-gheiti.png") repeat scroll 0 0 / cover;
   border-left: 10px solid $colour-home;
 	position:relative;
 	.masthead {
 	  margin: 80px 0px 80px 40px;
-	  padding: 30px;
+	  padding: 40px;
 	  color: #222222;
 		h1 {
 		  padding: 5px 15px 0px 15px;
@@ -135,13 +136,15 @@ article#home {
 		}
 		h2 {
 		  color: #ffffff;
-		  text-shadow: 1px 1px 2px #666666;
+		  text-shadow: 3px 3px 4px #000000;
 		  margin: 0.2em 0;
 			text-align:right;
+      font-size:2.2em;
 			a {
 				text-decoration:none;
+        color: #ffffff;
 				&:hover {
-					color: #ffffff;
+          text-shadow: 1px 1px 2px #ffffff;
 				}
 			}
 		}
@@ -151,16 +154,6 @@ article#home {
 		p {
 			color: #ffffff;
 		}
-	}
-	#homeMap {
-	  height:100%;
-	  width: 100%;
-	  bottom: 0;
-	  left: 0;
-	  position: absolute;
-	  right: 0;
-	  top: 0;
-	  z-index: 0;
 	}
 	.inner {
 	  margin-top: 70px;
