@@ -665,7 +665,8 @@ article#data {
   background-color: #222222;
   padding: 10px;
   clear: both;
-  color: #ffffff; }
+  color: #ffffff;
+  font-size: 0.6em; }
   .footer-box a {
     color: #ffffff;
     border-bottom: 1px dashed; }
@@ -673,8 +674,6 @@ article#data {
       border-bottom: none;
       text-decoration: none;
       color: #cccccc; }
-  .footer-box .footer-right {
-    font-size: 0.6em; }
 
 /* HELPERS */
 .clearer {
