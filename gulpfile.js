@@ -11,7 +11,7 @@ var streamify = require("gulp-streamify");
 
 // Copy files
 gulp.task('copy_files', function() {
-  return gulp.src(['app/**/*', '!app/css/**', '!app/scss/**'])
+  return gulp.src(['app/**/*', '!app/css/**', '!app/scss/**', 'CNAME'])
     .pipe(gulp.dest('dist'));
 });
 
